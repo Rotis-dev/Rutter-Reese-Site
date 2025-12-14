@@ -1,81 +1,415 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Style Guide | MRR Docs</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="../index.html">MRR Docs</a>
-      <nav class="nav">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="style-guide.html">Style Guide</a>
-        <a href="sanitization.html">Sanitization</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="contact.html" class="button">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Style Guide | Rutter-Reese</title>
+    <meta
+      name="description"
+      content="Ops documentation style guide for runbooks, SOPs, and troubleshooting: structure, procedures, decision points, warnings, verification, and versioning."
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
 
-  <main class="container">
-    <h1 class="section-title">Style Guide (Ops Docs)</h1>
-    <p class="kicker">Short rules that make docs consistent, auditable, and fast to use under pressure.</p>
+  <body data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="card">
-      <h2>Document anatomy</h2>
-      <ul>
-        <li><strong>Purpose</strong> (one sentence)</li>
-        <li><strong>Audience</strong> (who uses this)</li>
-        <li><strong>Prerequisites</strong> (access/tools/permissions)</li>
-        <li><strong>Safety & warnings</strong> (what can go wrong)</li>
-        <li><strong>Steps</strong> (numbered, one action per step)</li>
-        <li><strong>Decision points</strong> (IF/THEN with next step references)</li>
-        <li><strong>Escalation</strong> (who/when/how)</li>
-        <li><strong>Verification</strong> (how you know it worked)</li>
-        <li><strong>Records</strong> (what to log, where)</li>
-      </ul>
-    </div>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="resume.html">Resume</a>
+          <a href="style-guide.html" aria-current="page">Style guide</a>
+          <a href="sanitization.html">Sanitization</a>
+          <a href="contact.html" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="card">
-      <h2>Language rules</h2>
-      <ul>
-        <li>Use <strong>imperative voice</strong>: “Open…”, “Verify…”, “Record…”</li>
-        <li>One step = one action. Avoid “and” in steps.</li>
-        <li>Use <strong>consistent terms</strong>. Add a glossary if needed.</li>
-        <li>Put numbers in numerals (3, 10) when they are parameters.</li>
-      </ul>
-    </div>
+    <main id="main" class="container">
+      <section class="hero">
+        <h1 class="section-title">Style Guide (Ops Docs)</h1>
+        <p class="lead">
+          Rules that make documentation consistent, auditable, and fast to use
+          under pressure. Built for runbooks, SOPs, and troubleshooting guides.
+        </p>
 
-    <div class="card">
-      <h2>Warnings & callouts</h2>
-      <ul>
-        <li><strong>WARNING</strong>: Safety risk or equipment damage.</li>
-        <li><strong>CAUTION</strong>: Procedure risk (wrong command, wrong state).</li>
-        <li><strong>NOTE</strong>: Helpful context that doesn’t change the steps.</li>
-      </ul>
-    </div>
+        <div class="pill-row" aria-label="Jump to sections">
+          <a class="pill" href="#principles">Principles</a>
+          <a class="pill" href="#templates">Templates</a>
+          <a class="pill" href="#procedures">Procedures</a>
+          <a class="pill" href="#decisions">Decision points</a>
+          <a class="pill" href="#warnings">Warnings</a>
+          <a class="pill" href="#verification">Verification</a>
+          <a class="pill" href="#versioning">Versioning</a>
+        </div>
 
-    <div class="card">
-      <h2>Formatting rules</h2>
-      <ul>
-        <li>Headings: H1 doc title; H2 major sections; H3 subsections.</li>
-        <li>Use tables only for quick-reference, not long explanations.</li>
-        <li>Prefer checklists for repeatable verification steps.</li>
-      </ul>
-    </div>
-  </main>
+        <p class="muted small">
+          Reference pages:
+          <a class="link" href="sanitization.html">Sanitization checklist</a> ·
+          <a class="link" href="portfolio.html">Portfolio</a>
+        </p>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-      <span class="muted">Style guide</span>
-    </div>
-  </footer>
+      <section class="section" id="principles">
+        <h2>Principles</h2>
 
-  <script src="../assets/js/app.js"></script>
-</body>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Write for reality</h3>
+            <p class="muted">
+              Assume the reader is busy, tired, and time-limited. Make the “next
+              action” obvious.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Structure beats prose</h3>
+            <p class="muted">
+              Use repeatable sections so every doc is scannable: trigger,
+              checks, steps, decisions, escalation, verification.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Evidence over opinions</h3>
+            <p class="muted">
+              Capture timestamps, observed states, actions taken, and outcomes.
+              A good closeout can be audited later.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="templates">
+        <h2>Document templates</h2>
+        <p class="muted">
+          These are the “standard shapes” used across the site.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Runbook</h3>
+            <p class="muted small">
+              Incident response: an alarm/incident happens → what to do next.
+            </p>
+
+            <details>
+              <summary>Runbook skeleton</summary>
+              <ol class="compact">
+                <li><strong>Title</strong> + Version + Date + Disclaimer</li>
+                <li>
+                  <strong>Trigger</strong> (symptoms / alarm text examples)
+                </li>
+                <li><strong>Safety checks</strong> (do first)</li>
+                <li><strong>Triage steps</strong> (least-risk first)</li>
+                <li>
+                  <strong>Decision points</strong> (IF/THEN → next action)
+                </li>
+                <li>
+                  <strong>Escalation</strong> (who/when/how + what to send)
+                </li>
+                <li><strong>Verification</strong> (acceptance criteria)</li>
+                <li>
+                  <strong>Closeout notes</strong> (what happened / what you did
+                  / follow-ups)
+                </li>
+                <li><strong>Changelog</strong></li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>SOP</h3>
+            <p class="muted small">
+              Routine process: repeatable work with quality checks and records.
+            </p>
+
+            <details>
+              <summary>SOP skeleton</summary>
+              <ol class="compact">
+                <li><strong>Purpose</strong> + Audience</li>
+                <li><strong>Scope</strong> (what’s included/excluded)</li>
+                <li>
+                  <strong>Prerequisites</strong> (access/tools/permissions)
+                </li>
+                <li><strong>Procedure</strong> (numbered steps)</li>
+                <li>
+                  <strong>Quality checks</strong> (how you confirm completeness)
+                </li>
+                <li><strong>Records</strong> (what to log + where)</li>
+                <li><strong>Changelog</strong></li>
+              </ol>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>Troubleshooting</h3>
+            <p class="muted small">
+              Symptoms → fast checks → decision tree → recovery → verification.
+            </p>
+
+            <details>
+              <summary>Troubleshooting skeleton</summary>
+              <ol class="compact">
+                <li><strong>Symptoms</strong> (what the reader sees)</li>
+                <li><strong>Fast checks</strong> (2 minutes; confirm scope)</li>
+                <li><strong>Decision tree</strong> (branching logic)</li>
+                <li><strong>Recovery steps</strong> (least-risk first)</li>
+                <li><strong>Escalation package</strong> (copy/paste)</li>
+                <li><strong>Verification</strong> (clear pass/fail)</li>
+                <li><strong>Changelog</strong></li>
+              </ol>
+            </details>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="procedures">
+        <h2>Procedure writing rules</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Use imperative steps</h3>
+            <p class="muted">
+              Steps should be action-first and clear. Start with a verb:
+              “Open…”, “Verify…”, “Record…”.
+            </p>
+            <p class="muted small">
+              Standard approach used by major documentation style guides for
+              step-by-step instructions and procedures.
+              :contentReference[oaicite:0]{index=0}
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>One step = one action</h3>
+            <p class="muted">
+              Avoid “and” inside steps. If you must combine small actions, keep
+              them tightly related and obvious.
+            </p>
+            <p class="muted small">
+              “One step per action” is a common rule in procedure guidance.
+              :contentReference[oaicite:1]{index=1}
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Use numbered steps</h3>
+            <p class="muted">
+              Number procedures. Use short sub-steps only when needed (and keep
+              them consistent).
+            </p>
+            <p class="muted small">
+              Procedure formatting guidance and sub-step conventions are
+              documented by Google’s style guide.
+              :contentReference[oaicite:2]{index=2}
+            </p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Example: good steps vs bad steps</h3>
+
+          <details open>
+            <summary>Good</summary>
+            <ol>
+              <li>Open the incident ticket and record the alarm timestamp.</li>
+              <li>Verify the correct site/system is selected.</li>
+              <li>Check whether a maintenance window is active.</li>
+              <li>Re-check telemetry timestamps after 2 minutes.</li>
+            </ol>
+          </details>
+
+          <details>
+            <summary>Bad (multi-action, unclear)</summary>
+            <ol>
+              <li>
+                Go look at the alarms and see if anything is wrong and then try
+                a reset and tell the engineer.
+              </li>
+            </ol>
+          </details>
+        </article>
+      </section>
+
+      <section class="section" id="decisions">
+        <h2>Decision points</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Write IF/THEN</h3>
+            <p class="muted">
+              Each decision point must lead to a specific next action (and
+              ideally to a named section).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Use thresholds</h3>
+            <p class="muted">
+              Time thresholds reduce churn and “thrash” (example: wait 5 minutes
+              before repeating recovery actions).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Escalation is a decision</h3>
+            <p class="muted">
+              Escalate when risk increases, recovery fails past threshold, or
+              evidence suggests damage/unsafe state.
+            </p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Example: decision block</h3>
+          <ul>
+            <li>
+              <strong>If</strong> telemetry resumes and alarms clear → go to
+              <strong>Verification</strong>.
+            </li>
+            <li>
+              <strong>If</strong> telemetry remains stale &gt; 10 minutes →
+              <strong>Escalate</strong> and send the escalation package.
+            </li>
+            <li>
+              <strong>If</strong> signs indicate possible equipment damage →
+              <strong>stop actions</strong> and escalate immediately.
+            </li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="section" id="warnings">
+        <h2>Warnings, cautions, notes</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>WARNING</h3>
+            <p class="muted">
+              Personal safety risk, major damage, or high-consequence outcome
+              (including potential data loss).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>CAUTION</h3>
+            <p class="muted">
+              Procedure risk: wrong environment, wrong command, wrong state,
+              unintended disruption.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>NOTE / DISCLAIMER</h3>
+            <p class="muted">
+              Helpful context or constraints (sanitized sample, authorization
+              limits, assumptions).
+            </p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Rule</h3>
+          <ul>
+            <li>Callouts must be short and actionable.</li>
+            <li>Put callouts immediately before the step they affect.</li>
+            <li>
+              If the warning changes what the reader does, it belongs in the
+              steps or decision points.
+            </li>
+          </ul>
+          <p class="muted small">
+            Signal words and safety header patterns are widely standardized
+            (ANSI/ISO families), and many doc platforms define common callout
+            types (note/warning/disclaimer).
+            :contentReference[oaicite:3]{index=3}
+          </p>
+        </article>
+      </section>
+
+      <section class="section" id="verification">
+        <h2>Verification and records</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Verification is pass/fail</h3>
+            <p class="muted">
+              Define “done”: stable readings for 10 minutes, alarms cleared,
+              telemetry timestamps advancing, etc.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Recordkeeping is part of the job</h3>
+            <p class="muted">
+              Every runbook ends with closeout notes: what happened, what you
+              did, who you notified, follow-ups.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Escalate with evidence</h3>
+            <p class="muted">
+              Escalation packages should be copy/paste: symptoms, scope, checks,
+              actions attempted, current status.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="versioning">
+        <h2>Versioning and review</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Version header</h3>
+            <p class="muted">
+              Every doc has: version, date, and a short disclaimer (especially
+              for sanitized samples).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Changelog</h3>
+            <p class="muted">
+              Keep a short changelog at the bottom: what changed and why (v0.1 →
+              v1.0).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Review loop</h3>
+            <p class="muted">
+              Changes should be visible and explainable. Prefer small revisions
+              over big rewrites.
+            </p>
+          </article>
+        </div>
+
+        <article class="card">
+          <h3>Style promise</h3>
+          <p class="muted">
+            Consistent headings, action-first steps, explicit decision points,
+            and testable verification criteria.
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">
+          <a href="portfolio.html">Portfolio</a> ·
+          <a href="sanitization.html">Sanitization</a> ·
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
 </html>

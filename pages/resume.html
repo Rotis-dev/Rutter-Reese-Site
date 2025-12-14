@@ -1,52 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Resume | MRR Docs</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="../index.html">MRR Docs</a>
-      <nav class="nav">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="style-guide.html">Style Guide</a>
-        <a href="sanitization.html">Sanitization</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="contact.html" class="button">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Resume | Rutter-Reese</title>
+    <meta
+      name="description"
+      content="Resume for Matthew Rutter-Reese — operations-focused technical writing (runbooks, SOPs, troubleshooting, knowledge base)."
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
 
-  <main class="container">
-    <h1 class="section-title">Resume</h1>
-    <p class="muted">Add your resume content here as HTML for easy reading, plus a link to a PDF copy.</p>
-    <div class="card">
-      <h2>PDF version</h2>
-      <p class="muted small">Place your PDF in <code>/assets/resume/</code> and link it below.</p>
-      <p><a href="../assets/resume/resume.pdf">Download PDF (placeholder)</a></p>
-    </div>
+  <body data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="card">
-      <h2>Highlights</h2>
-      <ul>
-        <li>Ops documentation: SOPs, runbooks, troubleshooting, KB.</li>
-        <li>Procedure-driven background; comfort in high-consequence systems.</li>
-        <li>Docs workflow: Markdown + Git + review cycles.</li>
-      </ul>
-    </div>
-  </main>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="resume.html" aria-current="page">Resume</a>
+          <a href="style-guide.html">Style guide</a>
+          <a href="sanitization.html">Sanitization</a>
+          <a href="contact.html" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-      <span class="muted">Resume + highlights</span>
-    </div>
-  </footer>
+    <main id="main" class="container">
+      <section class="hero">
+        <h1 class="section-title">Resume</h1>
+        <p class="lead">
+          Operations-focused technical writing: runbooks, SOPs, troubleshooting
+          guides, and knowledge-base content. Procedure-driven background (ROC +
+          high-consequence systems).
+        </p>
+        <p class="muted small">
+          If the embedded PDF doesn’t load in your browser, use the “Open PDF”
+          link below.
+        </p>
+      </section>
 
-  <script src="../assets/js/app.js"></script>
-</body>
+      <section class="section" aria-label="Resume PDF">
+        <div class="card">
+          <h2>PDF version</h2>
+          <p class="muted small">
+            File path expected:
+            <code>/assets/resume/matthew-rutter-reese-resume.pdf</code>
+          </p>
+
+          <p class="muted small">
+            <a
+              class="link"
+              href="../assets/resume/matthew-rutter-reese-resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open PDF in a new tab →
+            </a>
+          </p>
+
+          <object
+            class="embed no-ctx"
+            data="../assets/resume/matthew-rutter-reese-resume.pdf"
+            type="application/pdf"
+            title="Matthew Rutter-Reese — Resume PDF"
+          >
+            <p class="muted">
+              Your browser can’t display the embedded PDF. Use this link:
+              <a
+                class="link"
+                href="../assets/resume/matthew-rutter-reese-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open PDF →
+              </a>
+            </p>
+          </object>
+
+          <p class="muted small">
+            Note: opening in a new tab uses
+            <code>rel="noopener noreferrer"</code> to prevent reverse-tabnabbing
+            risks with <code>target="_blank"</code>.
+            :contentReference[oaicite:1]{index=1}
+          </p>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Highlights">
+        <div class="grid-3">
+          <article class="card">
+            <h2>What I deliver</h2>
+            <ul class="muted">
+              <li>Runbooks (alarm/incident response)</li>
+              <li>SOPs + checklists (routine work)</li>
+              <li>Troubleshooting guides</li>
+              <li>KB/help-center articles</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Working style</h2>
+            <ul class="muted">
+              <li>Action-first, numbered procedures</li>
+              <li>Decision points + escalation packages</li>
+              <li>Verification criteria (pass/fail)</li>
+              <li>Versioning + changelog mindset</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Tooling</h2>
+            <ul class="muted">
+              <li>Markdown + Git workflow</li>
+              <li>Docs structured for review cycles</li>
+              <li>Comfortable with templates + style guides</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card">
+          <h2>About this site</h2>
+          <p class="muted">
+            Portfolio samples are intentionally generic and sanitized to
+            demonstrate structure and clarity without exposing proprietary
+            systems. See:
+            <a class="link" href="sanitization.html">Sanitization checklist</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">
+          <a href="portfolio.html">Portfolio</a> ·
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
 </html>

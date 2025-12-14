@@ -1,70 +1,297 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sanitization Checklist | MRR Docs</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="../index.html">MRR Docs</a>
-      <nav class="nav">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="style-guide.html">Style Guide</a>
-        <a href="sanitization.html">Sanitization</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="contact.html" class="button">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sanitization Checklist | Rutter-Reese</title>
+    <meta
+      name="description"
+      content="Sanitization checklist for publishing work-derived portfolio samples: permissions, redaction rules, what to never publish, and a pre-publish QA pass."
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
 
-  <main class="container">
-    <h1 class="section-title">Sanitization Checklist</h1>
-    <p class="kicker">Use this before publishing any work-derived sample. When in doubt, remove it.</p>
+  <body data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="card">
-      <h2>Remove identifiers</h2>
-      <ul>
-        <li>Company/customer names, site names, asset IDs, ticket IDs</li>
-        <li>Specific vendors/integrators if it narrows identity</li>
-        <li>Screenshots of proprietary tools, dashboards, SCADA screens</li>
-      </ul>
-    </div>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="portfolio.html">Portfolio</a>
+          <a href="resume.html">Resume</a>
+          <a href="style-guide.html">Style guide</a>
+          <a href="sanitization.html" aria-current="page">Sanitization</a>
+          <a href="contact.html" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <div class="card">
-      <h2>Generalize sensitive parameters</h2>
-      <ul>
-        <li>Exact setpoints, thresholds, limits, IP ranges</li>
-        <li>Security procedures, credentials, account roles, escalation contacts</li>
-        <li>Any workflow that could enable abuse</li>
-      </ul>
-    </div>
+    <main id="main" class="container">
+      <section class="hero">
+        <h1 class="section-title">Sanitization Checklist</h1>
+        <p class="lead">
+          This page is the “publish gate” for anything work-derived. When in
+          doubt, remove it or rewrite it as a generic scenario.
+        </p>
+        <p class="muted small">
+          Goal: demonstrate <em>structure + clarity</em> without exposing
+          company identity, sensitive operations, or security details.
+        </p>
+      </section>
 
-    <div class="card">
-      <h2>Convert “real doc” → “portfolio doc”</h2>
-      <ul>
-        <li>Rewrite into a generic scenario that demonstrates your structure.</li>
-        <li>Keep the “thinking” (decision points, verification) without exposing systems.</li>
-        <li>Add a footer watermark: “Sanitized portfolio sample — not operational guidance.”</li>
-      </ul>
-    </div>
+      <section class="section" aria-label="Rule zero">
+        <div class="card">
+          <h2>Rule 0 — Permission and ownership</h2>
+          <ul>
+            <li>
+              <strong>Assume you cannot publish internal documentation</strong>
+              unless you have explicit permission or your employer policy allows
+              it.
+            </li>
+            <li>
+              If your employer policy forbids sharing work artifacts (even
+              sanitized), <strong>do not publish</strong>—use original samples
+              instead.
+            </li>
+            <li>
+              Employers typically own work produced during employment; sharing
+              it publicly can still be a problem even if you wrote it.
+            </li>
+          </ul>
 
-    <div class="card">
-      <h2>Employer policy check</h2>
-      <p class="muted small">If your employer has a policy that forbids using internal documentation (even sanitized), do not publish it.</p>
-    </div>
-  </main>
+          <details>
+            <summary>Safe alternatives</summary>
+            <ul>
+              <li>
+                Write original “generic but realistic” samples (like the docs on
+                this site).
+              </li>
+              <li>
+                Create case studies describing your approach and outcomes
+                without revealing proprietary details.
+              </li>
+              <li>
+                Contribute documentation to an open-source project (public and
+                verifiable).
+              </li>
+            </ul>
+          </details>
+        </div>
+      </section>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-      <span class="muted">Sanitization checklist</span>
-    </div>
-  </footer>
+      <section class="section" aria-label="Never publish list">
+        <div class="card">
+          <h2>Never publish (hard rules)</h2>
+          <ul>
+            <li>
+              Credentials, secrets, API keys, tokens, certificates, VPN configs,
+              private URLs, internal hostnames.
+            </li>
+            <li>
+              Network diagrams/topology that reveal real architecture, IP
+              ranges, firewall rules, or access paths.
+            </li>
+            <li>
+              Customer lists, site names, asset IDs, ticket IDs, internal
+              incident timelines tied to a real org.
+            </li>
+            <li>
+              Screenshots from proprietary tools/dashboards (SCADA, internal
+              monitoring, ticket systems), unless fully mocked.
+            </li>
+            <li>
+              Security procedures that could enable abuse (bypass methods,
+              “break glass” instructions, privileged workflows).
+            </li>
+            <li>
+              Personal data (PII) for anyone: names, emails, phone numbers,
+              addresses, employee IDs, etc.
+            </li>
+          </ul>
+        </div>
+      </section>
 
-  <script src="../assets/js/app.js"></script>
-</body>
+      <section class="section" aria-label="Sanitization steps">
+        <h2>Sanitization steps (before you publish)</h2>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>1) Remove identifiers</h3>
+            <ul>
+              <li>Company/customer names, sites, regions, asset IDs</li>
+              <li>Vendor/integrator identifiers if they narrow identity</li>
+              <li>Ticket/incident numbers, internal team names</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>2) Generalize parameters</h3>
+            <ul>
+              <li>
+                Thresholds, setpoints, limits, timeouts → use “X minutes” /
+                “within expected range”
+              </li>
+              <li>
+                Precise alarm texts → use examples that don’t match real strings
+              </li>
+              <li>
+                Exact tools/platform names → “monitoring dashboard” / “ticket
+                system”
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>3) Remove security detail</h3>
+            <ul>
+              <li>Access paths, roles, permissions</li>
+              <li>Escalation contacts and on-call routing</li>
+              <li>Any “how to exploit” information</li>
+            </ul>
+          </article>
+        </div>
+
+        <details>
+          <summary>PII check (people data)</summary>
+          <p class="muted small">
+            Treat personal data as sensitive by default. Remove or replace with
+            fictional placeholders.
+          </p>
+          <ul>
+            <li>Names, email addresses, phone numbers</li>
+            <li>Employee IDs / badge numbers</li>
+            <li>Locations more specific than necessary</li>
+            <li>Any combination that could re-identify a person</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>Screenshots and metadata</summary>
+          <ul>
+            <li>
+              Prefer <strong>recreated mock screenshots</strong> or diagrams.
+            </li>
+            <li>
+              If you must use an image: blur/remove all identifiers, time
+              ranges, URLs, and internal labels.
+            </li>
+            <li>
+              Check file metadata (filenames, author, comments) before
+              publishing.
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>“Real doc” → “portfolio doc” conversion</summary>
+          <ol class="compact">
+            <li>
+              Keep the structure (trigger, safety checks, steps, decisions,
+              verification).
+            </li>
+            <li>Rewrite the scenario to be generic but realistic.</li>
+            <li>
+              Replace system names with neutral placeholders (Subsystem A, Site
+              01, Monitoring Dashboard).
+            </li>
+            <li>
+              Remove unique operational fingerprints (exact alarm strings, exact
+              time windows, unique constraints).
+            </li>
+            <li>
+              Add a disclaimer header:
+              <strong
+                >“Sanitized portfolio sample — not operational
+                guidance.”</strong
+              >
+            </li>
+          </ol>
+        </details>
+      </section>
+
+      <section class="section" aria-label="Pre-publish QA">
+        <div class="card">
+          <h2>Pre-publish QA (fast pass)</h2>
+          <ol>
+            <li>
+              Search the page for company/site/vendor names and remove them.
+            </li>
+            <li>
+              Search for: <code>@</code>, <code>http</code>, <code>vpn</code>,
+              <code>token</code>, <code>key</code>, <code>password</code>,
+              <code>cert</code>, <code>ssh</code> and remove anything sensitive.
+            </li>
+            <li>Confirm there are no screenshots from real internal tools.</li>
+            <li>
+              Confirm escalation contacts are generic roles (not real
+              names/phones/emails).
+            </li>
+            <li>
+              Confirm the doc still “works” as a sample: clear steps, decisions,
+              verification.
+            </li>
+          </ol>
+
+          <details>
+            <summary>
+              Repo safety (avoid publishing secrets by accident)
+            </summary>
+            <p class="muted small">
+              Use tooling and habits that reduce accidental secret exposure in
+              Git repos.
+            </p>
+            <ul>
+              <li>Never commit files with credentials/secrets.</li>
+              <li>
+                Consider a secret scanner in your workflow before pushing public
+                changes.
+              </li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <section class="section" aria-label="If asked for private samples">
+        <div class="card">
+          <h2>If a hiring manager asks for “real samples”</h2>
+          <ul>
+            <li>
+              Offer a sanitized version or an original sample written
+              specifically for them.
+            </li>
+            <li>
+              If they need a format match (Confluence/Document360/Zendesk),
+              provide the same content in that structure.
+            </li>
+            <li>
+              If confidentiality is strict, provide a
+              <strong>case study</strong> of your process and outcomes without
+              files.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" aria-label="Disclaimer">
+        <div class="callout">
+          <strong>Note:</strong> This is a practical checklist, not legal
+          advice. When unsure, default to “don’t publish.”
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">
+          <a href="style-guide.html">Style guide</a> ·
+          <a href="portfolio.html">Portfolio</a> ·
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
 </html>

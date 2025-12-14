@@ -1,94 +1,279 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio | MRR Docs</title>
-  <link rel="stylesheet" href="../assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="../index.html">MRR Docs</a>
-      <nav class="nav">
-        <a href="portfolio.html">Portfolio</a>
-        <a href="resume.html">Resume</a>
-        <a href="style-guide.html">Style Guide</a>
-        <a href="sanitization.html">Sanitization</a>
-        <a href="changelog.html">Changelog</a>
-        <a href="contact.html" class="button">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Portfolio | Rutter-Reese</title>
+    <meta
+      name="description"
+      content="Portfolio samples organized by runbooks, SOPs, and troubleshooting. Sanitized examples that demonstrate structure and clarity."
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
 
-  <main class="container">
-    <h1 class="section-title">Portfolio</h1>
-    <p class="kicker">3 core categories. Each item has a short “context” + the document preview or link.</p>
+  <body data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <hr />
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="portfolio.html" aria-current="page">Portfolio</a>
+          <a href="resume.html">Resume</a>
+          <a href="style-guide.html">Style guide</a>
+          <a href="sanitization.html">Sanitization</a>
+          <a href="contact.html" class="button">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-    <h2 id="runbooks">Runbooks</h2>
+    <main id="main" class="container">
+      <section class="hero">
+        <h1 class="section-title">Portfolio</h1>
+        <p class="lead">
+          Sanitized samples demonstrating operations documentation structure:
+          runbooks, SOPs, and troubleshooting guides. These are intentionally
+          generic—meant to show how I write, not reveal operational details.
+        </p>
 
-    <details open>
-      <summary>Runbook — Alarm Triage (Generic Example) <span class="badge">Runbook</span></summary>
-      <p class="small muted">
-        Audience: ROC/operator on shift. Goal: stabilize system, route escalation, verify recovery, capture closeout notes.
-        Sanitized and generic. Replace with your real-world (sanitized) version.
-      </p>
-      <p><a href="../docs/runbooks/alarm-triage-runbook.html">Open HTML version →</a></p>
-    </details>
+        <div class="pill-row" aria-label="Jump to categories">
+          <a class="pill" href="#runbooks">Runbooks</a>
+          <a class="pill" href="#sops">SOPs</a>
+          <a class="pill" href="#troubleshooting">Troubleshooting</a>
+          <a class="pill" href="#external">External previews</a>
+        </div>
 
-    <details>
-      <summary>Runbook — Communications Outage (Template) <span class="badge">Template</span></summary>
-      <p class="small muted">Template only. Add decision points + verification based on your environment.</p>
-      <p><a href="../docs/runbooks/comms-outage-runbook.html">Open →</a></p>
-    </details>
+        <p class="muted small">
+          If you want a specific format (Document360 / Confluence / Zendesk /
+          Markdown repo), say so and I’ll match it.
+        </p>
+      </section>
 
-    <hr />
+      <section class="section" id="runbooks" aria-label="Runbooks">
+        <h2>Runbooks</h2>
+        <p class="muted">
+          Incident-response docs: trigger → safety checks → steps → decision
+          points → escalation → verification → closeout.
+        </p>
 
-    <h2 id="sops">SOPs</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Alarm Triage Runbook <span class="badge">Runbook</span></h3>
+            <p class="muted">
+              Audience: operator/on-shift. Focus: stabilize quickly, make safe
+              actions, escalate cleanly, verify recovery.
+            </p>
+            <ul class="muted small">
+              <li>Clear “do first” safety checks</li>
+              <li>Decision points + escalation package</li>
+              <li>Closeout notes structure</li>
+            </ul>
+            <p>
+              <a class="link" href="../docs/runbooks/alarm-triage-runbook.html"
+                >Open sample →</a
+              >
+            </p>
+          </article>
 
-    <details open>
-      <summary>SOP — Weekly System Health Check (Generic Example) <span class="badge">SOP</span></summary>
-      <p class="small muted">
-        Purpose: consistent health checks + records. Includes prerequisites, steps, QC, and recordkeeping.
-      </p>
-      <p><a href="../docs/sops/weekly-health-check.html">Open →</a></p>
-    </details>
+          <article class="card">
+            <h3>
+              Communications Outage Runbook <span class="badge">Runbook</span>
+            </h3>
+            <p class="muted">
+              Scope triage: single site vs widespread. Least-risk recovery
+              actions. Escalation package + verification.
+            </p>
+            <ul class="muted small">
+              <li>Scope triage checklist</li>
+              <li>Heuristics (local vs upstream)</li>
+              <li>Verification criteria</li>
+            </ul>
+            <p>
+              <a class="link" href="../docs/runbooks/comms-outage-runbook.html"
+                >Open sample →</a
+              >
+            </p>
+          </article>
 
-    <hr />
+          <article class="card">
+            <h3>Runbook Templates <span class="badge">Template</span></h3>
+            <p class="muted">
+              A standardized runbook layout for consistent triage and escalation
+              across incidents.
+            </p>
+            <details>
+              <summary>What’s included</summary>
+              <ul class="muted small">
+                <li>Trigger + goal + inputs</li>
+                <li>Safety checks</li>
+                <li>Steps + decisions + escalation</li>
+                <li>Verification + closeout</li>
+              </ul>
+            </details>
+            <p class="muted small">
+              If you want, I can add a “copy/paste” blank template page next.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <h2 id="troubleshooting">Troubleshooting</h2>
+      <section class="section" id="sops" aria-label="SOPs">
+        <h2>SOPs</h2>
+        <p class="muted">
+          Routine processes: purpose → prerequisites → procedure → quality
+          checks → records.
+        </p>
 
-    <details open>
-      <summary>Troubleshooting — Network/Power Failover Triage (Generic Example) <span class="badge">Troubleshooting</span></summary>
-      <p class="small muted">Symptom → checks → fix → verify. Written for speed under pressure.</p>
-      <p><a href="../docs/troubleshooting/network-power-failover.html">Open →</a></p>
-    </details>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Weekly System Health Check <span class="badge">SOP</span></h3>
+            <p class="muted">
+              Weekly monitoring + recordkeeping SOP designed to support trends,
+              follow-ups, and accountability.
+            </p>
+            <ul class="muted small">
+              <li>Procedure + QC criteria</li>
+              <li>Weekly log template</li>
+              <li>Owner + due-date follow-ups</li>
+            </ul>
+            <p>
+              <a class="link" href="../docs/sops/weekly-health-check.html"
+                >Open sample →</a
+              >
+            </p>
+          </article>
 
-    <hr />
+          <article class="card">
+            <h3>Additional SOP Slots <span class="badge">Placeholder</span></h3>
+            <p class="muted">
+              When you’re ready, add 1–2 more SOPs (onboarding checklist,
+              maintenance workflow, ticket hygiene).
+            </p>
+            <details>
+              <summary>Suggested next SOPs</summary>
+              <ul class="muted small">
+                <li>Onboarding / access request workflow</li>
+                <li>Shift turnover checklist</li>
+                <li>Weekly reporting / KPI extraction</li>
+              </ul>
+            </details>
+          </article>
 
-    <h2 id="links">External previews (Drive/OneDrive)</h2>
-    <p class="muted small">
-      Paste your “view-only” preview links below. Embedded previews sometimes fail due to browser/security settings.
-      Do not publish proprietary/confidential information.
-    </p>
+          <article class="card">
+            <h3>Process Checklists <span class="badge">Checklist</span></h3>
+            <p class="muted">
+              Short checklists that support SOP adherence and reduce missed
+              steps.
+            </p>
+            <p class="muted small">
+              Optional: add a printable checklist page for each SOP.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <details>
-      <summary>Sample — Embedded preview placeholder <span class="badge">Embed</span></summary>
-      <p class="small muted">Replace iframe src with your share link's embed/preview URL.</p>
-      <iframe class="embed no-ctx" src="about:blank" title="Preview placeholder"></iframe>
-      <p class="small muted">If the preview doesn’t load, provide a normal view link instead.</p>
-    </details>
-  </main>
+      <section
+        class="section"
+        id="troubleshooting"
+        aria-label="Troubleshooting"
+      >
+        <h2>Troubleshooting</h2>
+        <p class="muted">
+          Symptoms → fast checks → decision tree → recovery → verification.
+        </p>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-      <span class="muted">Portfolio categories: runbooks / SOPs / troubleshooting</span>
-    </div>
-  </footer>
+        <div class="grid-3">
+          <article class="card">
+            <h3>
+              Network / Power Failover Triage
+              <span class="badge">Troubleshooting</span>
+            </h3>
+            <p class="muted">
+              Generic triage guide for “telemetry offline / flapping” incidents
+              where root cause may be network, power, or failover behavior.
+            </p>
+            <ul class="muted small">
+              <li>2-minute fast checks</li>
+              <li>Decision tree + heuristics</li>
+              <li>Escalation package template</li>
+            </ul>
+            <p>
+              <a
+                class="link"
+                href="../docs/troubleshooting/network-power-failover.html"
+                >Open sample →</a
+              >
+            </p>
+          </article>
 
-  <script src="../assets/js/app.js"></script>
-</body>
+          <article class="card">
+            <h3>
+              Future Troubleshooting Slots
+              <span class="badge">Placeholder</span>
+            </h3>
+            <p class="muted">
+              Add 1–2 more (authentication failures, data-quality issues,
+              “command rejected” cases).
+            </p>
+            <details>
+              <summary>Suggested next guides</summary>
+              <ul class="muted small">
+                <li>“Auth / token expired” triage</li>
+                <li>“Data stale but device online” triage</li>
+                <li>“Command timed out / rejected” triage</li>
+              </ul>
+            </details>
+          </article>
+
+          <article class="card">
+            <h3>KB Article Format <span class="badge">KB</span></h3>
+            <p class="muted">
+              Same troubleshooting content, rewritten as a searchable
+              help-center article.
+            </p>
+            <p class="muted small">Optional: we add a KB sample page next.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="external" aria-label="External previews">
+        <h2>External previews (Drive / OneDrive)</h2>
+        <p class="muted small">
+          Add view-only links below as needed. Embedded previews can fail
+          depending on browser/security settings. Publishing is sanitized only.
+        </p>
+
+        <details>
+          <summary>
+            Embedded preview placeholder <span class="badge">Embed</span>
+          </summary>
+          <p class="small muted">
+            Replace <code>src</code> with an embed/preview URL (not a download
+            link).
+          </p>
+          <iframe
+            class="embed no-ctx"
+            src="about:blank"
+            title="Preview placeholder"
+          ></iframe>
+          <p class="small muted">
+            If embed fails, use a normal view link instead.
+          </p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">
+          Family: <a href="family.html">Hub</a> ·
+          <a href="accounting.html">Christine (Accounting)</a> ·
+          <a href="it.html">Richie (IT)</a>
+        </span>
+      </div>
+    </footer>
+
+    <script src="../assets/js/app.js"></script>
+  </body>
 </html>
