@@ -1,3 +1,4 @@
+<!-- pages/it.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,16 +9,20 @@
       name="description"
       content="Richie — IT track. Contact for IT/networking support inquiries."
     />
+
     <meta property="og:title" content="Richie | IT" />
     <meta
       property="og:description"
       content="IT track: networking and IT support inquiries."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rutter-reese.com/pages/it.html" />
+
+    <link rel="canonical" href="https://rutter-reese.com/pages/it.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="it">
+  <body data-theme="it" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -26,15 +31,13 @@
 
         <nav class="nav" aria-label="Primary">
           <a href="it.html" aria-current="page">IT</a>
-          <a href="#about">About</a>
-          <a href="#focus">Focus</a>
-          <a href="#contact" class="button">Contact</a>
+          <a href="family.html">Family hub</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
+      <section class="hero" aria-label="IT landing">
         <h1 class="section-title">Richie</h1>
         <p class="lead">
           IT track (remote). Networking and IT support inquiries.
@@ -48,7 +51,9 @@
         </div>
 
         <div class="cta-row">
-          <a class="button" href="mailto:it@rutter-reese.com"
+          <a
+            class="button"
+            href="mailto:it@rutter-reese.com?subject=IT%20support%20inquiry"
             >Email: it@rutter-reese.com</a
           >
           <a class="button secondary" href="family.html">Family hub</a>
@@ -60,71 +65,47 @@
         </p>
       </section>
 
-      <section id="about" class="section" aria-label="About Richie">
-        <h2>About</h2>
-        <div class="card">
-          <p class="muted">
-            Replace this with a short summary: current role/experience, target
-            roles, and the kinds of problems you solve (end-user support,
-            small-network troubleshooting, basic administration).
-          </p>
-        </div>
-      </section>
-
-      <section id="focus" class="section" aria-label="Focus">
+      <section class="section" aria-label="Services summary">
         <h2>Focus</h2>
+
         <div class="grid-3">
           <article class="card">
-            <h3>Networking fundamentals</h3>
+            <h3>Network troubleshooting</h3>
             <p class="muted">
-              Switching/routing basics, VLAN concepts, and structured
-              troubleshooting.
+              Structured triage for connectivity issues and basic LAN/Wi-Fi
+              problems.
             </p>
           </article>
 
           <article class="card">
-            <h3>Remote-friendly support</h3>
+            <h3>End-user support</h3>
             <p class="muted">
-              Clear tickets, clean notes, and repeatable fixes.
+              Clear tickets, clean notes, and repeatable fixes for common
+              issues.
             </p>
           </article>
 
           <article class="card">
             <h3>Documentation</h3>
             <p class="muted">
-              SOPs and checklists so the same issue gets solved faster next
+              SOPs and checklists so recurring issues get resolved faster next
               time.
             </p>
           </article>
         </div>
-      </section>
 
-      <section id="contact" class="section" aria-label="Contact Richie">
-        <h2>Contact</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Email</h3>
-            <p>
-              <a class="link" href="mailto:it@rutter-reese.com"
-                >it@rutter-reese.com</a
-              >
-            </p>
-            <p class="muted small">Suggested subject: “IT support inquiry”.</p>
-          </article>
-
-          <article class="card">
-            <h3>Family hub</h3>
-            <p class="muted">Deliberate navigation to other pages.</p>
-            <p><a class="link" href="family.html">Open hub</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Status</h3>
-            <p class="muted">
-              This page is a placeholder until resume/portfolio links are added.
-            </p>
-          </article>
+        <div class="card">
+          <h3>Scope note</h3>
+          <p class="muted" style="margin-bottom: 0">
+            This page is intentionally brief. Email the environment (home /
+            small business), issue summary, and any constraints to confirm scope
+            and fit.
+          </p>
         </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
       </section>
     </main>
 

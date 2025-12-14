@@ -1,16 +1,21 @@
-# Tech Writer Portfolio Site Skeleton
+# Rutter-Reese Portfolio Site (Static)
 
-This is a lightweight static site skeleton for a technical writing portfolio.
+Lightweight static portfolio site for operations-focused technical writing.
 
-## How to run locally
-- Open the folder in VS Code.
-- Use any simple static server (e.g., VS Code Live Server extension) or `python -m http.server`.
+## What this is
 
-## Deploy (Cloudflare Pages)
-- Create a GitHub repo and push this folder.
-- In Cloudflare Pages: Create project → Connect to GitHub repo → Framework preset: None → Build command: (none) → Output directory: `/`.
+- Plain HTML/CSS/JS (no framework)
+- Hosted on Cloudflare Pages (Git integration)
+- Single shared stylesheet: `assets/css/styles.css`
+- Theme accents via `body[data-theme]`: `writing` (blue), `accounting` (green), `it` (purple)
+- Small JS helper: `assets/js/app.js` (footer year, aria-current, theme fallback, right-click disabled only on embeds)
 
-## Customize
-- Replace placeholder email and resume PDF.
-- Add real (sanitized) documents into `/docs/`.
+## Local dev
 
+Any static server works.
+
+### Option A: Python (recommended)
+
+```bash
+python -m http.server 8000
+```

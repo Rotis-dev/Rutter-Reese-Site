@@ -1,21 +1,26 @@
+<!-- pages/portfolio.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>Portfolio | Rutter-Reese</title>
+    <title>Portfolio | Matt Rutter-Reese</title>
     <meta
       name="description"
-      content="Sanitized portfolio samples organized by runbooks, SOPs, and troubleshooting. Demonstrates structure and clarity, not operational details."
+      content="Portfolio links and sanitized writing samples: runbooks, SOPs, and troubleshooting guides."
     />
 
-    <meta property="og:title" content="Portfolio | Rutter-Reese" />
+    <meta property="og:title" content="Portfolio | Matt Rutter-Reese" />
     <meta
       property="og:description"
-      content="Sanitized ops documentation samples: runbooks, SOPs, troubleshooting guides."
+      content="Portfolio links and sanitized ops documentation samples: runbooks, SOPs, troubleshooting guides."
     />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://rutter-reese.com/pages/portfolio.html"
+    />
 
     <link
       rel="canonical"
@@ -24,7 +29,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="writing">
+  <body id="top" data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -34,61 +39,177 @@
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html" aria-current="page">Portfolio</a>
           <a href="resume.html">Resume</a>
-          <a href="style-guide.html">Style guide</a>
-          <a href="sanitization.html">Sanitization</a>
+          <a href="process.html">Process</a>
           <a href="contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
+      <section class="hero" aria-label="Portfolio overview">
         <h1 class="section-title">Portfolio</h1>
-
         <p class="lead">
-          Sanitized samples demonstrating operations documentation structure:
-          runbooks, SOPs, and troubleshooting guides. These are intentionally
-          generic—meant to show how I write, not reveal operational details.
+          Start with the links below. Sanitized HTML samples are also included
+          to show structure and clarity (not operational details).
         </p>
 
-        <div class="pill-row" aria-label="Jump to categories">
-          <a class="pill" href="#runbooks">Runbooks</a>
-          <a class="pill" href="#sops">SOPs</a>
-          <a class="pill" href="#troubleshooting">Troubleshooting</a>
-          <a class="pill" href="#external">External previews</a>
+        <div class="pill-row" aria-label="Jump links">
+          <a class="pill" href="#primary">Portfolio links</a>
+          <a class="pill" href="#samples">Sanitized samples</a>
+          <a class="pill" href="#planned">Planned additions</a>
+        </div>
+
+        <div class="cta-row">
+          <a class="button" href="#primary">Open portfolio links</a>
+          <a class="button secondary" href="#samples">View samples</a>
         </div>
 
         <p class="muted small">
-          Want a specific format (Document360 / Confluence / Zendesk / Markdown
-          repo)? Say so and I’ll match it.
-        </p>
-
-        <p class="muted small">
-          All samples follow a consistent structure. See the
-          <a href="style-guide.html">Style guide</a> and
-          <a href="sanitization.html">Sanitization checklist</a>.
+          Governance (style guide, sanitization, changelog) lives under
+          <a class="link" href="process.html">Process</a>.
         </p>
       </section>
 
-      <section class="section" id="runbooks" aria-label="Runbooks">
-        <h2>Runbooks</h2>
+      <!-- =========================
+           PRIMARY: PORTFOLIO LINKS
+           ========================= -->
+      <section
+        class="section"
+        id="primary"
+        aria-label="Primary portfolio links"
+      >
+        <h2>Portfolio links</h2>
         <p class="muted">
-          Incident-response docs: trigger → safety checks → steps → decision
-          points → escalation → verification → closeout.
+          These are the primary artifacts. Some links are placeholders until the
+          final OneDrive/PDF links are ready.
         </p>
 
         <div class="grid-3">
           <article class="card">
-            <h3>Alarm Triage Runbook <span class="badge">Runbook</span></h3>
+            <h3>Portfolio PDF</h3>
             <p class="muted">
-              Audience: operator/on-shift. Focus: stabilize quickly, make safe
-              actions, escalate cleanly, verify recovery.
+              One document for fast review (summary + selected samples).
             </p>
-            <ul class="muted small">
-              <li>“Do first” safety checks</li>
-              <li>Decision points + escalation package</li>
-              <li>Closeout notes structure</li>
-            </ul>
+            <p>
+              <a
+                class="link"
+                href="https://example.com/portfolio.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open PDF (placeholder) →</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Runbook package PDF</h3>
+            <p class="muted">
+              Compact runbook set exported to PDF for easy scanning.
+            </p>
+            <p>
+              <a
+                class="link"
+                href="https://example.com/runbook-package.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open PDF (placeholder) →</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>SOP package PDF</h3>
+            <p class="muted">
+              SOP + checklist examples exported to PDF for hiring manager
+              review.
+            </p>
+            <p>
+              <a
+                class="link"
+                href="https://example.com/sop-package.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open PDF (placeholder) →</a
+              >
+            </p>
+          </article>
+        </div>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Case study (rewrite)</h3>
+            <p class="muted">
+              Before/after write-up describing outcomes without exposing
+              internals.
+            </p>
+            <p>
+              <a
+                class="link"
+                href="https://example.com/case-study-rewrite"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open (placeholder) →</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Open-source docs contribution</h3>
+            <p class="muted">
+              Public artifact demonstrating docs-as-code workflow (optional).
+            </p>
+            <p>
+              <a
+                class="link"
+                href="https://example.com/open-source-docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open (placeholder) →</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Site repository</h3>
+            <p class="muted">
+              Source for this site (useful for reviewers who care about
+              versioning).
+            </p>
+            <p>
+              <a
+                class="link"
+                href="https://github.com/Rotis-dev/rutter-reese-site"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Open GitHub →</a
+              >
+            </p>
+          </article>
+        </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
+      </section>
+
+      <!-- =========================
+           SECONDARY: HTML SAMPLES
+           ========================= -->
+      <section class="section" id="samples" aria-label="Sanitized samples">
+        <h2>Sanitized samples</h2>
+        <p class="muted">
+          Sanitized, generic HTML pages intended to demonstrate structure, step
+          quality, decision points, escalation logic, and verification criteria.
+        </p>
+
+        <h3 class="section-title" style="margin-top: 1rem">Runbooks</h3>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Alarm Triage Runbook</h3>
+            <p class="muted">
+              Trigger → checks → actions → decisions → escalation →
+              verification.
+            </p>
             <p>
               <a class="link" href="../docs/runbooks/alarm-triage-runbook.html"
                 >Open sample →</a
@@ -97,18 +218,10 @@
           </article>
 
           <article class="card">
-            <h3>
-              Communications Outage Runbook <span class="badge">Runbook</span>
-            </h3>
+            <h3>Comms Outage Runbook</h3>
             <p class="muted">
-              Scope triage (single site vs widespread). Least-risk recovery
-              actions. Escalation package + verification.
+              Scope isolation, comms checks, fallback actions, closeout notes.
             </p>
-            <ul class="muted small">
-              <li>Scope triage checklist</li>
-              <li>Heuristics (local vs upstream)</li>
-              <li>Verification criteria</li>
-            </ul>
             <p>
               <a class="link" href="../docs/runbooks/comms-outage-runbook.html"
                 >Open sample →</a
@@ -117,48 +230,23 @@
           </article>
 
           <article class="card">
-            <h3>Runbook Templates <span class="badge">Template</span></h3>
+            <h3>Runbook template</h3>
             <p class="muted">
-              Standardized runbook layout to keep triage, escalation, and
-              verification consistent across incidents.
+              Planned: copy/paste template page matching the runbook structure.
             </p>
-
-            <details>
-              <summary>What’s included</summary>
-              <ul class="muted small">
-                <li>Trigger + goal + inputs</li>
-                <li>Safety checks</li>
-                <li>Steps + decisions + escalation</li>
-                <li>Verification + closeout</li>
-              </ul>
-            </details>
-
-            <p class="muted small">
-              Optional next: add a “blank template” page for copy/paste.
+            <p class="muted small" style="margin-bottom: 0">
+              See <a class="link" href="#planned">Planned additions</a>.
             </p>
           </article>
         </div>
-      </section>
 
-      <section class="section" id="sops" aria-label="SOPs">
-        <h2>SOPs</h2>
-        <p class="muted">
-          Routine processes: purpose → prerequisites → procedure → quality
-          checks → records.
-        </p>
-
+        <h3 class="section-title" style="margin-top: 1.5rem">SOPs</h3>
         <div class="grid-3">
           <article class="card">
-            <h3>Weekly System Health Check <span class="badge">SOP</span></h3>
+            <h3>Weekly System Health Check SOP</h3>
             <p class="muted">
-              Weekly monitoring + recordkeeping SOP designed to support trends,
-              follow-ups, and accountability.
+              Routine procedure with acceptance criteria and recordkeeping.
             </p>
-            <ul class="muted small">
-              <li>Procedure + QC criteria</li>
-              <li>Recordkeeping expectations</li>
-              <li>Owner + due-date follow-ups</li>
-            </ul>
             <p>
               <a class="link" href="../docs/sops/weekly-health-check.html"
                 >Open sample →</a
@@ -167,59 +255,36 @@
           </article>
 
           <article class="card">
-            <h3>Additional SOP Slots <span class="badge">Placeholder</span></h3>
+            <h3>Additional SOPs</h3>
             <p class="muted">
-              Add 1–2 more SOPs when ready (onboarding checklist, maintenance
-              workflow, ticket hygiene).
+              Planned: 1–2 additional real SOPs (onboarding, turnover,
+              reporting).
             </p>
-            <details>
-              <summary>Suggested next SOPs</summary>
-              <ul class="muted small">
-                <li>Onboarding / access request workflow</li>
-                <li>Shift turnover checklist</li>
-                <li>Weekly reporting / KPI extraction</li>
-              </ul>
-            </details>
+            <p class="muted small" style="margin-bottom: 0">
+              See <a class="link" href="#planned">Planned additions</a>.
+            </p>
           </article>
 
           <article class="card">
-            <h3>Process Checklists <span class="badge">Checklist</span></h3>
+            <h3>Checklist formats</h3>
             <p class="muted">
-              Short checklists that support SOP adherence and reduce missed
-              steps.
+              Planned: printable checklists that pair with SOPs.
             </p>
-            <p class="muted small">
-              Optional: add a printable checklist page per SOP.
+            <p class="muted small" style="margin-bottom: 0">
+              See <a class="link" href="#planned">Planned additions</a>.
             </p>
           </article>
         </div>
-      </section>
 
-      <section
-        class="section"
-        id="troubleshooting"
-        aria-label="Troubleshooting"
-      >
-        <h2>Troubleshooting</h2>
-        <p class="muted">
-          Symptoms → fast checks → decision tree → recovery → verification.
-        </p>
-
+        <h3 class="section-title" style="margin-top: 1.5rem">
+          Troubleshooting
+        </h3>
         <div class="grid-3">
           <article class="card">
-            <h3>
-              Network / Power Failover Triage
-              <span class="badge">Troubleshooting</span>
-            </h3>
+            <h3>Network + Power Failover Triage</h3>
             <p class="muted">
-              Generic triage guide for “telemetry offline / flapping” incidents
-              where root cause may be network, power, or failover behavior.
+              Symptoms → fast checks → decision tree → recovery → verification.
             </p>
-            <ul class="muted small">
-              <li>2-minute fast checks</li>
-              <li>Decision tree + heuristics</li>
-              <li>Escalation package structure</li>
-            </ul>
             <p>
               <a
                 class="link"
@@ -230,65 +295,65 @@
           </article>
 
           <article class="card">
-            <h3>
-              Future Troubleshooting Slots
-              <span class="badge">Placeholder</span>
-            </h3>
+            <h3>Additional troubleshooting</h3>
             <p class="muted">
-              Add 1–2 more (authentication failures, data-quality issues,
-              “command rejected” cases).
+              Planned: 1–2 more (auth failures, data-quality issues, command
+              rejected).
             </p>
-            <details>
-              <summary>Suggested next guides</summary>
-              <ul class="muted small">
-                <li>“Auth / token expired” triage</li>
-                <li>“Data stale but device online” triage</li>
-                <li>“Command timed out / rejected” triage</li>
-              </ul>
-            </details>
+            <p class="muted small" style="margin-bottom: 0">
+              See <a class="link" href="#planned">Planned additions</a>.
+            </p>
           </article>
 
           <article class="card">
-            <h3>KB Article Format <span class="badge">KB</span></h3>
+            <h3>KB-style rewrite</h3>
             <p class="muted">
-              Same troubleshooting content, rewritten as a searchable
-              help-center article.
+              Planned: one sample rewritten into a help-center/KB layout.
             </p>
-            <p class="muted small">Optional next: add a KB sample page.</p>
+            <p class="muted small" style="margin-bottom: 0">
+              See <a class="link" href="#planned">Planned additions</a>.
+            </p>
           </article>
         </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
       </section>
 
-      <section class="section" id="external" aria-label="External previews">
-        <h2>External previews (Drive / OneDrive)</h2>
-        <p class="muted small">
-          Add view-only links below as needed. Embedded previews can fail
-          depending on browser/security settings. Publish sanitized content
-          only.
+      <!-- =========================
+           PLANNED
+           ========================= -->
+      <section class="section" id="planned" aria-label="Planned additions">
+        <h2>Planned additions</h2>
+        <p class="muted">
+          Short list. Added as real artifacts become available.
         </p>
 
-        <details>
-          <summary>
-            Embedded preview placeholder <span class="badge">Embed</span>
-          </summary>
-          <p class="small muted">
-            Replace <code>src</code> with an embed/preview URL (not a download
-            link).
-          </p>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Runbook template page</h3>
+            <p class="muted">
+              Copy/paste template that matches the runbook structure used on the
+              site.
+            </p>
+          </article>
 
-          <!-- Optional: add sandbox once you confirm your embed still works.
-               sandbox can reduce iframe capabilities but may break previews. -->
-          <iframe
-            class="embed no-ctx"
-            src="about:blank"
-            title="Preview placeholder"
-            loading="lazy"
-          ></iframe>
+          <article class="card">
+            <h3>KB-style sample</h3>
+            <p class="muted">
+              One troubleshooting guide rewritten into a help-center/KB format.
+            </p>
+          </article>
 
-          <p class="small muted">
-            If embed fails, use a normal view link instead.
-          </p>
-        </details>
+          <article class="card">
+            <h3>More real SOPs</h3>
+            <p class="muted">
+              Onboarding, shift turnover, ticket hygiene, and a weekly reporting
+              workflow.
+            </p>
+          </article>
+        </div>
 
         <p class="muted small" style="margin-top: 0.75rem">
           <a class="link" href="#top">Back to top</a>
@@ -300,9 +365,7 @@
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
         <span class="muted small">
-          Family: <a href="family.html">Hub</a> ·
-          <a href="accounting.html">Christine (Accounting)</a> ·
-          <a href="it.html">Richie (IT)</a>
+          <a href="family.html">Family hub</a>
         </span>
       </div>
     </footer>

@@ -1,19 +1,24 @@
+<!-- pages/style-guide.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Style Guide | Rutter-Reese</title>
+    <title>Style Guide | Matt Rutter-Reese</title>
     <meta
       name="description"
       content="Ops documentation style guide for runbooks, SOPs, and troubleshooting: structure, procedures, decision points, warnings, verification, and versioning."
     />
-    <meta property="og:title" content="Style Guide | Rutter-Reese" />
+    <meta property="og:title" content="Style Guide | Matt Rutter-Reese" />
     <meta
       property="og:description"
       content="Ops documentation style guide for runbooks, SOPs, and troubleshooting: structure, procedures, decision points, warnings, verification, and versioning."
     />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://rutter-reese.com/pages/style-guide.html"
+    />
 
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link
@@ -31,16 +36,15 @@
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html">Portfolio</a>
           <a href="resume.html">Resume</a>
-          <a href="style-guide.html" aria-current="page">Style guide</a>
-          <a href="sanitization.html">Sanitization</a>
+          <a href="process.html">Process</a>
           <a href="contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
-        <h1 class="section-title">Style Guide (Ops Docs)</h1>
+      <section class="hero" aria-label="Style guide intro">
+        <h1 class="section-title">Style Guide</h1>
         <p class="lead">
           Rules that keep documentation consistent, auditable, and fast to use
           under pressure. Built for runbooks, SOPs, and troubleshooting guides.
@@ -58,9 +62,8 @@
         </div>
 
         <p class="muted small">
-          Related:
-          <a class="link" href="sanitization.html">Sanitization checklist</a> ·
-          <a class="link" href="portfolio.html">Portfolio</a>
+          This page is part of <a href="process.html">Process</a>. For writing
+          samples, go to <a href="portfolio.html">Portfolio</a>.
         </p>
       </section>
 
@@ -125,7 +128,7 @@
                   <strong>Closeout notes</strong> (what happened / what you did
                   / follow-ups)
                 </li>
-                <li><strong>Changelog</strong></li>
+                <li><strong>Changes</strong> (short changelog)</li>
               </ol>
             </details>
           </article>
@@ -149,7 +152,7 @@
                   <strong>Quality checks</strong> (pass/fail completeness)
                 </li>
                 <li><strong>Records</strong> (what to log + where)</li>
-                <li><strong>Changelog</strong></li>
+                <li><strong>Changes</strong> (short changelog)</li>
               </ol>
             </details>
           </article>
@@ -169,7 +172,7 @@
                 <li><strong>Recovery steps</strong> (least-risk first)</li>
                 <li><strong>Escalation package</strong> (copy/paste)</li>
                 <li><strong>Verification</strong> (clear pass/fail)</li>
-                <li><strong>Changelog</strong></li>
+                <li><strong>Changes</strong> (short changelog)</li>
               </ol>
             </details>
           </article>
@@ -183,8 +186,7 @@
           <article class="card">
             <h3>Use imperative steps</h3>
             <p class="muted">
-              Steps should be action-first and clear. Start with a verb:
-              “Open…”, “Verify…”, “Record…”.
+              Start with a verb: “Open…”, “Verify…”, “Record…”.
             </p>
           </article>
 
@@ -192,15 +194,14 @@
             <h3>One step = one action</h3>
             <p class="muted">
               Avoid “and” inside steps. Split steps so each action can be
-              checked off.
+              checked.
             </p>
           </article>
 
           <article class="card">
             <h3>Prefer lists over paragraphs</h3>
             <p class="muted">
-              If it’s a sequence, it’s a numbered list. If it’s options, it’s
-              bullets.
+              Sequences use numbered lists. Options use bullets.
             </p>
           </article>
         </div>
@@ -247,8 +248,8 @@
         <article class="card">
           <h3>Escalation package (copy/paste block)</h3>
           <p class="muted small">
-            Put this into every runbook/troubleshooting guide so escalation is
-            clean and fast.
+            Include this in runbooks and troubleshooting guides so escalation is
+            clean.
           </p>
           <pre><code>SUMMARY (1–2 lines):
 SCOPE (single site vs widespread):
@@ -269,8 +270,8 @@ REQUEST (what you want the receiver to do next):</code></pre>
           <article class="card">
             <h3>Write IF/THEN</h3>
             <p class="muted">
-              Each decision must lead to a specific next action (and ideally to
-              a named section).
+              Each decision must lead to a specific next action (ideally a named
+              section).
             </p>
           </article>
 
@@ -345,8 +346,8 @@ REQUEST (what you want the receiver to do next):</code></pre>
             <li>Callouts must be short and actionable.</li>
             <li>Put callouts immediately before the step they affect.</li>
             <li>
-              If the warning changes what the reader does, it belongs in the
-              steps or decision points.
+              If a warning changes what the reader does, it belongs in steps or
+              decisions.
             </li>
           </ul>
         </article>
@@ -360,15 +361,15 @@ REQUEST (what you want the receiver to do next):</code></pre>
             <h3>Verification is pass/fail</h3>
             <p class="muted">
               Define “done”: stable readings for 10 minutes, alarms cleared,
-              telemetry timestamps advancing, etc.
+              timestamps advancing, etc.
             </p>
           </article>
 
           <article class="card">
             <h3>Recordkeeping is part of the job</h3>
             <p class="muted">
-              Every runbook ends with closeout notes: what happened, what you
-              did, who you notified, follow-ups.
+              Closeout notes: what happened, what you did, who you notified,
+              follow-ups.
             </p>
           </article>
 
@@ -395,10 +396,10 @@ REQUEST (what you want the receiver to do next):</code></pre>
           </article>
 
           <article class="card">
-            <h3>Changelog</h3>
+            <h3>Changes block</h3>
             <p class="muted">
-              Keep a short changelog at the bottom: what changed and why (v0.1 →
-              v1.0).
+              Keep a short “Changes” section at the bottom of each doc: what
+              changed and why.
             </p>
           </article>
 
@@ -423,7 +424,7 @@ REQUEST (what you want the receiver to do next):</code></pre>
       <section class="section" id="references">
         <h2>Public references (optional)</h2>
         <p class="muted small">
-          These are public style guides that align with the rules above.
+          Public style guides that align with the rules above.
         </p>
 
         <div class="grid-3">
@@ -480,7 +481,7 @@ REQUEST (what you want the receiver to do next):</code></pre>
           </article>
 
           <article class="card">
-            <h3>Communities</h3>
+            <h3>Community</h3>
             <ul class="muted">
               <li>
                 <a
@@ -506,9 +507,7 @@ REQUEST (what you want the receiver to do next):</code></pre>
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
         <span class="muted small">
-          <a href="portfolio.html">Portfolio</a> ·
-          <a href="sanitization.html">Sanitization</a> ·
-          <a href="contact.html">Contact</a>
+          <a href="family.html">Family hub</a>
         </span>
       </div>
     </footer>

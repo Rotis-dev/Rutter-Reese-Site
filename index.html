@@ -35,19 +35,18 @@
         <nav class="nav" aria-label="Primary">
           <a href="pages/portfolio.html">Portfolio</a>
           <a href="pages/resume.html">Resume</a>
-          <a href="pages/style-guide.html">Style guide</a>
-          <a href="pages/sanitization.html">Sanitization</a>
+          <a href="pages/process.html">Process</a>
           <a href="pages/contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
+      <section class="hero" aria-label="Intro">
         <h1 class="section-title">Matt Rutter-Reese</h1>
         <p class="lead">
-          Operations-focused technical writing: runbooks, SOPs, troubleshooting
-          guides, checklists, and KB-style docs.
+          Ops-focused technical writing: runbooks, SOPs, troubleshooting guides,
+          checklists, and KB-style docs.
         </p>
 
         <div class="pill-row" aria-label="Specialties">
@@ -59,23 +58,61 @@
 
         <div class="cta-row">
           <a class="button" href="pages/portfolio.html">View portfolio</a>
+          <a class="button secondary" href="pages/contact.html">Contact</a>
           <a class="button secondary" href="mailto:writing@rutter-reese.com">
             Email: writing@rutter-reese.com
           </a>
         </div>
 
         <p class="muted small">
-          All samples are sanitized and intended to demonstrate structure and
-          clarity—not disclose operational details. See
-          <a href="pages/sanitization.html">Sanitization checklist</a>.
+          Looking for examples first? Start with
+          <a href="pages/portfolio.html">Portfolio</a>. Process notes (style
+          guide, sanitization, changelog) live under
+          <a href="pages/process.html">Process</a>.
         </p>
+      </section>
+
+      <section class="section" aria-label="Quick links">
+        <h2>Start here</h2>
+        <p class="muted">
+          Recruiter-friendly: portfolio first, then resume and contact.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Portfolio</h3>
+            <p class="muted">
+              Primary work samples organized by runbooks, SOPs, and
+              troubleshooting.
+            </p>
+            <p>
+              <a class="link" href="pages/portfolio.html">Open portfolio</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Resume</h3>
+            <p class="muted">
+              One-page resume and highlights (PDF links will be added later).
+            </p>
+            <p><a class="link" href="pages/resume.html">Open resume</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Contact</h3>
+            <p class="muted">
+              Email addresses and LinkedIn links in one place.
+            </p>
+            <p><a class="link" href="pages/contact.html">Open contact</a></p>
+          </article>
+        </div>
       </section>
 
       <section class="section" aria-label="Featured samples">
         <h2>Featured samples</h2>
         <p class="muted">
-          Short, scannable examples that show incident-response structure and
-          procedure clarity.
+          Sanitized examples that demonstrate structure and clarity under
+          pressure.
         </p>
 
         <div class="grid-3">
@@ -105,22 +142,6 @@
           </article>
 
           <article class="card">
-            <h3>Network + Power Failover Troubleshooting</h3>
-            <p class="muted">
-              Symptoms → quick checks → decision tree → restore/verify.
-            </p>
-            <p>
-              <a
-                class="link"
-                href="docs/troubleshooting/network-power-failover.html"
-                >Open sample</a
-              >
-            </p>
-          </article>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
             <h3>Weekly Health Check SOP</h3>
             <p class="muted">
               Routine inspection and logging with clear acceptance criteria.
@@ -131,92 +152,12 @@
               >
             </p>
           </article>
-
-          <article class="card">
-            <h3>Portfolio index</h3>
-            <p class="muted">
-              All samples organized by type (runbooks, SOPs, troubleshooting).
-            </p>
-            <p>
-              <a class="link" href="pages/portfolio.html">Open portfolio</a>
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>How I write</h3>
-            <p class="muted">
-              Rules for headings, steps, warnings, terminology, and revisions.
-            </p>
-            <p>
-              <a class="link" href="pages/style-guide.html">Open style guide</a>
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" aria-label="Approach">
-        <h2>Approach</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Operational clarity</h3>
-            <p class="muted">
-              Write for the moment someone is tired, busy, and under time
-              pressure.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Structure first</h3>
-            <p class="muted">
-              Consistent sections: trigger, safety checks, steps, decisions,
-              escalation, verification, closeout.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Iterate visibly</h3>
-            <p class="muted">
-              Versioned docs with small, readable changes. Stakeholders see
-              improvement, not churn.
-            </p>
-          </article>
         </div>
 
         <p class="muted small">
-          Runbooks are incident-response guides (alarm/incident happens → what
-          to do next).
+          Sanitization checklist and publishing rules are in
+          <a href="pages/process.html">Process</a>.
         </p>
-      </section>
-
-      <section class="section" aria-label="Contact">
-        <h2>Contact</h2>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Email</h3>
-            <p>
-              <a class="link" href="mailto:writing@rutter-reese.com"
-                >writing@rutter-reese.com</a
-              >
-            </p>
-            <p class="muted small">
-              Routed to my personal inbox via Cloudflare Email Routing.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Resume</h3>
-            <p class="muted">One-page resume + highlights.</p>
-            <p><a class="link" href="pages/resume.html">Open resume</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Sanitization</h3>
-            <p class="muted">Checklist applied before publishing any sample.</p>
-            <p>
-              <a class="link" href="pages/sanitization.html">Open checklist</a>
-            </p>
-          </article>
-        </div>
       </section>
     </main>
 
@@ -224,17 +165,7 @@
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
         <span class="muted small">
-          Family:
-          <a href="pages/family.html">Hub</a> ·
-          <a href="pages/accounting.html">Christine (Accounting)</a> ·
-          <a
-            href="https://www.linkedin.com/in/prado-christine-mae/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Christine LinkedIn</a
-          >
-          ·
-          <a href="pages/it.html">Richie (IT)</a>
+          <a href="pages/family.html">Family hub</a>
         </span>
       </div>
     </footer>

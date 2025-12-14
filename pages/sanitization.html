@@ -1,21 +1,33 @@
+<!-- pages/sanitization.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Sanitization Checklist | Rutter-Reese</title>
+    <title>Sanitization Checklist | Matt Rutter-Reese</title>
     <meta
       name="description"
       content="Sanitization checklist for publishing portfolio samples: permissions, redaction rules, what to never publish, and a pre-publish QA pass."
     />
-    <meta property="og:title" content="Sanitization Checklist | Rutter-Reese" />
+    <meta
+      property="og:title"
+      content="Sanitization Checklist | Matt Rutter-Reese"
+    />
     <meta
       property="og:description"
       content="Publish gate for portfolio samples: permissions, redaction, never-publish rules, and a pre-publish QA pass."
     />
     <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://rutter-reese.com/pages/sanitization.html"
+    />
 
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="canonical"
+      href="https://rutter-reese.com/pages/sanitization.html"
+    />
   </head>
 
   <body data-theme="writing" id="top">
@@ -27,20 +39,19 @@
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html">Portfolio</a>
           <a href="resume.html">Resume</a>
-          <a href="style-guide.html">Style guide</a>
-          <a href="sanitization.html" aria-current="page">Sanitization</a>
+          <a href="process.html">Process</a>
           <a href="contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero">
-        <h1 class="section-title">Sanitization Checklist</h1>
+      <section class="hero" aria-label="Sanitization intro">
+        <h1 class="section-title">Sanitization checklist</h1>
         <p class="lead">
-          This is the publish gate for anything derived from real operations.
-          Goal: demonstrate <strong>structure + clarity</strong> without
-          exposing identity, sensitive operations, or security details.
+          Publish gate for anything derived from real operations. Goal: show
+          <strong>structure + clarity</strong> without exposing identity,
+          sensitive operations, or security details.
         </p>
 
         <div class="pill-row" aria-label="Jump to sections">
@@ -53,8 +64,8 @@
         </div>
 
         <p class="muted small">
-          Samples on this site are intentionally generic. If in doubt: remove it
-          or rewrite it as a new scenario.
+          This page is part of <a href="process.html">Process</a>. If in doubt:
+          remove it or rewrite it as a new scenario.
         </p>
       </section>
 
@@ -64,15 +75,15 @@
         aria-label="Permission and ownership"
       >
         <div class="card">
-          <h2>Rule 0 — Permission and ownership</h2>
+          <h2>Rule 0 — permission and ownership</h2>
           <ul class="muted">
             <li>
               Assume you <strong>cannot publish internal documentation</strong>
-              unless your employer policy explicitly allows it.
+              unless employer policy explicitly allows it.
             </li>
             <li>
               Even if you wrote it, employers commonly own work created during
-              employment. Publishing may still violate policy or agreements.
+              employment.
             </li>
             <li>
               When unsure, publish an original sample that demonstrates your
@@ -128,10 +139,9 @@
             </li>
           </ul>
 
-          <p class="muted small">
-            If a sample contains PII, treat it as high risk and remove it. NIST
-            guidance emphasizes protecting PII from inappropriate
-            access/use/disclosure. :contentReference[oaicite:0]{index=0}
+          <p class="muted small" style="margin-bottom: 0">
+            If a sample contains PII, remove it. When unsure, default to “don’t
+            publish.”
           </p>
         </div>
       </section>
@@ -150,16 +160,11 @@
           </article>
 
           <article class="card">
-            <h3>2) Generalize parameters</h3>
+            <h3>2) Generalize specifics</h3>
             <ul class="muted">
-              <li>
-                Setpoints/thresholds/timeouts → “within expected range” / “X
-                minutes”
-              </li>
-              <li>
-                Exact alarm texts → examples that don’t match real strings
-              </li>
+              <li>Exact strings → examples that don’t match real systems</li>
               <li>Tool names → “monitoring dashboard” / “ticket system”</li>
+              <li>Exact thresholds → “within expected range” / “X minutes”</li>
             </ul>
           </article>
 
@@ -195,10 +200,9 @@
               >
             </li>
           </ol>
-          <p class="muted small">
-            Redaction/de-identification is a recognized approach for reducing
-            re-identification risk when sharing data.
-            :contentReference[oaicite:1]{index=1}
+          <p class="muted small" style="margin-bottom: 0">
+            If sanitization feels hard, write a new scenario from scratch. It’s
+            usually faster and safer.
           </p>
         </div>
       </section>
@@ -224,18 +228,14 @@
           </ol>
 
           <details>
-            <summary>Logging / copy-paste traps</summary>
+            <summary>Copy/paste traps</summary>
             <ul class="muted small">
               <li>
                 Don’t paste real URLs, hostnames, or system identifiers “as
                 examples.”
               </li>
               <li>Don’t include real alarm strings or exact query filters.</li>
-              <li>
-                Don’t include secrets in code blocks or configs—OWASP explicitly
-                warns against hardcoding secrets in repos/logs.
-                :contentReference[oaicite:2]{index=2}
-              </li>
+              <li>Don’t include secrets in code blocks or configs.</li>
             </ul>
           </details>
         </div>
@@ -247,13 +247,13 @@
           <ul class="muted">
             <li>Never commit secrets (even “temporary” ones).</li>
             <li>
-              Use automated checks where possible. GitHub push protection is
-              designed to block pushes that contain supported secrets.
-              :contentReference[oaicite:3]{index=3}
+              Keep samples generic—no real screenshots, URLs, or internal
+              identifiers.
             </li>
             <li>
-              Keep samples generic—no real tool screenshots, URLs, or internal
-              identifiers.
+              Optional safety habit: before you publish, search the repo for
+              <code>@</code>, <code>http</code>, <code>token</code>, and your
+              employer name.
             </li>
           </ul>
         </div>
@@ -285,7 +285,7 @@
 
         <div class="card">
           <h2>Disclaimer</h2>
-          <p class="muted">
+          <p class="muted" style="margin: 0">
             Practical guidance, not legal advice. When unsure, default to “don’t
             publish.”
           </p>
@@ -297,9 +297,7 @@
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
         <span class="muted small">
-          <a href="style-guide.html">Style guide</a> ·
-          <a href="portfolio.html">Portfolio</a> ·
-          <a href="contact.html">Contact</a>
+          <a href="family.html">Family hub</a>
         </span>
       </div>
     </footer>
