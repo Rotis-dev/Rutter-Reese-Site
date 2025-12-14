@@ -1,19 +1,19 @@
-<!-- pages/it.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Richie | IT</title>
     <meta
       name="description"
-      content="Richie — IT track. Contact for IT/networking support inquiries."
+      content="Richie Rutter-Reese — IT support (remote): networking, troubleshooting, and documentation."
     />
 
     <meta property="og:title" content="Richie | IT" />
     <meta
       property="og:description"
-      content="IT track: networking and IT support inquiries."
+      content="IT support (remote): networking, troubleshooting, and documentation."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rutter-reese.com/pages/it.html" />
@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="it" id="top">
+  <body id="top" data-theme="it">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -30,91 +30,74 @@
         <a class="brand" href="it.html" aria-label="IT home">Rutter-Reese</a>
 
         <nav class="nav" aria-label="Primary">
-          <a href="it.html" aria-current="page">IT</a>
-          <a href="family.html">Family hub</a>
+          <a href="it.html" aria-current="page">Home</a>
+          <a href="it-portfolio.html">Portfolio</a>
+          <a href="it-resume.html">Resume</a>
+          <a href="it-contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero" aria-label="IT landing">
+      <section class="hero" aria-label="Richie landing">
         <h1 class="section-title">Richie</h1>
         <p class="lead">
-          IT track (remote). Networking and IT support inquiries.
+          IT support (remote): networking, troubleshooting, and documentation.
         </p>
 
-        <div class="pill-row" aria-label="Focus areas">
-          <span class="pill">Networking</span>
-          <span class="pill">IT support</span>
-          <span class="pill">Troubleshooting</span>
-          <span class="pill">Documentation</span>
-        </div>
-
         <div class="cta-row">
-          <a
-            class="button"
-            href="mailto:it@rutter-reese.com?subject=IT%20support%20inquiry"
-            >Email: it@rutter-reese.com</a
-          >
-          <a class="button secondary" href="family.html">Family hub</a>
+          <a class="button" href="it-portfolio.html">View portfolio</a>
+          <a class="button secondary" href="it-contact.html">Contact</a>
         </div>
 
-        <p class="muted small">
-          Note: email forwarding destination for
-          <strong>it@rutter-reese.com</strong> is TBD.
+        <p class="small muted" style="margin-top:.9rem;">
+          Email routing: <a class="link" href="mailto:it@rutter-reese.com">it@rutter-reese.com</a> ·
+          LinkedIn: <span class="muted">Not active</span>
         </p>
       </section>
 
-      <section class="section" aria-label="Services summary">
-        <h2>Focus</h2>
+      <section class="section" aria-label="Focus areas">
+        <h2>Focus areas</h2>
 
         <div class="grid-3">
           <article class="card">
-            <h3>Network troubleshooting</h3>
-            <p class="muted">
-              Structured triage for connectivity issues and basic LAN/Wi-Fi
-              problems.
-            </p>
+            <h3>Networking</h3>
+            <p class="muted">Basic switching/routing concepts and structured troubleshooting.</p>
           </article>
 
           <article class="card">
-            <h3>End-user support</h3>
-            <p class="muted">
-              Clear tickets, clean notes, and repeatable fixes for common
-              issues.
-            </p>
+            <h3>IT support</h3>
+            <p class="muted">Remote-friendly support with clean tickets and repeatable fixes.</p>
           </article>
 
           <article class="card">
             <h3>Documentation</h3>
-            <p class="muted">
-              SOPs and checklists so recurring issues get resolved faster next
-              time.
-            </p>
+            <p class="muted">Simple SOPs/checklists so common issues resolve faster next time.</p>
           </article>
         </div>
+      </section>
+
+      <section class="section" aria-label="How to engage">
+        <h2>How to engage</h2>
 
         <div class="card">
-          <h3>Scope note</h3>
-          <p class="muted" style="margin-bottom: 0">
-            This page is intentionally brief. Email the environment (home /
-            small business), issue summary, and any constraints to confirm scope
-            and fit.
-          </p>
+          <ul class="muted" style="margin:0;">
+            <li>Describe the issue and environment (home / small office / remote).</li>
+            <li>Share what you already tried and any error messages.</li>
+            <li>Confirm goals (restore service, improve reliability, document the fix).</li>
+          </ul>
         </div>
-
-        <p class="muted small" style="margin-top: 0.75rem">
-          <a class="link" href="#top">Back to top</a>
-        </p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-        <span class="muted small">
-          <a href="family.html">Family hub</a>
-        </span>
+
+        <!-- Family hub should only appear on the 3 main branch landing pages. -->
+        <div class="footer-actions">
+          <a class="link" href="family.html">Family hub</a>
+        </div>
       </div>
     </footer>
 

@@ -1,80 +1,143 @@
-// assets/js/app.js
 (() => {
   "use strict";
 
-  // 1) Footer year (safe if the element doesn't exist)
+  // ============================================================
+  // Rutter-Reese v2 helpers (no dependencies)
+  // - Default: light mode
+  // - Optional: dark mode via html[data-mode="dark"]
+  // - Persists mode in localStorage
+  // - Marks current nav link with aria-current="page"
+  // - Sets footer year if #year exists
+  // ============================================================
+
+  // 1) Footer year (safe if missing)
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
-  // 2) Ensure a theme is set (fallback if a page forgets data-theme)
-  // Themes here only control accent colors via body[data-theme].
+  // 2) Ensure a theme is set for accent colors (writing/accounting/it)
+  //    Pages should set body[data-theme] explicitly, but we add a safe fallback.
   const body = document.body;
   if (body && !body.dataset.theme) {
-    const p = String(location.pathname || "").toLowerCase();
-    if (p.includes("/pages/accounting")) body.dataset.theme = "accounting";
-    else if (p.includes("/pages/it")) body.dataset.theme = "it";
+    const p = (location.pathname || "").toLowerCase();
+    if (p.includes("/christine/")) body.dataset.theme = "accounting";
+    else if (p.includes("/richie/")) body.dataset.theme = "it";
     else body.dataset.theme = "writing";
   }
 
-  // 3) Mark the current primary-nav link for accessibility
-  // Important: resolve relative links against the CURRENT page URL, not the site root.
-  const normalizePath = (pathname) => {
-    const raw = String(pathname || "/");
+  // 3) Theme mode (light/dark) — default light
+  const MODE_KEY = "rr_mode";
+  const root = document.documentElement;
 
-    // Remove trailing slashes (except for root)
-    let p = raw.replace(/\/+$/, "");
-    if (p === "") p = "/";
+  function applyMode(mode) {
+    // Light mode = no attribute (cleaner HTML + simpler CSS defaults)
+    if (mode === "dark") root.setAttribute("data-mode", "dark");
+    else root.removeAttribute("data-mode");
+  }
 
-    // Treat /index.html as /
-    if (p.toLowerCase() === "/index.html") return "/";
+  function getSavedMode() {
+    try {
+      const v = localStorage.getItem(MODE_KEY);
+      return v === "dark" || v === "light" ? v : null;
+    } catch {
+      return null;
+    }
+  }
 
-    return p;
+  function saveMode(mode) {
+    try {
+      localStorage.setItem(MODE_KEY, mode);
+    } catch {
+      // ignore storage failures (privacy mode, blocked storage, etc.)
+    }
+  }
+
+  function setMode(mode) {
+    const normalized = mode === "dark" ? "dark" : "light";
+    applyMode(normalized);
+    saveMode(normalized);
+    updateModeButtons(normalized);
+  }
+
+  function updateModeButtons(activeMode) {
+    document.querySelectorAll("[data-mode-set]").forEach((btn) => {
+      const el = btn;
+      const target = (el.getAttribute("data-mode-set") || "").toLowerCase();
+      const isActive = target === activeMode;
+      el.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
+  // Apply saved preference (or default to light)
+  const saved = getSavedMode();
+  applyMode(saved || "light");
+
+  // 4) Create footer theme controls if the page doesn't include them
+  //    (Keeps HTML edits small; still works if you add your own markup later.)
+  function ensureThemeControls() {
+    const footer = document.querySelector("footer.site-footer");
+    if (!footer) return;
+
+    // If user already added controls, do nothing.
+    if (footer.querySelector("[data-theme-controls]")) {
+      updateModeButtons(saved || "light");
+      return;
+    }
+
+    // Prefer appending into an existing footer row, if present.
+    const footerRow = footer.querySelector(".footer-row") || footer;
+
+    const wrap = document.createElement("div");
+    wrap.className = "footer-actions";
+    wrap.setAttribute("data-theme-controls", "true");
+
+    const lightBtn = document.createElement("button");
+    lightBtn.type = "button";
+    lightBtn.className = "theme-toggle";
+    lightBtn.textContent = "Light";
+    lightBtn.setAttribute("data-mode-set", "light");
+
+    const darkBtn = document.createElement("button");
+    darkBtn.type = "button";
+    darkBtn.className = "theme-toggle";
+    darkBtn.textContent = "Dark";
+    darkBtn.setAttribute("data-mode-set", "dark");
+
+    wrap.appendChild(lightBtn);
+    wrap.appendChild(darkBtn);
+
+    footerRow.appendChild(wrap);
+
+    // Wire up clicks
+    wrap.addEventListener("click", (e) => {
+      const t = e.target;
+      if (!(t instanceof Element)) return;
+      const mode = t.getAttribute("data-mode-set");
+      if (!mode) return;
+      setMode(mode);
+    });
+
+    updateModeButtons(getSavedMode() || "light");
+  }
+
+  ensureThemeControls();
+
+  // 5) Mark current nav link for accessibility
+  const normalizePath = (path) => {
+    const s = (path || "/").replace(/\/+/g, "/").replace(/\/+$/, "");
+    return s === "" ? "/" : s;
   };
 
   const currentPath = normalizePath(location.pathname);
 
-  // Scope to the primary header nav only, so content links aren't affected.
-  const primaryNav = document.querySelector('nav[aria-label="Primary"]');
-  if (primaryNav) {
-    primaryNav.querySelectorAll("a[href]").forEach((a) => {
-      // Don't override if the page already set aria-current manually.
-      if (a.hasAttribute("aria-current")) return;
+  document.querySelectorAll("nav a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (!href) return;
 
-      const href = a.getAttribute("href");
-      if (!href) return;
-
-      // Ignore hash-only links (not used in your header nav, but safe)
-      if (href.trim().startsWith("#")) return;
-
-      let url;
-      try {
-        // Use location.href so "portfolio.html" on /pages/* resolves to /pages/portfolio.html.
-        url = new URL(href, location.href);
-      } catch {
-        return; // ignore malformed hrefs
-      }
-
-      // Ignore external links (different site)
-      if (url.origin !== location.origin) return;
-
-      const hrefPath = normalizePath(url.pathname);
-
-      // Match "/" and "/index.html" as the same page.
-      if (hrefPath === currentPath) {
-        a.setAttribute("aria-current", "page");
-      }
-    });
-  }
-
-  // 4) Light friction: disable right-click ONLY on embedded previews
-  // Not security; just reduces casual copying.
-  document.addEventListener(
-    "contextmenu",
-    (e) => {
-      const target = e.target;
-      if (!(target instanceof Element)) return;
-      if (target.closest(".embed, .no-ctx")) e.preventDefault();
-    },
-    { capture: true }
-  );
+    try {
+      const hrefPath = normalizePath(new URL(href, document.baseURI).pathname);
+      if (hrefPath === currentPath) a.setAttribute("aria-current", "page");
+    } catch {
+      // ignore malformed hrefs
+    }
+  });
 })();

@@ -1,4 +1,3 @@
-<!-- pages/portfolio.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,24 +7,18 @@
     <title>Portfolio | Matt Rutter-Reese</title>
     <meta
       name="description"
-      content="Portfolio links and sanitized writing samples: runbooks, SOPs, and troubleshooting guides."
+      content="Matt Rutter-Reese portfolio: links to primary artifacts plus a small set of sanitized HTML samples (runbooks, SOPs, troubleshooting)."
     />
 
     <meta property="og:title" content="Portfolio | Matt Rutter-Reese" />
     <meta
       property="og:description"
-      content="Portfolio links and sanitized ops documentation samples: runbooks, SOPs, troubleshooting guides."
+      content="Portfolio links first, then sanitized writing samples: runbooks, SOPs, troubleshooting guides."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://rutter-reese.com/pages/portfolio.html"
-    />
+    <meta property="og:url" content="https://rutter-reese.com/pages/portfolio.html" />
 
-    <link
-      rel="canonical"
-      href="https://rutter-reese.com/pages/portfolio.html"
-    />
+    <link rel="canonical" href="https://rutter-reese.com/pages/portfolio.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
@@ -39,323 +32,158 @@
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html" aria-current="page">Portfolio</a>
           <a href="resume.html">Resume</a>
-          <a href="process.html">Process</a>
           <a href="contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero" aria-label="Portfolio overview">
+      <section class="hero" aria-label="Portfolio intro">
         <h1 class="section-title">Portfolio</h1>
         <p class="lead">
-          Start with the links below. Sanitized HTML samples are also included
-          to show structure and clarity (not operational details).
+          Recruiter-first: primary artifacts at the top. Sanitized HTML samples are below to show structure and decision points.
         </p>
 
-        <div class="pill-row" aria-label="Jump links">
-          <a class="pill" href="#primary">Portfolio links</a>
-          <a class="pill" href="#samples">Sanitized samples</a>
-          <a class="pill" href="#planned">Planned additions</a>
-        </div>
-
         <div class="cta-row">
-          <a class="button" href="#primary">Open portfolio links</a>
+          <a class="button" href="#primary">Open primary links</a>
           <a class="button secondary" href="#samples">View samples</a>
         </div>
 
-        <p class="muted small">
-          Governance (style guide, sanitization, changelog) lives under
-          <a class="link" href="process.html">Process</a>.
+        <p class="small muted" style="margin-top:.9rem;">
+          Note: links marked “placeholder” are temporary until final OneDrive/PDF links are added.
         </p>
       </section>
 
-      <!-- =========================
-           PRIMARY: PORTFOLIO LINKS
-           ========================= -->
-      <section
-        class="section"
-        id="primary"
-        aria-label="Primary portfolio links"
-      >
-        <h2>Portfolio links</h2>
+      <section class="section" id="primary" aria-label="Primary portfolio links">
+        <h2>Primary links</h2>
         <p class="muted">
-          These are the primary artifacts. Some links are placeholders until the
-          final OneDrive/PDF links are ready.
+          These are the “front-and-center” artifacts most reviewers expect.
         </p>
 
         <div class="grid-3">
           <article class="card">
-            <h3>Portfolio PDF</h3>
+            <h3>Portfolio PDF <span class="badge">Placeholder</span></h3>
             <p class="muted">
-              One document for fast review (summary + selected samples).
+              One document a reviewer can open/download quickly.
             </p>
             <p>
-              <a
-                class="link"
-                href="https://example.com/portfolio.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open PDF (placeholder) →</a
-              >
+              <a class="button secondary" href="https://example.com/matt-portfolio.pdf" target="_blank" rel="noopener noreferrer">
+                Open PDF
+              </a>
             </p>
           </article>
 
           <article class="card">
-            <h3>Runbook package PDF</h3>
+            <h3>Runbook package PDF <span class="badge">Placeholder</span></h3>
             <p class="muted">
-              Compact runbook set exported to PDF for easy scanning.
+              Compact set exported to PDF (triage + outage).
             </p>
             <p>
-              <a
-                class="link"
-                href="https://example.com/runbook-package.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open PDF (placeholder) →</a
-              >
+              <a class="button secondary" href="https://example.com/runbook-package.pdf" target="_blank" rel="noopener noreferrer">
+                Open PDF
+              </a>
             </p>
           </article>
 
           <article class="card">
-            <h3>SOP package PDF</h3>
+            <h3>Case study: rewrite <span class="badge">Placeholder</span></h3>
             <p class="muted">
-              SOP + checklist examples exported to PDF for hiring manager
-              review.
+              Outcome-focused write-up (before/after) without exposing internal systems.
             </p>
             <p>
-              <a
-                class="link"
-                href="https://example.com/sop-package.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open PDF (placeholder) →</a
-              >
+              <a class="button secondary" href="https://example.com/case-study-rewrite" target="_blank" rel="noopener noreferrer">
+                Open case study
+              </a>
             </p>
           </article>
         </div>
 
         <div class="grid-3">
-          <article class="card">
-            <h3>Case study (rewrite)</h3>
-            <p class="muted">
-              Before/after write-up describing outcomes without exposing
-              internals.
-            </p>
-            <p>
-              <a
-                class="link"
-                href="https://example.com/case-study-rewrite"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open (placeholder) →</a
-              >
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Open-source docs contribution</h3>
-            <p class="muted">
-              Public artifact demonstrating docs-as-code workflow (optional).
-            </p>
-            <p>
-              <a
-                class="link"
-                href="https://example.com/open-source-docs"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open (placeholder) →</a
-              >
-            </p>
-          </article>
-
           <article class="card">
             <h3>Site repository</h3>
             <p class="muted">
-              Source for this site (useful for reviewers who care about
-              versioning).
+              Source for this site (helpful for reviewers who care about docs-as-code and versioning).
             </p>
             <p>
-              <a
-                class="link"
-                href="https://github.com/Rotis-dev/rutter-reese-site"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Open GitHub →</a
-              >
+              <a class="button secondary" href="https://github.com/Rotis-dev/Rutter-Reese-Site" target="_blank" rel="noopener noreferrer">
+                Open GitHub
+              </a>
             </p>
           </article>
-        </div>
 
-        <p class="muted small" style="margin-top: 0.75rem">
-          <a class="link" href="#top">Back to top</a>
-        </p>
+          <article class="card">
+            <h3>Open-source docs contribution <span class="badge">Optional</span></h3>
+            <p class="muted">
+              Add one verifiable docs PR when available.
+            </p>
+            <p>
+              <a class="button secondary" href="https://example.com/open-source-docs" target="_blank" rel="noopener noreferrer">
+                Open link
+              </a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>More artifacts <span class="badge">Planned</span></h3>
+            <p class="muted">
+              Add SOP package PDF, KB-style sample, and 1–2 additional SOPs.
+            </p>
+            <p class="small muted" style="margin-bottom:0;">No action needed now.</p>
+          </article>
+        </div>
       </section>
 
-      <!-- =========================
-           SECONDARY: HTML SAMPLES
-           ========================= -->
-      <section class="section" id="samples" aria-label="Sanitized samples">
-        <h2>Sanitized samples</h2>
+      <section class="section" id="samples" aria-label="Sanitized HTML samples">
+        <h2>Sanitized HTML samples</h2>
         <p class="muted">
-          Sanitized, generic HTML pages intended to demonstrate structure, step
-          quality, decision points, escalation logic, and verification criteria.
+          These samples are intentionally generic and sanitized. They demonstrate structure and clarity—not operational specifics.
         </p>
 
-        <h3 class="section-title" style="margin-top: 1rem">Runbooks</h3>
         <div class="grid-3">
           <article class="card">
             <h3>Alarm Triage Runbook</h3>
-            <p class="muted">
-              Trigger → checks → actions → decisions → escalation →
-              verification.
-            </p>
-            <p>
-              <a class="link" href="../docs/runbooks/alarm-triage-runbook.html"
-                >Open sample →</a
-              >
-            </p>
+            <p class="muted">Trigger → fast checks → actions → decisions → escalation → verification.</p>
+            <p><a class="button secondary" href="../docs/runbooks/alarm-triage-runbook.html">Open sample</a></p>
           </article>
 
           <article class="card">
             <h3>Comms Outage Runbook</h3>
-            <p class="muted">
-              Scope isolation, comms checks, fallback actions, closeout notes.
-            </p>
-            <p>
-              <a class="link" href="../docs/runbooks/comms-outage-runbook.html"
-                >Open sample →</a
-              >
-            </p>
+            <p class="muted">Scope isolation, comms checks, fallback actions, clean closeout.</p>
+            <p><a class="button secondary" href="../docs/runbooks/comms-outage-runbook.html">Open sample</a></p>
           </article>
 
           <article class="card">
-            <h3>Runbook template</h3>
-            <p class="muted">
-              Planned: copy/paste template page matching the runbook structure.
-            </p>
-            <p class="muted small" style="margin-bottom: 0">
-              See <a class="link" href="#planned">Planned additions</a>.
-            </p>
+            <h3>Weekly Health Check SOP</h3>
+            <p class="muted">Routine process with prerequisites, steps, QC checks, and records.</p>
+            <p><a class="button secondary" href="../docs/sops/weekly-health-check.html">Open sample</a></p>
           </article>
         </div>
 
-        <h3 class="section-title" style="margin-top: 1.5rem">SOPs</h3>
-        <div class="grid-3">
-          <article class="card">
-            <h3>Weekly System Health Check SOP</h3>
-            <p class="muted">
-              Routine procedure with acceptance criteria and recordkeeping.
-            </p>
-            <p>
-              <a class="link" href="../docs/sops/weekly-health-check.html"
-                >Open sample →</a
-              >
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Additional SOPs</h3>
-            <p class="muted">
-              Planned: 1–2 additional real SOPs (onboarding, turnover,
-              reporting).
-            </p>
-            <p class="muted small" style="margin-bottom: 0">
-              See <a class="link" href="#planned">Planned additions</a>.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Checklist formats</h3>
-            <p class="muted">
-              Planned: printable checklists that pair with SOPs.
-            </p>
-            <p class="muted small" style="margin-bottom: 0">
-              See <a class="link" href="#planned">Planned additions</a>.
-            </p>
-          </article>
-        </div>
-
-        <h3 class="section-title" style="margin-top: 1.5rem">
-          Troubleshooting
-        </h3>
         <div class="grid-3">
           <article class="card">
             <h3>Network + Power Failover Triage</h3>
-            <p class="muted">
-              Symptoms → fast checks → decision tree → recovery → verification.
-            </p>
-            <p>
-              <a
-                class="link"
-                href="../docs/troubleshooting/network-power-failover.html"
-                >Open sample →</a
-              >
-            </p>
+            <p class="muted">Symptoms → quick checks → decision tree → recovery → verification.</p>
+            <p><a class="button secondary" href="../docs/troubleshooting/network-power-failover.html">Open sample</a></p>
           </article>
 
           <article class="card">
-            <h3>Additional troubleshooting</h3>
+            <h3>KB-style sample <span class="badge">Planned</span></h3>
             <p class="muted">
-              Planned: 1–2 more (auth failures, data-quality issues, command
-              rejected).
+              Rewrite one troubleshooting doc into a help-center/KB layout.
             </p>
-            <p class="muted small" style="margin-bottom: 0">
-              See <a class="link" href="#planned">Planned additions</a>.
-            </p>
+            <p class="small muted" style="margin-bottom:0;">Add later.</p>
           </article>
 
           <article class="card">
-            <h3>KB-style rewrite</h3>
+            <h3>Runbook template page <span class="badge">Planned</span></h3>
             <p class="muted">
-              Planned: one sample rewritten into a help-center/KB layout.
+              Copy/paste template that matches the structure used in the runbooks.
             </p>
-            <p class="muted small" style="margin-bottom: 0">
-              See <a class="link" href="#planned">Planned additions</a>.
-            </p>
+            <p class="small muted" style="margin-bottom:0;">Add later.</p>
           </article>
         </div>
 
-        <p class="muted small" style="margin-top: 0.75rem">
-          <a class="link" href="#top">Back to top</a>
-        </p>
-      </section>
-
-      <!-- =========================
-           PLANNED
-           ========================= -->
-      <section class="section" id="planned" aria-label="Planned additions">
-        <h2>Planned additions</h2>
-        <p class="muted">
-          Short list. Added as real artifacts become available.
-        </p>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Runbook template page</h3>
-            <p class="muted">
-              Copy/paste template that matches the runbook structure used on the
-              site.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>KB-style sample</h3>
-            <p class="muted">
-              One troubleshooting guide rewritten into a help-center/KB format.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>More real SOPs</h3>
-            <p class="muted">
-              Onboarding, shift turnover, ticket hygiene, and a weekly reporting
-              workflow.
-            </p>
-          </article>
-        </div>
-
-        <p class="muted small" style="margin-top: 0.75rem">
+        <p class="small muted" style="margin-top:1rem;">
           <a class="link" href="#top">Back to top</a>
         </p>
       </section>
@@ -364,9 +192,11 @@
     <footer class="site-footer">
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-        <span class="muted small">
-          <a href="family.html">Family hub</a>
-        </span>
+
+        <!-- Family hub should only appear on the 3 main branch landing pages. -->
+        <div class="footer-actions">
+          <a class="link" href="family.html">Family hub</a>
+        </div>
       </div>
     </footer>
 

@@ -1,134 +1,106 @@
-<!-- pages/accounting.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Christine | Accounting</title>
     <meta
       name="description"
-      content="Christine — accounting track. Contact for bookkeeping and accounting support inquiries."
+      content="Christine Rutter-Reese — accounting support (remote): bookkeeping, reconciliations, reporting, and process cleanup."
     />
 
     <meta property="og:title" content="Christine | Accounting" />
     <meta
       property="og:description"
-      content="Accounting track: bookkeeping and accounting support inquiries."
+      content="Accounting support (remote): bookkeeping, reconciliations, reporting, and process cleanup."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://rutter-reese.com/pages/accounting.html"
-    />
+    <meta property="og:url" content="https://rutter-reese.com/pages/accounting.html" />
 
-    <link
-      rel="canonical"
-      href="https://rutter-reese.com/pages/accounting.html"
-    />
+    <link rel="canonical" href="https://rutter-reese.com/pages/accounting.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="accounting" id="top">
+  <body id="top" data-theme="accounting">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-row">
-        <a class="brand" href="accounting.html" aria-label="Accounting home"
-          >Rutter-Reese</a
-        >
+        <a class="brand" href="accounting.html" aria-label="Accounting home">Rutter-Reese</a>
 
         <nav class="nav" aria-label="Primary">
-          <a href="accounting.html" aria-current="page">Accounting</a>
-          <a href="family.html">Family hub</a>
+          <a href="accounting.html" aria-current="page">Home</a>
+          <a href="accounting-portfolio.html">Portfolio</a>
+          <a href="accounting-resume.html">Resume</a>
+          <a href="accounting-contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
-      <section class="hero" aria-label="Accounting landing">
+      <section class="hero" aria-label="Christine landing">
         <h1 class="section-title">Christine</h1>
         <p class="lead">
-          Accounting track (remote). Bookkeeping and accounting support
-          inquiries.
+          Accounting support (remote): bookkeeping, reconciliations, reporting, and process cleanup.
         </p>
 
-        <div class="pill-row" aria-label="Focus areas">
-          <span class="pill">Bookkeeping</span>
-          <span class="pill">Reconciliation</span>
-          <span class="pill">Reporting</span>
-          <span class="pill">Process improvement</span>
-        </div>
-
         <div class="cta-row">
-          <a
-            class="button"
-            href="mailto:accounting@rutter-reese.com?subject=Bookkeeping%20inquiry"
-            >Email: accounting@rutter-reese.com</a
-          >
-          <a
-            class="button secondary"
-            href="https://www.linkedin.com/in/prado-christine-mae/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn</a
-          >
+          <a class="button" href="accounting-portfolio.html">View portfolio</a>
+          <a class="button secondary" href="accounting-contact.html">Contact</a>
         </div>
 
-        <p class="muted small">
-          Messages route to a personal inbox. Replies may come from Outlook.
+        <p class="small muted" style="margin-top:.9rem;">
+          Email routing: <a class="link" href="mailto:accounting@rutter-reese.com">accounting@rutter-reese.com</a> ·
+          LinkedIn:
+          <a class="link" href="https://www.linkedin.com/in/prado-christine-mae/" target="_blank" rel="noopener noreferrer">
+            linkedin.com/in/prado-christine-mae
+          </a>
         </p>
       </section>
 
-      <section class="section" aria-label="Services summary">
+      <section class="section" aria-label="Services">
         <h2>Services</h2>
 
         <div class="grid-3">
           <article class="card">
             <h3>Monthly bookkeeping</h3>
-            <p class="muted">
-              Categorization, reconciliations, and consistent month-end close
-              support.
-            </p>
+            <p class="muted">Categorization, reconciliations, and tidy month-end close support.</p>
           </article>
 
           <article class="card">
             <h3>Cleanup / catch-up</h3>
-            <p class="muted">
-              Bring accounts up to date and resolve discrepancies so reports are
-              usable.
-            </p>
+            <p class="muted">Backlog cleanup so books are usable again for reporting and decisions.</p>
           </article>
 
           <article class="card">
-            <h3>Basic reporting</h3>
-            <p class="muted">
-              Simple, timely summaries: P&amp;L, balance sheet, and cash-flow
-              visibility.
-            </p>
+            <h3>Simple process improvement</h3>
+            <p class="muted">Checklists and repeatable workflows so the process stays consistent.</p>
           </article>
         </div>
+      </section>
+
+      <section class="section" aria-label="How to engage">
+        <h2>How to engage</h2>
 
         <div class="card">
-          <h3>Scope note</h3>
-          <p class="muted" style="margin-bottom: 0">
-            This page is intentionally brief. Share your tools
-            (QuickBooks/Xero/etc.), entity type, and timeframe by email to
-            confirm scope and fit.
-          </p>
+          <ul class="muted" style="margin:0;">
+            <li>Start with a quick message about your business and what you need.</li>
+            <li>Confirm tools (QuickBooks, Xero, Excel, etc.) and timeline.</li>
+            <li>Scope and cadence are kept simple (weekly check-in or monthly close).</li>
+          </ul>
         </div>
-
-        <p class="muted small" style="margin-top: 0.75rem">
-          <a class="link" href="#top">Back to top</a>
-        </p>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-        <span class="muted small">
-          <a href="family.html">Family hub</a>
-        </span>
+
+        <!-- Family hub should only appear on the 3 main branch landing pages. -->
+        <div class="footer-actions">
+          <a class="link" href="family.html">Family hub</a>
+        </div>
       </div>
     </footer>
 
