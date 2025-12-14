@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Runbook — Alarm Triage (Sanitized Sample)</title>
+    <title>Runbook — Alarm Triage (Generic) | Rutter-Reese</title>
     <meta
       name="description"
-      content="Sanitized portfolio sample runbook: alarm triage structure (trigger, safety checks, steps, decisions, escalation, verification, closeout)."
+      content="Sanitized runbook sample: alarm triage workflow for operations. Trigger, safety checks, triage steps, decision points, escalation, verification, closeout."
     />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
@@ -19,78 +19,52 @@
         <a class="brand" href="../../index.html" aria-label="Home"
           >Rutter-Reese</a
         >
-        <nav class="nav" aria-label="Documentation navigation">
+        <nav class="nav" aria-label="Primary">
           <a href="../../pages/portfolio.html">Portfolio</a>
           <a href="../../pages/style-guide.html">Style guide</a>
           <a href="../../pages/sanitization.html">Sanitization</a>
-          <a href="../../pages/contact.html" class="button secondary"
-            >Contact</a
-          >
+          <a href="../../pages/contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
       <section class="hero">
-        <p class="muted small">
-          <a class="link" href="../../pages/portfolio.html"
-            >← Back to portfolio</a
-          >
-        </p>
-
         <h1 class="section-title">Runbook — Alarm Triage (Generic Example)</h1>
-
-        <p class="muted small">
-          Version: <strong>v1.0</strong> —
-          <time datetime="2026-01-01">2026-01-01</time>
-          · Sanitized portfolio sample — not operational guidance.
+        <p class="kicker">
+          Version: v1.0 — 2026-01-01 · Sanitized portfolio sample — not
+          operational guidance.
         </p>
 
-        <div class="card">
-          <h2>Scope and intent</h2>
-          <p class="muted">
-            This document demonstrates a runbook structure (trigger → safety
-            checks → steps → decision points → escalation → verification →
-            closeout). It is intentionally generic and sanitized.
-          </p>
+        <div class="pill-row" aria-label="Doc tags">
+          <span class="pill">Runbook</span>
+          <span class="pill">Incident response</span>
+          <span class="pill">Triage</span>
         </div>
+
+        <p class="muted small">
+          These examples are intentionally generic. See
+          <a class="link" href="../../pages/sanitization.html"
+            >Sanitization checklist</a
+          >.
+        </p>
       </section>
 
       <section class="section" aria-label="Runbook content">
-        <div class="grid-3">
-          <article class="card">
-            <h2>Trigger</h2>
-            <ul>
-              <li>
-                Alarm fires for a critical component (example: “Subsystem
-                Offline”).
-              </li>
-              <li>Multiple related alarms within 5 minutes.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h2>Goal</h2>
-            <ul>
-              <li>Stabilize operations quickly and safely.</li>
-              <li>Restore telemetry/normal state if permitted.</li>
-              <li>Escalate with clean notes if not recoverable.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h2>Inputs to capture</h2>
-            <ul>
-              <li>Timestamp(s), alarm text, severity.</li>
-              <li>Last known healthy time / last telemetry.</li>
-              <li>Any related alarms or site notes.</li>
-            </ul>
-          </article>
+        <div class="card">
+          <h2>Trigger</h2>
+          <ul class="muted">
+            <li>
+              Alarm fires for a critical component (example: “Subsystem
+              Offline”).
+            </li>
+            <li>Or: multiple related alarms within 5 minutes.</li>
+          </ul>
         </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Safety checks (do first)</h2>
-          <ol class="compact">
+          <ol class="compact muted">
             <li>
               Confirm you are working in the correct environment (site/system).
             </li>
@@ -100,11 +74,11 @@
             </li>
             <li>If there is any safety risk, stop and escalate immediately.</li>
           </ol>
-        </article>
+        </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Triage steps</h2>
-          <ol>
+          <ol class="muted">
             <li>Record timestamp + alarm text + any related alerts.</li>
             <li>
               Check last known healthy status (example: last telemetry time).
@@ -117,14 +91,14 @@
               comms) if permitted.
             </li>
           </ol>
-        </article>
+        </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Decision points</h2>
-          <ul>
+          <ul class="muted">
             <li>
               <strong>If</strong> telemetry returns and alarm clears, go to
-              <a class="link" href="#verification">Verification</a>.
+              Verification.
             </li>
             <li>
               <strong>If</strong> telemetry remains offline &gt; 10 minutes,
@@ -135,34 +109,38 @@
               stop remote actions and escalate.
             </li>
           </ul>
+        </div>
+
+        <div class="card">
+          <h2>Escalation</h2>
+          <ul class="muted">
+            <li>
+              Escalate to: on-call engineer / field tech / manager (based on
+              severity).
+            </li>
+            <li>
+              Provide: symptom summary, steps attempted, current status, any
+              safety concerns.
+            </li>
+          </ul>
 
           <details>
-            <summary>Escalation matrix (generic)</summary>
-            <p class="muted small">
-              Use <code>&lt;details&gt;</code> / <code>&lt;summary&gt;</code> to
-              keep optional content collapsible while remaining accessible.
-              :contentReference[oaicite:1]{index=1}
-            </p>
-            <ul>
-              <li>
-                <strong>Critical:</strong> immediate call to on-call engineer +
-                field dispatch if required.
-              </li>
-              <li>
-                <strong>High:</strong> notify on-call engineer; dispatch if not
-                recovered within threshold.
-              </li>
-              <li>
-                <strong>Moderate:</strong> monitor + create ticket + notify
-                during business hours.
-              </li>
-            </ul>
+            <summary>Escalation package (copy/paste)</summary>
+            <pre><code>Summary:
+- Trigger/alarm:
+- First observed (time):
+- Scope (single site vs widespread):
+- Checks completed:
+- Actions attempted:
+- Current status:
+- Safety concerns:
+- Requested next steps / owner:</code></pre>
           </details>
-        </article>
+        </div>
 
-        <article class="card" id="verification">
+        <div class="card">
           <h2>Verification</h2>
-          <ol>
+          <ol class="muted">
             <li>
               Confirm steady-state readings within expected range for 10
               minutes.
@@ -170,34 +148,23 @@
             <li>Confirm alarms cleared and no new related alarms.</li>
             <li>Update log/ticket with actions taken and outcome.</li>
           </ol>
-        </article>
+        </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Closeout notes (recordkeeping)</h2>
-          <ul>
+          <ul class="muted">
             <li>What happened (1–2 sentences)</li>
             <li>What you did (bullets)</li>
             <li>Who you notified</li>
             <li>What still needs follow-up</li>
           </ul>
-        </article>
+        </div>
 
-        <details>
-          <summary>Changelog</summary>
-          <ul>
-            <li><strong>v1.0</strong> — Initial sanitized sample structure.</li>
-          </ul>
-        </details>
-      </section>
-
-      <section class="section">
         <div class="card">
-          <h2>Notes</h2>
-          <p class="muted">
-            Navigation uses <code>aria-current="page"</code> to indicate the
-            current page within a set of links when applicable.
-            :contentReference[oaicite:2]{index=2}
-          </p>
+          <h2>Changes</h2>
+          <ul class="muted">
+            <li>v1.0 — Initial published sample.</li>
+          </ul>
         </div>
       </section>
     </main>
@@ -205,7 +172,11 @@
     <footer class="site-footer">
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-        <span class="muted small">Runbook sample</span>
+        <span class="muted small">
+          <a href="../../pages/portfolio.html">Portfolio</a> ·
+          <a href="../../pages/style-guide.html">Style guide</a> ·
+          <a href="../../pages/sanitization.html">Sanitization</a>
+        </span>
       </div>
     </footer>
 

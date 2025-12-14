@@ -6,12 +6,19 @@
     <title>Sanitization Checklist | Rutter-Reese</title>
     <meta
       name="description"
-      content="Sanitization checklist for publishing work-derived portfolio samples: permissions, redaction rules, what to never publish, and a pre-publish QA pass."
+      content="Sanitization checklist for publishing portfolio samples: permissions, redaction rules, what to never publish, and a pre-publish QA pass."
     />
+    <meta property="og:title" content="Sanitization Checklist | Rutter-Reese" />
+    <meta
+      property="og:description"
+      content="Publish gate for portfolio samples: permissions, redaction, never-publish rules, and a pre-publish QA pass."
+    />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="writing">
+  <body data-theme="writing" id="top">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -31,173 +38,154 @@
       <section class="hero">
         <h1 class="section-title">Sanitization Checklist</h1>
         <p class="lead">
-          This page is the “publish gate” for anything work-derived. When in
-          doubt, remove it or rewrite it as a generic scenario.
+          This is the publish gate for anything derived from real operations.
+          Goal: demonstrate <strong>structure + clarity</strong> without
+          exposing identity, sensitive operations, or security details.
         </p>
+
+        <div class="pill-row" aria-label="Jump to sections">
+          <a class="pill" href="#permission">Permission</a>
+          <a class="pill" href="#never">Never publish</a>
+          <a class="pill" href="#steps">Sanitization steps</a>
+          <a class="pill" href="#qa">Pre-publish QA</a>
+          <a class="pill" href="#repo">Repo safety</a>
+          <a class="pill" href="#requests">If asked for “real” samples</a>
+        </div>
+
         <p class="muted small">
-          Goal: demonstrate <em>structure + clarity</em> without exposing
-          company identity, sensitive operations, or security details.
+          Samples on this site are intentionally generic. If in doubt: remove it
+          or rewrite it as a new scenario.
         </p>
       </section>
 
-      <section class="section" aria-label="Rule zero">
+      <section
+        class="section"
+        id="permission"
+        aria-label="Permission and ownership"
+      >
         <div class="card">
           <h2>Rule 0 — Permission and ownership</h2>
-          <ul>
+          <ul class="muted">
             <li>
-              <strong>Assume you cannot publish internal documentation</strong>
-              unless you have explicit permission or your employer policy allows
-              it.
+              Assume you <strong>cannot publish internal documentation</strong>
+              unless your employer policy explicitly allows it.
             </li>
             <li>
-              If your employer policy forbids sharing work artifacts (even
-              sanitized), <strong>do not publish</strong>—use original samples
-              instead.
+              Even if you wrote it, employers commonly own work created during
+              employment. Publishing may still violate policy or agreements.
             </li>
             <li>
-              Employers typically own work produced during employment; sharing
-              it publicly can still be a problem even if you wrote it.
+              When unsure, publish an original sample that demonstrates your
+              approach without using internal artifacts.
             </li>
           </ul>
 
           <details>
             <summary>Safe alternatives</summary>
-            <ul>
+            <ul class="muted small">
               <li>
-                Write original “generic but realistic” samples (like the docs on
-                this site).
+                Write original “generic but realistic” samples (preferred).
               </li>
               <li>
-                Create case studies describing your approach and outcomes
-                without revealing proprietary details.
+                Write a case study (problem → approach → result) without files,
+                names, screenshots, or internal tools.
               </li>
               <li>
-                Contribute documentation to an open-source project (public and
-                verifiable).
+                Contribute docs to an open-source project (public + verifiable).
               </li>
             </ul>
           </details>
         </div>
       </section>
 
-      <section class="section" aria-label="Never publish list">
+      <section class="section" id="never" aria-label="Never publish list">
         <div class="card">
           <h2>Never publish (hard rules)</h2>
-          <ul>
+          <ul class="muted">
             <li>
-              Credentials, secrets, API keys, tokens, certificates, VPN configs,
-              private URLs, internal hostnames.
+              Credentials/secrets: API keys, tokens, passwords, certificates,
+              VPN configs, private URLs, internal hostnames.
             </li>
             <li>
-              Network diagrams/topology that reveal real architecture, IP
-              ranges, firewall rules, or access paths.
+              Network architecture/topology that reveals real access paths, IP
+              ranges, firewall rules, or privileged workflows.
             </li>
             <li>
-              Customer lists, site names, asset IDs, ticket IDs, internal
-              incident timelines tied to a real org.
+              Company/customer identifiers: site names, asset IDs, ticket IDs,
+              customer lists, real incident timelines tied to an org.
             </li>
             <li>
-              Screenshots from proprietary tools/dashboards (SCADA, internal
-              monitoring, ticket systems), unless fully mocked.
+              Screenshots from real internal tools/dashboards (SCADA,
+              monitoring, ticket systems) unless fully mocked.
             </li>
             <li>
-              Security procedures that could enable abuse (bypass methods,
-              “break glass” instructions, privileged workflows).
+              Security procedures that could enable abuse (bypass, break-glass,
+              escalation routes, privileged steps).
             </li>
             <li>
-              Personal data (PII) for anyone: names, emails, phone numbers,
+              Personal data (PII): names, personal emails, phone numbers,
               addresses, employee IDs, etc.
             </li>
           </ul>
+
+          <p class="muted small">
+            If a sample contains PII, treat it as high risk and remove it. NIST
+            guidance emphasizes protecting PII from inappropriate
+            access/use/disclosure. :contentReference[oaicite:0]{index=0}
+          </p>
         </div>
       </section>
 
-      <section class="section" aria-label="Sanitization steps">
+      <section class="section" id="steps" aria-label="Sanitization steps">
         <h2>Sanitization steps (before you publish)</h2>
 
         <div class="grid-3">
           <article class="card">
             <h3>1) Remove identifiers</h3>
-            <ul>
+            <ul class="muted">
               <li>Company/customer names, sites, regions, asset IDs</li>
-              <li>Vendor/integrator identifiers if they narrow identity</li>
-              <li>Ticket/incident numbers, internal team names</li>
+              <li>Vendor/integrator identifiers that narrow identity</li>
+              <li>Ticket/incident numbers, team names, on-call labels</li>
             </ul>
           </article>
 
           <article class="card">
             <h3>2) Generalize parameters</h3>
-            <ul>
+            <ul class="muted">
               <li>
-                Thresholds, setpoints, limits, timeouts → use “X minutes” /
-                “within expected range”
+                Setpoints/thresholds/timeouts → “within expected range” / “X
+                minutes”
               </li>
               <li>
-                Precise alarm texts → use examples that don’t match real strings
+                Exact alarm texts → examples that don’t match real strings
               </li>
-              <li>
-                Exact tools/platform names → “monitoring dashboard” / “ticket
-                system”
-              </li>
+              <li>Tool names → “monitoring dashboard” / “ticket system”</li>
             </ul>
           </article>
 
           <article class="card">
             <h3>3) Remove security detail</h3>
-            <ul>
-              <li>Access paths, roles, permissions</li>
-              <li>Escalation contacts and on-call routing</li>
-              <li>Any “how to exploit” information</li>
+            <ul class="muted">
+              <li>Access paths, role names, permissions</li>
+              <li>Escalation contacts and routing details</li>
+              <li>Anything that could be repurposed for abuse</li>
             </ul>
           </article>
         </div>
 
-        <details>
-          <summary>PII check (people data)</summary>
-          <p class="muted small">
-            Treat personal data as sensitive by default. Remove or replace with
-            fictional placeholders.
-          </p>
-          <ul>
-            <li>Names, email addresses, phone numbers</li>
-            <li>Employee IDs / badge numbers</li>
-            <li>Locations more specific than necessary</li>
-            <li>Any combination that could re-identify a person</li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>Screenshots and metadata</summary>
-          <ul>
+        <div class="card">
+          <h3>Convert “real doc” → “portfolio doc”</h3>
+          <ol>
             <li>
-              Prefer <strong>recreated mock screenshots</strong> or diagrams.
-            </li>
-            <li>
-              If you must use an image: blur/remove all identifiers, time
-              ranges, URLs, and internal labels.
-            </li>
-            <li>
-              Check file metadata (filenames, author, comments) before
-              publishing.
-            </li>
-          </ul>
-        </details>
-
-        <details>
-          <summary>“Real doc” → “portfolio doc” conversion</summary>
-          <ol class="compact">
-            <li>
-              Keep the structure (trigger, safety checks, steps, decisions,
+              Keep the structure (trigger, checks, steps, decisions,
               verification).
             </li>
             <li>Rewrite the scenario to be generic but realistic.</li>
             <li>
-              Replace system names with neutral placeholders (Subsystem A, Site
-              01, Monitoring Dashboard).
+              Replace system names with placeholders (Subsystem A, Site 01).
             </li>
             <li>
-              Remove unique operational fingerprints (exact alarm strings, exact
-              time windows, unique constraints).
+              Remove unique fingerprints (exact strings, exact constraints).
             </li>
             <li>
               Add a disclaimer header:
@@ -207,16 +195,19 @@
               >
             </li>
           </ol>
-        </details>
+          <p class="muted small">
+            Redaction/de-identification is a recognized approach for reducing
+            re-identification risk when sharing data.
+            :contentReference[oaicite:1]{index=1}
+          </p>
+        </div>
       </section>
 
-      <section class="section" aria-label="Pre-publish QA">
+      <section class="section" id="qa" aria-label="Pre-publish QA">
         <div class="card">
           <h2>Pre-publish QA (fast pass)</h2>
           <ol>
-            <li>
-              Search the page for company/site/vendor names and remove them.
-            </li>
+            <li>Search for company/site/vendor names and remove them.</li>
             <li>
               Search for: <code>@</code>, <code>http</code>, <code>vpn</code>,
               <code>token</code>, <code>key</code>, <code>password</code>,
@@ -224,59 +215,80 @@
             </li>
             <li>Confirm there are no screenshots from real internal tools.</li>
             <li>
-              Confirm escalation contacts are generic roles (not real
-              names/phones/emails).
+              Confirm escalation contacts are generic roles (not real people).
             </li>
             <li>
-              Confirm the doc still “works” as a sample: clear steps, decisions,
-              verification.
+              Confirm the doc still works as a sample (clear steps, decisions,
+              verification).
             </li>
           </ol>
 
           <details>
-            <summary>
-              Repo safety (avoid publishing secrets by accident)
-            </summary>
-            <p class="muted small">
-              Use tooling and habits that reduce accidental secret exposure in
-              Git repos.
-            </p>
-            <ul>
-              <li>Never commit files with credentials/secrets.</li>
+            <summary>Logging / copy-paste traps</summary>
+            <ul class="muted small">
               <li>
-                Consider a secret scanner in your workflow before pushing public
-                changes.
+                Don’t paste real URLs, hostnames, or system identifiers “as
+                examples.”
+              </li>
+              <li>Don’t include real alarm strings or exact query filters.</li>
+              <li>
+                Don’t include secrets in code blocks or configs—OWASP explicitly
+                warns against hardcoding secrets in repos/logs.
+                :contentReference[oaicite:2]{index=2}
               </li>
             </ul>
           </details>
         </div>
       </section>
 
-      <section class="section" aria-label="If asked for private samples">
+      <section class="section" id="repo" aria-label="Repo safety">
         <div class="card">
-          <h2>If a hiring manager asks for “real samples”</h2>
-          <ul>
+          <h2>Repo safety (avoid accidental leaks)</h2>
+          <ul class="muted">
+            <li>Never commit secrets (even “temporary” ones).</li>
             <li>
-              Offer a sanitized version or an original sample written
-              specifically for them.
+              Use automated checks where possible. GitHub push protection is
+              designed to block pushes that contain supported secrets.
+              :contentReference[oaicite:3]{index=3}
             </li>
             <li>
-              If they need a format match (Confluence/Document360/Zendesk),
-              provide the same content in that structure.
-            </li>
-            <li>
-              If confidentiality is strict, provide a
-              <strong>case study</strong> of your process and outcomes without
-              files.
+              Keep samples generic—no real tool screenshots, URLs, or internal
+              identifiers.
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="section" aria-label="Disclaimer">
-        <div class="callout">
-          <strong>Note:</strong> This is a practical checklist, not legal
-          advice. When unsure, default to “don’t publish.”
+      <section
+        class="section"
+        id="requests"
+        aria-label="If asked for real samples"
+      >
+        <div class="card">
+          <h2>If a hiring manager asks for “real samples”</h2>
+          <ul class="muted">
+            <li>
+              Offer a sanitized version or write a fresh sample tailored to
+              their format.
+            </li>
+            <li>
+              If they want a platform match
+              (Confluence/Document360/Zendesk/Markdown repo), deliver the same
+              content in that structure.
+            </li>
+            <li>
+              If confidentiality is strict, provide a short case study instead
+              of files.
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Disclaimer</h2>
+          <p class="muted">
+            Practical guidance, not legal advice. When unsure, default to “don’t
+            publish.”
+          </p>
         </div>
       </section>
     </main>

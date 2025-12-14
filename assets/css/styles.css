@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Rutter-Reese Site Styles (v1.1)
+   Rutter-Reese Site Styles (v1.2)
    - Clean, recruiter-friendly, accessible defaults
    - One shared design system + per-page accent via body[data-theme]
    - Dark-first, with optional light-mode support
@@ -113,6 +113,16 @@ video {
 code,
 pre {
   font-family: var(--font-mono);
+}
+
+/* Headings / content rhythm */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+p {
+  margin: 0 0 var(--space-3);
 }
 
 /* Links */
@@ -313,10 +323,22 @@ hr {
   background: rgba(18, 24, 38, 0.55);
   color: var(--muted);
   font-size: 0.85rem;
+  text-decoration: none;
 }
 .pill:hover {
   text-decoration: none;
-  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-color: rgba(43, 108, 255, 0.4); /* fallback */
+}
+.pill:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+@supports (border-color: color-mix(in srgb, black 50%, white)) {
+  .pill:hover {
+    border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    color: var(--text);
+  }
 }
 
 /* ---------- Cards / grids ---------- */
@@ -352,10 +374,32 @@ hr {
   margin: 0 0 var(--space-3);
   color: var(--muted);
 }
+.card p:last-child {
+  margin-bottom: 0;
+}
 
 .link {
   color: var(--link);
   font-weight: 600;
+}
+
+/* Consistent list spacing in cards + details */
+.card ul,
+.card ol,
+details ul,
+details ol {
+  margin: 0 0 var(--space-3);
+  padding-left: 1.25rem;
+}
+.card ul:last-child,
+.card ol:last-child,
+details ul:last-child,
+details ol:last-child {
+  margin-bottom: 0;
+}
+.card li,
+details li {
+  margin: 0.25rem 0;
 }
 
 /* Callout (used on sanitization page) */
@@ -366,6 +410,11 @@ hr {
   background: rgba(18, 24, 38, 0.7);
   border-radius: var(--r-3);
   color: var(--muted);
+}
+@supports (background: color-mix(in srgb, black 50%, transparent)) {
+  .callout {
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+  }
 }
 
 /* ---------- Details (accordion) ---------- */
@@ -405,27 +454,25 @@ summary:focus-visible {
   background: rgba(11, 14, 20, 0.8);
 }
 
-/* ---------- Content defaults ---------- */
-ul,
-ol {
-  padding-left: 1.25rem;
-}
-li {
-  margin: 0.25rem 0;
-}
-
+/* ---------- Code blocks ---------- */
 pre {
   overflow: auto;
   padding: var(--space-4);
   border-radius: var(--r-2);
   border: 1px solid var(--border);
   background: rgba(15, 21, 36, 0.85);
+  margin: 0 0 var(--space-4);
 }
 code {
   padding: 0.12rem 0.3rem;
   border-radius: 0.45rem;
-  border: 1px solid color-mix(in srgb, var(--border) 85%, transparent);
+  border: 1px solid var(--border); /* fallback */
   background: rgba(15, 21, 36, 0.6);
+}
+@supports (border-color: color-mix(in srgb, black 50%, white)) {
+  code {
+    border-color: color-mix(in srgb, var(--border) 85%, transparent);
+  }
 }
 
 /* Tables (for quick reference) */

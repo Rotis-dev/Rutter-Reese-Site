@@ -6,7 +6,7 @@
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   // 2) Ensure a theme is set (fallback if a page forgets data-theme)
-  // Themes are defined in CSS and keyed off body[data-theme].
+  // Themes are keyed off body[data-theme] in CSS.
   const body = document.body;
   if (body && !body.dataset.theme) {
     const p = (location.pathname || "").toLowerCase();
@@ -16,15 +16,18 @@
   }
 
   // 3) Mark the current nav link for accessibility
-  // aria-current indicates the current item in a set (like navigation). :contentReference[oaicite:0]{index=0}
-  const normalizePath = (path) => (path || "/").replace(/\/+$/, "") || "/";
+  const normalizePath = (path) => {
+    const s = (path || "/").replace(/\/+$/, "");
+    return s === "" ? "/" : s;
+  };
   const currentPath = normalizePath(location.pathname);
 
   document.querySelectorAll("nav a[href]").forEach((a) => {
+    const href = a.getAttribute("href");
+    if (!href) return;
+
     try {
-      const hrefPath = normalizePath(
-        new URL(a.getAttribute("href"), location.origin).pathname
-      );
+      const hrefPath = normalizePath(new URL(href, location.origin).pathname);
       if (hrefPath === currentPath) a.setAttribute("aria-current", "page");
     } catch {
       // ignore malformed hrefs
@@ -32,9 +35,7 @@
   });
 
   // 4) Light friction: disable right-click ONLY on embedded previews
-  // This is not security; it only reduces casual copying.
-  // contextmenu can be canceled with preventDefault(). :contentReference[oaicite:1]{index=1}
-  // closest() is used to detect if the click happened inside an .embed/.no-ctx region. :contentReference[oaicite:2]{index=2}
+  // Not security; just reduces casual copying.
   document.addEventListener(
     "contextmenu",
     (e) => {

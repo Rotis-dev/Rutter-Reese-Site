@@ -8,10 +8,21 @@
       name="description"
       content="Ops documentation style guide for runbooks, SOPs, and troubleshooting: structure, procedures, decision points, warnings, verification, and versioning."
     />
+    <meta property="og:title" content="Style Guide | Rutter-Reese" />
+    <meta
+      property="og:description"
+      content="Ops documentation style guide for runbooks, SOPs, and troubleshooting: structure, procedures, decision points, warnings, verification, and versioning."
+    />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link
+      rel="canonical"
+      href="https://rutter-reese.com/pages/style-guide.html"
+    />
   </head>
 
-  <body data-theme="writing">
+  <body id="top" data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
@@ -31,7 +42,7 @@
       <section class="hero">
         <h1 class="section-title">Style Guide (Ops Docs)</h1>
         <p class="lead">
-          Rules that make documentation consistent, auditable, and fast to use
+          Rules that keep documentation consistent, auditable, and fast to use
           under pressure. Built for runbooks, SOPs, and troubleshooting guides.
         </p>
 
@@ -43,10 +54,11 @@
           <a class="pill" href="#warnings">Warnings</a>
           <a class="pill" href="#verification">Verification</a>
           <a class="pill" href="#versioning">Versioning</a>
+          <a class="pill" href="#references">References</a>
         </div>
 
         <p class="muted small">
-          Reference pages:
+          Related:
           <a class="link" href="sanitization.html">Sanitization checklist</a> ·
           <a class="link" href="portfolio.html">Portfolio</a>
         </p>
@@ -84,9 +96,7 @@
 
       <section class="section" id="templates">
         <h2>Document templates</h2>
-        <p class="muted">
-          These are the “standard shapes” used across the site.
-        </p>
+        <p class="muted">These are the standard shapes used across the site.</p>
 
         <div class="grid-3">
           <article class="card">
@@ -130,13 +140,13 @@
               <summary>SOP skeleton</summary>
               <ol class="compact">
                 <li><strong>Purpose</strong> + Audience</li>
-                <li><strong>Scope</strong> (what’s included/excluded)</li>
+                <li><strong>Scope</strong> (included/excluded)</li>
                 <li>
                   <strong>Prerequisites</strong> (access/tools/permissions)
                 </li>
                 <li><strong>Procedure</strong> (numbered steps)</li>
                 <li>
-                  <strong>Quality checks</strong> (how you confirm completeness)
+                  <strong>Quality checks</strong> (pass/fail completeness)
                 </li>
                 <li><strong>Records</strong> (what to log + where)</li>
                 <li><strong>Changelog</strong></li>
@@ -176,38 +186,39 @@
               Steps should be action-first and clear. Start with a verb:
               “Open…”, “Verify…”, “Record…”.
             </p>
-            <p class="muted small">
-              Standard approach used by major documentation style guides for
-              step-by-step instructions and procedures.
-              :contentReference[oaicite:0]{index=0}
-            </p>
           </article>
 
           <article class="card">
             <h3>One step = one action</h3>
             <p class="muted">
-              Avoid “and” inside steps. If you must combine small actions, keep
-              them tightly related and obvious.
-            </p>
-            <p class="muted small">
-              “One step per action” is a common rule in procedure guidance.
-              :contentReference[oaicite:1]{index=1}
+              Avoid “and” inside steps. Split steps so each action can be
+              checked off.
             </p>
           </article>
 
           <article class="card">
-            <h3>Use numbered steps</h3>
+            <h3>Prefer lists over paragraphs</h3>
             <p class="muted">
-              Number procedures. Use short sub-steps only when needed (and keep
-              them consistent).
-            </p>
-            <p class="muted small">
-              Procedure formatting guidance and sub-step conventions are
-              documented by Google’s style guide.
-              :contentReference[oaicite:2]{index=2}
+              If it’s a sequence, it’s a numbered list. If it’s options, it’s
+              bullets.
             </p>
           </article>
         </div>
+
+        <article class="card">
+          <h3>Procedure formatting</h3>
+          <ul class="muted">
+            <li>Use numbered steps for actions. Keep step text short.</li>
+            <li>
+              Use consistent names for the same thing (terms, tools, states).
+            </li>
+            <li>Place warnings immediately before the step they affect.</li>
+            <li>
+              Use a “do first” block when ordering matters (safety checks,
+              environment checks).
+            </li>
+          </ul>
+        </article>
 
         <article class="card">
           <h3>Example: good steps vs bad steps</h3>
@@ -232,6 +243,23 @@
             </ol>
           </details>
         </article>
+
+        <article class="card">
+          <h3>Escalation package (copy/paste block)</h3>
+          <p class="muted small">
+            Put this into every runbook/troubleshooting guide so escalation is
+            clean and fast.
+          </p>
+          <pre><code>SUMMARY (1–2 lines):
+SCOPE (single site vs widespread):
+START TIME (last known good / first alarm time):
+SYMPTOMS (exact alarm text or observed state):
+CHECKS PERFORMED (bullets):
+ACTIONS ATTEMPTED (bullets; least-risk first):
+CURRENT STATUS (what is true right now):
+RISKS / SAFETY CONCERNS:
+REQUEST (what you want the receiver to do next):</code></pre>
+        </article>
       </section>
 
       <section class="section" id="decisions">
@@ -241,16 +269,16 @@
           <article class="card">
             <h3>Write IF/THEN</h3>
             <p class="muted">
-              Each decision point must lead to a specific next action (and
-              ideally to a named section).
+              Each decision must lead to a specific next action (and ideally to
+              a named section).
             </p>
           </article>
 
           <article class="card">
             <h3>Use thresholds</h3>
             <p class="muted">
-              Time thresholds reduce churn and “thrash” (example: wait 5 minutes
-              before repeating recovery actions).
+              Time thresholds reduce churn (example: wait 5 minutes before
+              repeating recovery actions).
             </p>
           </article>
 
@@ -264,7 +292,7 @@
         </div>
 
         <article class="card">
-          <h3>Example: decision block</h3>
+          <h3>Example decision block</h3>
           <ul>
             <li>
               <strong>If</strong> telemetry resumes and alarms clear → go to
@@ -289,31 +317,31 @@
           <article class="card">
             <h3>WARNING</h3>
             <p class="muted">
-              Personal safety risk, major damage, or high-consequence outcome
-              (including potential data loss).
+              Safety risk or equipment damage risk. Short, actionable, placed
+              immediately before the step it affects.
             </p>
           </article>
 
           <article class="card">
             <h3>CAUTION</h3>
             <p class="muted">
-              Procedure risk: wrong environment, wrong command, wrong state,
-              unintended disruption.
+              Procedure risk (wrong environment, wrong state, unintended
+              disruption).
             </p>
           </article>
 
           <article class="card">
             <h3>NOTE / DISCLAIMER</h3>
             <p class="muted">
-              Helpful context or constraints (sanitized sample, authorization
-              limits, assumptions).
+              Helpful context that does not change the step sequence (sanitized
+              sample, scope, authorization limits).
             </p>
           </article>
         </div>
 
         <article class="card">
           <h3>Rule</h3>
-          <ul>
+          <ul class="muted">
             <li>Callouts must be short and actionable.</li>
             <li>Put callouts immediately before the step they affect.</li>
             <li>
@@ -321,12 +349,6 @@
               steps or decision points.
             </li>
           </ul>
-          <p class="muted small">
-            Signal words and safety header patterns are widely standardized
-            (ANSI/ISO families), and many doc platforms define common callout
-            types (note/warning/disclaimer).
-            :contentReference[oaicite:3]{index=3}
-          </p>
         </article>
       </section>
 
@@ -383,8 +405,8 @@
           <article class="card">
             <h3>Review loop</h3>
             <p class="muted">
-              Changes should be visible and explainable. Prefer small revisions
-              over big rewrites.
+              Prefer small revisions over big rewrites. Changes should be
+              visible and explainable.
             </p>
           </article>
         </div>
@@ -396,6 +418,87 @@
             and testable verification criteria.
           </p>
         </article>
+      </section>
+
+      <section class="section" id="references">
+        <h2>Public references (optional)</h2>
+        <p class="muted small">
+          These are public style guides that align with the rules above.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Google Technical Writing</h3>
+            <ul class="muted">
+              <li>
+                <a
+                  class="link"
+                  href="https://developers.google.com/tech-writing/overview"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Course overview
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://developers.google.com/tech-writing/one/summary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Technical Writing One (summary)
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Cloudflare Style Guide</h3>
+            <ul class="muted">
+              <li>
+                <a
+                  class="link"
+                  href="https://developers.cloudflare.com/style-guide/documentation-content-strategy/writing-guidelines/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Writing guidelines
+                </a>
+              </li>
+              <li>
+                <a
+                  class="link"
+                  href="https://developers.cloudflare.com/style-guide/components/steps/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Steps component (procedures)
+                </a>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Communities</h3>
+            <ul class="muted">
+              <li>
+                <a
+                  class="link"
+                  href="https://www.writethedocs.org/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Write the Docs
+                </a>
+              </li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="muted small">
+          <a class="link" href="#top">Back to top</a>
+        </p>
       </section>
     </main>
 

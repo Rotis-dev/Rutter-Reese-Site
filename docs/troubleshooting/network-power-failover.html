@@ -4,11 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>
-      Troubleshooting — Network/Power Failover Triage (Sanitized Sample)
+      Troubleshooting — Network/Power Failover Triage (Generic) | Rutter-Reese
     </title>
     <meta
       name="description"
-      content="Sanitized troubleshooting sample: symptoms → fast checks → decision tree → recovery steps → verification → closeout."
+      content="Sanitized troubleshooting sample: telemetry offline or flapping triage. Fast checks, decision tree, low-risk recovery steps, verification."
     />
     <link rel="stylesheet" href="../../assets/css/styles.css" />
   </head>
@@ -21,192 +21,128 @@
         <a class="brand" href="../../index.html" aria-label="Home"
           >Rutter-Reese</a
         >
-        <nav class="nav" aria-label="Documentation navigation">
+        <nav class="nav" aria-label="Primary">
           <a href="../../pages/portfolio.html">Portfolio</a>
           <a href="../../pages/style-guide.html">Style guide</a>
           <a href="../../pages/sanitization.html">Sanitization</a>
-          <a href="../../pages/contact.html" class="button secondary"
-            >Contact</a
-          >
+          <a href="../../pages/contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" class="container">
       <section class="hero">
-        <p class="muted small">
-          <a class="link" href="../../pages/portfolio.html"
-            >← Back to portfolio</a
-          >
-        </p>
-
         <h1 class="section-title">
           Troubleshooting — Network/Power Failover Triage (Generic Example)
         </h1>
-
-        <p class="muted small">
-          Version: <strong>v1.1</strong> —
-          <time datetime="2026-01-01">2026-01-01</time>
-          · Sanitized portfolio sample — not operational guidance.
+        <p class="kicker">
+          Version: v1.0 — 2026-01-01 · Sanitized portfolio sample — not
+          operational guidance.
         </p>
 
-        <div class="card">
-          <h2>Scope and intent</h2>
-          <p class="muted">
-            This guide demonstrates a troubleshooting workflow for “telemetry
-            offline / flapping” incidents where the root cause may be network,
-            power, or failover behavior. It’s generic by design.
-          </p>
+        <div class="pill-row" aria-label="Doc tags">
+          <span class="pill">Troubleshooting</span>
+          <span class="pill">Triage</span>
+          <span class="pill">Decision tree</span>
         </div>
       </section>
 
       <section class="section" aria-label="Troubleshooting content">
-        <div class="grid-3">
-          <article class="card">
-            <h2>Symptoms</h2>
-            <ul>
-              <li>Telemetry offline / stale timestamps</li>
-              <li>Remote commands time out</li>
-              <li>Intermittent connection (“flapping” alarms)</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h2>Goal</h2>
-            <ul>
-              <li>Confirm scope (single site vs multiple)</li>
-              <li>Stabilize and restore safely (least-risk first)</li>
-              <li>Escalate with clean notes if not recoverable</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h2>Capture (start)</h2>
-            <ul>
-              <li>Start time (last known good telemetry)</li>
-              <li>Exact symptoms + any related alarms</li>
-              <li>Recent changes (maintenance, comms/power work)</li>
-            </ul>
-          </article>
+        <div class="card">
+          <h2>Symptoms</h2>
+          <ul class="muted">
+            <li>Telemetry offline</li>
+            <li>Remote commands time out</li>
+            <li>Intermittent connection / flapping alarms</li>
+          </ul>
         </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Fast checks (2 minutes)</h2>
-          <ol class="compact">
+          <ol class="compact muted">
             <li>
-              Confirm the monitoring platform is healthy (not a dashboard/API
-              outage).
+              Confirm monitoring platform is healthy (not a platform outage).
             </li>
-            <li>Check scope: is more than one site/device affected?</li>
+            <li>Check whether multiple sites are affected (scope).</li>
             <li>
-              Record last known good telemetry time (defines the incident
-              window).
+              Check last known time of good telemetry (start of incident).
             </li>
           </ol>
-        </article>
+        </div>
 
-        <article class="card">
+        <div class="card">
           <h2>Decision tree</h2>
-          <ul>
+          <ul class="muted">
             <li>
               <strong>If</strong> multiple sites are affected → treat as
               platform/network issue; escalate.
             </li>
+            <li><strong>If</strong> only one site affected → continue.</li>
             <li>
-              <strong>If</strong> only one site is affected → continue local
-              triage.
+              <strong>If</strong> last update &lt; 5 min ago → wait 5 min and
+              re-check (avoid thrash).
             </li>
             <li>
-              <strong>If</strong> last update &lt; 5 minutes ago → wait 5
-              minutes and re-check (avoid thrash).
-            </li>
-            <li>
-              <strong>If</strong> last update &gt; 10 minutes ago → proceed to
+              <strong>If</strong> last update &gt; 10 min ago → initiate comms
               recovery steps (if permitted).
             </li>
           </ul>
+        </div>
 
-          <details>
-            <summary>Heuristic: “network vs power vs failover”</summary>
-            <ul>
-              <li>
-                <strong>Network pattern:</strong> comms alarms, stale telemetry,
-                but power indicators seem normal.
-              </li>
-              <li>
-                <strong>Power pattern:</strong> sudden drop + multiple
-                subsystems offline simultaneously; repeated resets.
-              </li>
-              <li>
-                <strong>Failover pattern:</strong> intermittent connectivity at
-                regular intervals (switching paths).
-              </li>
-            </ul>
-          </details>
-        </article>
-
-        <article class="card">
-          <h2>Recovery steps (least-risk first)</h2>
-          <ol>
+        <div class="card">
+          <h2>Recovery steps (low-risk first)</h2>
+          <ol class="muted">
+            <li>Re-poll / refresh telemetry once.</li>
+            <li>Check comms device status (generic indicator if available).</li>
             <li>
-              Re-poll / refresh telemetry and confirm timestamps are truly stale
-              (not UI delay).
-            </li>
-            <li>
-              Check comms status indicators (generic): gateway online, tunnel
-              up, heartbeat present.
-            </li>
-            <li>
-              If allowed: perform a <strong>single</strong> least-disruptive
-              recovery action (example: restart comms service) and monitor for
+              If allowed: restart comms service (single action) and monitor for
               10 minutes.
             </li>
             <li>
-              If still offline: stop repeated actions; prepare escalation
-              package and request field verification.
+              If still offline: escalate to field tech with incident summary.
             </li>
           </ol>
+        </div>
 
-          <details>
-            <summary>Escalation package (copy/paste)</summary>
-            <ul>
-              <li>Symptoms + start time (last known good)</li>
-              <li>Scope (single vs multiple sites)</li>
-              <li>Fast checks performed + results</li>
-              <li>Actions attempted (what/when) + outcome</li>
-              <li>
-                Current status + any constraints (maintenance window, DNO, etc.)
-              </li>
-            </ul>
-          </details>
-        </article>
-
-        <article class="card" id="verification">
+        <div class="card">
           <h2>Verification</h2>
-          <ul>
-            <li>Telemetry timestamps advance normally for 10 minutes.</li>
-            <li>No repeated comms alarms during the verification period.</li>
-            <li>Closeout notes entered (what/when/why + follow-ups).</li>
+          <ul class="muted">
+            <li>Telemetry stable for 10 minutes.</li>
+            <li>No repeated comms alarms during verification period.</li>
+            <li>Closeout notes entered (what/when/why).</li>
           </ul>
-        </article>
+        </div>
 
-        <details>
-          <summary>Changelog</summary>
-          <ul>
-            <li>
-              <strong>v1.1</strong> — Added heuristics + escalation package
-              template.
-            </li>
-            <li><strong>v1.0</strong> — Initial sanitized sample.</li>
+        <div class="card">
+          <h2>Escalation package (copy/paste)</h2>
+          <pre><code>Summary:
+- Symptoms:
+- Scope (single site vs widespread):
+- Last known good telemetry:
+- Fast checks completed:
+- Actions attempted:
+- Current status:
+- Safety concerns:
+- Requested next steps / owner:</code></pre>
+        </div>
+
+        <div class="card">
+          <h2>Changes</h2>
+          <ul class="muted">
+            <li>v1.0 — Initial published sample.</li>
           </ul>
-        </details>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-        <span class="muted small">Troubleshooting sample</span>
+        <span class="muted small">
+          <a href="../../pages/portfolio.html">Portfolio</a> ·
+          <a href="../../pages/style-guide.html">Style guide</a> ·
+          <a href="../../pages/sanitization.html">Sanitization</a>
+        </span>
       </div>
     </footer>
 

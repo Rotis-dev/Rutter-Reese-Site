@@ -3,20 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Resume | Rutter-Reese</title>
     <meta
       name="description"
-      content="Resume for Matthew Rutter-Reese — operations-focused technical writing (runbooks, SOPs, troubleshooting, knowledge base)."
+      content="Resume for Matt Rutter-Reese — operations-focused technical writing (runbooks, SOPs, troubleshooting, knowledge base)."
     />
+
+    <meta property="og:title" content="Resume | Rutter-Reese" />
+    <meta
+      property="og:description"
+      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, KB-style docs."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="canonical" href="https://rutter-reese.com/pages/resume.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="writing">
+  <body id="top" data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html">Portfolio</a>
           <a href="resume.html" aria-current="page">Resume</a>
@@ -32,27 +43,34 @@
         <h1 class="section-title">Resume</h1>
         <p class="lead">
           Operations-focused technical writing: runbooks, SOPs, troubleshooting
-          guides, and knowledge-base content. Procedure-driven background (ROC +
+          guides, and KB-style content. Procedure-driven background (ROC +
           high-consequence systems).
         </p>
         <p class="muted small">
           If the embedded PDF doesn’t load in your browser, use the “Open PDF”
           link below.
         </p>
+
+        <div class="pill-row" aria-label="Jump to sections">
+          <a class="pill" href="#pdf">PDF</a>
+          <a class="pill" href="#highlights">Highlights</a>
+          <a class="pill" href="#site">About this site</a>
+        </div>
       </section>
 
-      <section class="section" aria-label="Resume PDF">
+      <section class="section" id="pdf" aria-label="Resume PDF">
+        <h2>PDF</h2>
+
         <div class="card">
-          <h2>PDF version</h2>
-          <p class="muted small">
+          <p class="muted small" style="margin-top: 0">
             File path expected:
-            <code>/assets/resume/matthew-rutter-reese-resume.pdf</code>
+            <code>/assets/resume/matt-rutter-reese-resume.pdf</code>
           </p>
 
           <p class="muted small">
             <a
               class="link"
-              href="../assets/resume/matthew-rutter-reese-resume.pdf"
+              href="../assets/resume/matt-rutter-reese-resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -62,15 +80,15 @@
 
           <object
             class="embed no-ctx"
-            data="../assets/resume/matthew-rutter-reese-resume.pdf"
+            data="../assets/resume/matt-rutter-reese-resume.pdf"
             type="application/pdf"
-            title="Matthew Rutter-Reese — Resume PDF"
+            aria-label="Matt Rutter-Reese — Resume PDF"
           >
             <p class="muted">
               Your browser can’t display the embedded PDF. Use this link:
               <a
                 class="link"
-                href="../assets/resume/matthew-rutter-reese-resume.pdf"
+                href="../assets/resume/matt-rutter-reese-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -79,19 +97,20 @@
             </p>
           </object>
 
-          <p class="muted small">
-            Note: opening in a new tab uses
-            <code>rel="noopener noreferrer"</code> to prevent reverse-tabnabbing
-            risks with <code>target="_blank"</code>.
-            :contentReference[oaicite:1]{index=1}
+          <p class="muted small" style="margin-bottom: 0">
+            External links opened in a new tab use
+            <code>rel="noopener noreferrer"</code> to prevent access to
+            <code>window.opener</code>. :contentReference[oaicite:2]{index=2}
           </p>
         </div>
       </section>
 
-      <section class="section" aria-label="Highlights">
+      <section class="section" id="highlights" aria-label="Highlights">
+        <h2>Highlights</h2>
+
         <div class="grid-3">
           <article class="card">
-            <h2>What I deliver</h2>
+            <h3>What I deliver</h3>
             <ul class="muted">
               <li>Runbooks (alarm/incident response)</li>
               <li>SOPs + checklists (routine work)</li>
@@ -101,7 +120,7 @@
           </article>
 
           <article class="card">
-            <h2>Working style</h2>
+            <h3>Working style</h3>
             <ul class="muted">
               <li>Action-first, numbered procedures</li>
               <li>Decision points + escalation packages</li>
@@ -111,18 +130,34 @@
           </article>
 
           <article class="card">
-            <h2>Tooling</h2>
+            <h3>Tooling</h3>
             <ul class="muted">
               <li>Markdown + Git workflow</li>
               <li>Docs structured for review cycles</li>
-              <li>Comfortable with templates + style guides</li>
+              <li>Templates + style guides</li>
             </ul>
           </article>
         </div>
 
         <div class="card">
-          <h2>About this site</h2>
-          <p class="muted">
+          <h3>Quick links</h3>
+          <p class="muted" style="margin-bottom: 0">
+            <a class="link" href="portfolio.html">Portfolio</a> ·
+            <a class="link" href="style-guide.html">Style guide</a> ·
+            <a class="link" href="sanitization.html">Sanitization checklist</a>
+          </p>
+        </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
+      </section>
+
+      <section class="section" id="site" aria-label="About this site">
+        <h2>About this site</h2>
+
+        <div class="card">
+          <p class="muted" style="margin: 0">
             Portfolio samples are intentionally generic and sanitized to
             demonstrate structure and clarity without exposing proprietary
             systems. See:
@@ -137,7 +172,8 @@
         <span>© <span id="year"></span> Rutter-Reese</span>
         <span class="muted small">
           <a href="portfolio.html">Portfolio</a> ·
-          <a href="contact.html">Contact</a>
+          <a href="contact.html">Contact</a> ·
+          <a href="family.html">Family hub</a>
         </span>
       </div>
     </footer>
