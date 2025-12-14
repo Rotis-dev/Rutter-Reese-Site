@@ -1,78 +1,194 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SOP: Weekly System Health Check (Generic)</title>
-  <link rel="stylesheet" href="../../assets/css/styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-row">
-      <a class="brand" href="../../index.html">MRR Docs</a>
-      <nav class="nav">
-        <a href="../../pages/portfolio.html">Portfolio</a>
-        <a href="../../pages/style-guide.html">Style Guide</a>
-        <a href="../../pages/sanitization.html">Sanitization</a>
-      </nav>
-    </div>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>SOP — Weekly System Health Check (Sanitized Sample)</title>
+    <meta
+      name="description"
+      content="Sanitized SOP sample: weekly system health check procedure with prerequisites, steps, quality checks, and records."
+    />
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+  </head>
 
-  <main class="container">
-    <h1 class="section-title">SOP — Weekly System Health Check (Generic Example)</h1>
-    <p class="kicker">Version: v1.0 — 2026-01-01 · Sanitized portfolio sample — not operational guidance.</p>
+  <body data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="card">
-      <h2>Purpose</h2>
-      <p class="muted">Perform a consistent weekly health check and capture a record of system status.</p>
-      <h3>Audience</h3>
-      <p class="muted">Ops/Support staff responsible for basic monitoring and recordkeeping.</p>
-    </div>
+    <header class="site-header">
+      <div class="container header-row">
+        <a class="brand" href="../../index.html" aria-label="Home"
+          >Rutter-Reese</a
+        >
+        <nav class="nav" aria-label="Documentation navigation">
+          <a href="../../pages/portfolio.html">Portfolio</a>
+          <a href="../../pages/style-guide.html">Style guide</a>
+          <a href="../../pages/sanitization.html">Sanitization</a>
+          <a href="../../pages/contact.html" class="button secondary"
+            >Contact</a
+          >
+        </nav>
+      </div>
+    </header>
 
-    <div class="card">
-      <h2>Prerequisites</h2>
-      <ul>
-        <li>Access to monitoring dashboard(s) and system status page</li>
-        <li>Access to the weekly log (ticket, spreadsheet, or KB page)</li>
-      </ul>
-    </div>
+    <main id="main" class="container">
+      <section class="hero">
+        <p class="muted small">
+          <a class="link" href="../../pages/portfolio.html"
+            >← Back to portfolio</a
+          >
+        </p>
 
-    <div class="card">
-      <h2>Procedure</h2>
-      <ol>
-        <li>Open the weekly log and create a new entry for this week.</li>
-        <li>Verify telemetry freshness (last update within expected window).</li>
-        <li>Review critical alarms for the last 7 days; list top 3 recurring alarms.</li>
-        <li>Check communications uptime; record any outages.</li>
-        <li>Check power/backup health indicators (if applicable); record status.</li>
-        <li>Document any open follow-ups and assign an owner (name/role).</li>
-      </ol>
-    </div>
+        <h1 class="section-title">
+          SOP — Weekly System Health Check (Generic Example)
+        </h1>
 
-    <div class="card">
-      <h2>Quality checks</h2>
-      <ul>
-        <li>All fields completed; no “TBD”.</li>
-        <li>Any abnormality has a follow-up item and owner.</li>
-      </ul>
-    </div>
+        <p class="muted small">
+          Version: <strong>v1.1</strong> —
+          <time datetime="2026-01-01">2026-01-01</time>
+          · Sanitized portfolio sample — not operational guidance.
+        </p>
 
-    <div class="card">
-      <h2>Records</h2>
-      <ul>
-        <li>Weekly log entry link or ID</li>
-        <li>Summary paragraph (3–5 lines)</li>
-      </ul>
-    </div>
-  </main>
+        <div class="card">
+          <h2>Purpose</h2>
+          <p class="muted">
+            Perform a consistent weekly health check and produce a record that
+            supports trend detection, follow-ups, and accountability.
+          </p>
 
-  <footer class="site-footer">
-    <div class="container footer-row">
-      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-      <span class="muted">SOP sample</span>
-    </div>
-  </footer>
+          <h3>Audience</h3>
+          <p class="muted">
+            Ops/Support staff responsible for basic monitoring and
+            recordkeeping.
+          </p>
+        </div>
+      </section>
 
-  <script src="../../assets/js/app.js"></script>
-</body>
+      <section class="section" aria-label="SOP content">
+        <div class="grid-3">
+          <article class="card">
+            <h2>Scope</h2>
+            <ul>
+              <li>Review monitoring health and data freshness</li>
+              <li>Review alarms/trends for last 7 days</li>
+              <li>Confirm comms uptime and note outages</li>
+              <li>Confirm power/backup indicators (if applicable)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Inputs</h2>
+            <ul>
+              <li>Monitoring dashboard(s)</li>
+              <li>Status page (if used)</li>
+              <li>Weekly log (ticket/KB/spreadsheet)</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h2>Outputs</h2>
+            <ul>
+              <li>Completed weekly entry</li>
+              <li>Top issues + follow-ups with owners</li>
+              <li>Notes on outages/abnormalities</li>
+            </ul>
+          </article>
+        </div>
+
+        <article class="card">
+          <h2>Prerequisites</h2>
+          <ul>
+            <li>Access to monitoring dashboard(s) and system status page</li>
+            <li>Access to the weekly log (ticket, spreadsheet, or KB page)</li>
+            <li>Ability to assign an owner (name/role) for follow-ups</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Procedure</h2>
+          <ol>
+            <li>Open the weekly log and create a new entry for this week.</li>
+            <li>
+              Verify telemetry freshness (last update within the expected
+              window).
+            </li>
+            <li>
+              Review critical alarms for the last 7 days; list the top 3
+              recurring alarm types.
+            </li>
+            <li>
+              Check communications uptime; record outages or notable
+              instability.
+            </li>
+            <li>
+              Check power/backup health indicators (if applicable); record
+              status and any anomalies.
+            </li>
+            <li>
+              Document open follow-ups and assign an owner (name/role) and due
+              date.
+            </li>
+          </ol>
+
+          <details>
+            <summary>Weekly log template (copy/paste)</summary>
+            <ul>
+              <li><strong>Week of:</strong> YYYY-MM-DD</li>
+              <li><strong>Telemetry freshness:</strong> OK / Not OK (notes)</li>
+              <li><strong>Top recurring alarms (3):</strong> 1) … 2) … 3) …</li>
+              <li><strong>Comms uptime notes:</strong> …</li>
+              <li><strong>Power/backup notes:</strong> …</li>
+              <li>
+                <strong>Follow-ups:</strong> (Owner, due date, link/ticket)
+              </li>
+              <li><strong>Summary (3–5 lines):</strong> …</li>
+            </ul>
+          </details>
+        </article>
+
+        <article class="card">
+          <h2>Quality checks</h2>
+          <ul>
+            <li>All required fields completed (no “TBD”).</li>
+            <li>
+              Any abnormality has at least one follow-up item with an owner and
+              due date.
+            </li>
+            <li>
+              Summary is clear enough that someone else can understand status in
+              60 seconds.
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Records</h2>
+          <ul>
+            <li>Weekly log entry link or ID</li>
+            <li>Top recurring alarms list</li>
+            <li>Follow-up list (owner + due date)</li>
+          </ul>
+        </article>
+
+        <details>
+          <summary>Changelog</summary>
+          <ul>
+            <li>
+              <strong>v1.1</strong> — Added weekly log template + clearer QC
+              criteria.
+            </li>
+            <li><strong>v1.0</strong> — Initial sanitized sample.</li>
+          </ul>
+        </details>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-row">
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">SOP sample</span>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/app.js"></script>
+  </body>
 </html>

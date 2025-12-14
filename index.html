@@ -3,97 +3,239 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Matthew Rutter-Reese | Technical Writer (Ops Documentation)</title>
+    <title>Matt Rutter-Reese | Writing (Runbooks, SOPs, Troubleshooting)</title>
     <meta
       name="description"
-      content="Remote technical writer specializing in SOPs, runbooks, troubleshooting guides, and knowledge bases."
+      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and knowledge-base style documentation."
     />
+
+    <meta
+      property="og:title"
+      content="Matt Rutter-Reese | Writing (Runbooks, SOPs, Troubleshooting)"
+    />
+    <meta
+      property="og:description"
+      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and knowledge-base style documentation."
+    />
+    <meta property="og:type" content="website" />
+
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-  <body>
+
+  <body id="top" data-theme="writing">
+    <a class="skip-link" href="#main">Skip to content</a>
+
     <header class="site-header">
       <div class="container header-row">
-        <a class="brand" href="index.html">MRR Docs</a>
-        <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Home">Rutter-Reese</a>
+
+        <nav class="nav" aria-label="Primary">
           <a href="pages/portfolio.html">Portfolio</a>
           <a href="pages/resume.html">Resume</a>
-          <a href="pages/style-guide.html">Style Guide</a>
-          <a href="pages/sanitization.html">Sanitization</a>
-          <a href="pages/changelog.html">Changelog</a>
+          <a href="pages/style-guide.html">Style guide</a>
           <a href="pages/contact.html" class="button">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main class="container">
+    <main id="main" class="container">
       <section class="hero">
-        <h1>Technical Writer for Operations Documentation</h1>
+        <h1 class="section-title">Matt Rutter-Reese</h1>
         <p class="lead">
-          I write documentation that holds up in real operations:
-          <strong>SOPs</strong>, <strong>runbooks</strong>,
-          <strong>troubleshooting guides</strong>, and
-          <strong>knowledge-base articles</strong>.
+          Operations-focused technical writing: runbooks, SOPs, troubleshooting
+          guides, checklists, and KB-style docs.
         </p>
-        <div class="hero-cta">
+
+        <div class="pill-row" aria-label="Specialties">
+          <span class="pill">Runbooks</span>
+          <span class="pill">SOPs</span>
+          <span class="pill">Troubleshooting</span>
+          <span class="pill">Ops documentation</span>
+        </div>
+
+        <div class="cta-row">
           <a class="button" href="pages/portfolio.html">View portfolio</a>
-          <a class="button secondary" href="pages/resume.html">View resume</a>
-        </div>
-
-        <div class="callout">
-          <strong>Note on “download protection”:</strong> anything viewable on
-          the web can be copied. This site is built to show quality clearly,
-          with light friction (no direct download links) and watermarking.
-        </div>
-      </section>
-
-      <section class="grid-3">
-        <div class="card">
-          <h2>Runbooks</h2>
-          <p>
-            Incident response playbooks: triggers → checks → steps → decision
-            points → escalation → verification.
-          </p>
-          <a href="pages/portfolio.html#runbooks">Browse runbooks →</a>
-        </div>
-        <div class="card">
-          <h2>SOPs</h2>
-          <p>
-            Routine processes: purpose → prerequisites → steps → QC/records →
-            safety and exceptions.
-          </p>
-          <a href="pages/portfolio.html#sops">Browse SOPs →</a>
-        </div>
-        <div class="card">
-          <h2>Troubleshooting</h2>
-          <p>
-            Symptom-based guides with decision trees and verification steps.
-          </p>
-          <a href="pages/portfolio.html#troubleshooting"
-            >Browse troubleshooting →</a
+          <a class="button secondary" href="mailto:writing@rutter-reese.com"
+            >Email: writing@rutter-reese.com</a
           >
         </div>
+
+        <p class="muted small">
+          Note: all samples are sanitized and intended to demonstrate structure
+          and clarity—not disclose operational details. See
+          <a href="pages/sanitization.html">Sanitization checklist</a>.
+        </p>
       </section>
 
-      <section class="card">
-        <h2>How I work</h2>
-        <ol class="compact">
-          <li>Clarify audience + success criteria.</li>
-          <li>
-            Extract truth from SMEs (interviews, logs, tickets, shift notes).
-          </li>
-          <li>Draft fast, then tighten for clarity and scanability.</li>
-          <li>Review cycle + versioning (changelog).</li>
-          <li>Publish into a structure that’s easy to maintain.</li>
-        </ol>
+      <section class="section">
+        <h2>Featured samples</h2>
+        <p class="muted">
+          Short, scannable examples that show incident-response structure and
+          procedure clarity.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Alarm Triage Runbook</h3>
+            <p class="muted">
+              Trigger → checks → steps → decision points → escalation →
+              verification.
+            </p>
+            <p>
+              <a class="link" href="docs/runbooks/alarm-triage-runbook.html"
+                >Open sample</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Comms Outage Runbook</h3>
+            <p class="muted">
+              Isolation steps, comms checks, fallback actions, closeout notes.
+            </p>
+            <p>
+              <a class="link" href="docs/runbooks/comms-outage-runbook.html"
+                >Open sample</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Network + Power Failover Troubleshooting</h3>
+            <p class="muted">
+              Symptoms → quick checks → decision tree → restore/verify.
+            </p>
+            <p>
+              <a
+                class="link"
+                href="docs/troubleshooting/network-power-failover.html"
+                >Open sample</a
+              >
+            </p>
+          </article>
+        </div>
+
+        <div class="grid-3" style="margin-top: 1rem">
+          <article class="card">
+            <h3>Weekly Health Check SOP</h3>
+            <p class="muted">
+              Routine inspection and logging with clear acceptance criteria.
+            </p>
+            <p>
+              <a class="link" href="docs/sops/weekly-health-check.html"
+                >Open sample</a
+              >
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Portfolio Index</h3>
+            <p class="muted">
+              All samples organized by type (runbooks, SOPs, troubleshooting).
+            </p>
+            <p>
+              <a class="link" href="pages/portfolio.html">Open portfolio</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>How I write</h3>
+            <p class="muted">
+              Rules for headings, steps, warnings, terminology, and revisions.
+            </p>
+            <p>
+              <a class="link" href="pages/style-guide.html">Open style guide</a>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Approach</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Operational clarity</h3>
+            <p class="muted">
+              Write for the moment someone is tired, busy, and under time
+              pressure.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Structure first</h3>
+            <p class="muted">
+              Consistent sections: trigger, safety checks, steps, decisions,
+              escalation, verification, closeout.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Iterate visibly</h3>
+            <p class="muted">
+              Versioned docs with changelogs so stakeholders see improvement,
+              not churn.
+            </p>
+            <p>
+              <a class="link" href="pages/changelog.html"
+                >View site changelog</a
+              >
+            </p>
+          </article>
+        </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          Runbooks are designed as incident-response guides (alarm/incident
+          happens → what to do next). :contentReference[oaicite:1]{index=1}
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Contact</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Email</h3>
+            <p>
+              <a class="link" href="mailto:writing@rutter-reese.com"
+                >writing@rutter-reese.com</a
+              >
+            </p>
+            <p class="muted small">
+              Forwarded to my personal inbox via Cloudflare Email Routing.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Resume</h3>
+            <p class="muted">One-page resume + highlights.</p>
+            <p><a class="link" href="pages/resume.html">Open resume</a></p>
+          </article>
+
+          <article class="card">
+            <h3>Sanitization</h3>
+            <p class="muted">Checklist I apply before publishing any sample.</p>
+            <p>
+              <a class="link" href="pages/sanitization.html">Open checklist</a>
+            </p>
+          </article>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
       <div class="container footer-row">
-        <span>© <span id="year"></span> Matthew Rutter-Reese</span>
-        <span class="muted"
-          >Built as a docs-as-code portfolio on a static site.</span
-        >
+        <span>© <span id="year"></span> Rutter-Reese</span>
+        <span class="muted small">
+          Family:
+          <a href="pages/family.html">Hub</a> ·
+          <a href="pages/accounting.html">Christine (Accounting)</a> ·
+          <a
+            href="https://www.linkedin.com/in/prado-christine-mae/"
+            rel="noopener"
+            >Christine LinkedIn</a
+          >
+          ·
+          <a href="pages/it.html">Richie (IT)</a>
+        </span>
       </div>
     </footer>
 
