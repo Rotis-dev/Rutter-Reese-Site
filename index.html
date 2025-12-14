@@ -3,22 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Matt Rutter-Reese | Writing (Runbooks, SOPs, Troubleshooting)</title>
+
+    <title>Matt Rutter-Reese | Ops Technical Writing</title>
     <meta
       name="description"
-      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and knowledge-base style documentation."
+      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, checklists, and KB-style docs."
     />
 
     <meta
       property="og:title"
-      content="Matt Rutter-Reese | Writing (Runbooks, SOPs, Troubleshooting)"
+      content="Matt Rutter-Reese | Ops Technical Writing"
     />
     <meta
       property="og:description"
-      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and knowledge-base style documentation."
+      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, checklists, and KB-style docs."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rutter-reese.com/" />
 
+    <link rel="canonical" href="https://rutter-reese.com/" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
 
@@ -33,6 +36,7 @@
           <a href="pages/portfolio.html">Portfolio</a>
           <a href="pages/resume.html">Resume</a>
           <a href="pages/style-guide.html">Style guide</a>
+          <a href="pages/sanitization.html">Sanitization</a>
           <a href="pages/contact.html" class="button">Contact</a>
         </nav>
       </div>
@@ -55,19 +59,19 @@
 
         <div class="cta-row">
           <a class="button" href="pages/portfolio.html">View portfolio</a>
-          <a class="button secondary" href="mailto:writing@rutter-reese.com"
-            >Email: writing@rutter-reese.com</a
-          >
+          <a class="button secondary" href="mailto:writing@rutter-reese.com">
+            Email: writing@rutter-reese.com
+          </a>
         </div>
 
         <p class="muted small">
-          Note: all samples are sanitized and intended to demonstrate structure
-          and clarity—not disclose operational details. See
+          All samples are sanitized and intended to demonstrate structure and
+          clarity—not disclose operational details. See
           <a href="pages/sanitization.html">Sanitization checklist</a>.
         </p>
       </section>
 
-      <section class="section">
+      <section class="section" aria-label="Featured samples">
         <h2>Featured samples</h2>
         <p class="muted">
           Short, scannable examples that show incident-response structure and
@@ -115,7 +119,7 @@
           </article>
         </div>
 
-        <div class="grid-3" style="margin-top: 1rem">
+        <div class="grid-3">
           <article class="card">
             <h3>Weekly Health Check SOP</h3>
             <p class="muted">
@@ -129,7 +133,7 @@
           </article>
 
           <article class="card">
-            <h3>Portfolio Index</h3>
+            <h3>Portfolio index</h3>
             <p class="muted">
               All samples organized by type (runbooks, SOPs, troubleshooting).
             </p>
@@ -150,7 +154,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" aria-label="Approach">
         <h2>Approach</h2>
         <div class="grid-3">
           <article class="card">
@@ -172,24 +176,19 @@
           <article class="card">
             <h3>Iterate visibly</h3>
             <p class="muted">
-              Versioned docs with changelogs so stakeholders see improvement,
-              not churn.
-            </p>
-            <p>
-              <a class="link" href="pages/changelog.html"
-                >View site changelog</a
-              >
+              Versioned docs with small, readable changes. Stakeholders see
+              improvement, not churn.
             </p>
           </article>
         </div>
 
-        <p class="muted small" style="margin-top: 0.75rem">
-          Runbooks are designed as incident-response guides (alarm/incident
-          happens → what to do next). :contentReference[oaicite:1]{index=1}
+        <p class="muted small">
+          Runbooks are incident-response guides (alarm/incident happens → what
+          to do next).
         </p>
       </section>
 
-      <section class="section">
+      <section class="section" aria-label="Contact">
         <h2>Contact</h2>
         <div class="grid-3">
           <article class="card">
@@ -200,7 +199,7 @@
               >
             </p>
             <p class="muted small">
-              Forwarded to my personal inbox via Cloudflare Email Routing.
+              Routed to my personal inbox via Cloudflare Email Routing.
             </p>
           </article>
 
@@ -212,7 +211,7 @@
 
           <article class="card">
             <h3>Sanitization</h3>
-            <p class="muted">Checklist I apply before publishing any sample.</p>
+            <p class="muted">Checklist applied before publishing any sample.</p>
             <p>
               <a class="link" href="pages/sanitization.html">Open checklist</a>
             </p>
@@ -230,7 +229,8 @@
           <a href="pages/accounting.html">Christine (Accounting)</a> ·
           <a
             href="https://www.linkedin.com/in/prado-christine-mae/"
-            rel="noopener"
+            target="_blank"
+            rel="noopener noreferrer"
             >Christine LinkedIn</a
           >
           ·
