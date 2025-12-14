@@ -3,20 +3,31 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Contact | Rutter-Reese</title>
     <meta
       name="description"
       content="Contact for ops documentation work: runbooks, SOPs, troubleshooting guides, and knowledge-base articles."
     />
+
+    <meta property="og:title" content="Contact | Rutter-Reese" />
+    <meta
+      property="og:description"
+      content="Email routes by work type (writing, accounting, IT). Replies come from Outlook."
+    />
+    <meta property="og:type" content="website" />
+
+    <link rel="canonical" href="https://rutter-reese.com/pages/contact.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
 
-  <body data-theme="writing">
+  <body id="top" data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html">Portfolio</a>
           <a href="resume.html">Resume</a>
@@ -38,17 +49,31 @@
           Messages are routed to personal inboxes. Replies will come from
           Outlook.
         </p>
+
+        <div class="pill-row" aria-label="Jump to sections">
+          <a class="pill" href="#email">Email</a>
+          <a class="pill" href="#linkedin">LinkedIn</a>
+          <a class="pill" href="#request">What to include</a>
+        </div>
       </section>
 
-      <section class="section" aria-label="Email contacts">
+      <section class="section" id="email" aria-label="Email contacts">
+        <h2>Email</h2>
+        <p class="muted small">
+          If you’re not sure which one to use, send to
+          <strong>writing@rutter-reese.com</strong> and I’ll route it.
+        </p>
+
         <div class="grid-3">
           <article class="card">
-            <h2>Technical writing</h2>
+            <h3>Technical writing</h3>
             <p class="muted">
               Runbooks, SOPs, troubleshooting guides, KB articles.
             </p>
             <p>
-              <a class="link" href="mailto:writing@rutter-reese.com"
+              <a
+                class="link"
+                href="mailto:writing@rutter-reese.com?subject=Ops%20documentation%20project"
                 >writing@rutter-reese.com</a
               >
             </p>
@@ -58,10 +83,12 @@
           </article>
 
           <article class="card">
-            <h2>Accounting</h2>
+            <h3>Accounting</h3>
             <p class="muted">Bookkeeping / accounting support inquiries.</p>
             <p>
-              <a class="link" href="mailto:accounting@rutter-reese.com"
+              <a
+                class="link"
+                href="mailto:accounting@rutter-reese.com?subject=Bookkeeping%20inquiry"
                 >accounting@rutter-reese.com</a
               >
             </p>
@@ -69,22 +96,26 @@
           </article>
 
           <article class="card">
-            <h2>IT</h2>
+            <h3>IT</h3>
             <p class="muted">IT / networking inquiries.</p>
             <p>
-              <a class="link" href="mailto:it@rutter-reese.com"
+              <a
+                class="link"
+                href="mailto:it@rutter-reese.com?subject=IT%20inquiry"
                 >it@rutter-reese.com</a
               >
             </p>
-            <p class="muted small">Suggested subject: “IT support inquiry”</p>
+            <p class="muted small">Suggested subject: “IT inquiry”</p>
           </article>
         </div>
       </section>
 
-      <section class="section" aria-label="LinkedIn profiles">
+      <section class="section" id="linkedin" aria-label="LinkedIn profiles">
+        <h2>LinkedIn</h2>
+
         <div class="grid-3">
           <article class="card">
-            <h2>LinkedIn (Matt)</h2>
+            <h3>Matt</h3>
             <p class="muted small">
               Preferred for verification and work history.
             </p>
@@ -101,7 +132,7 @@
           </article>
 
           <article class="card">
-            <h2>LinkedIn (Christine)</h2>
+            <h3>Christine</h3>
             <p class="muted small">Accounting track.</p>
             <p>
               <a
@@ -116,7 +147,7 @@
           </article>
 
           <article class="card">
-            <h2>Availability</h2>
+            <h3>Availability</h3>
             <p class="muted">
               Remote contract work. Clear scope, fast turnaround, clean
               deliverables.
@@ -130,9 +161,14 @@
         </div>
       </section>
 
-      <section class="section" aria-label="How to write a good request">
+      <section
+        class="section"
+        id="request"
+        aria-label="How to write a good request"
+      >
+        <h2>What to include in your message</h2>
+
         <div class="card">
-          <h2>What to include in your message</h2>
           <ol>
             <li>What you need (runbook, SOP, KB article, audit pass, etc.)</li>
             <li>
@@ -140,11 +176,17 @@
               etc.)
             </li>
             <li>Timeline and review cadence</li>
-            <li>
-              Any constraints (security, redaction, audience, approval flow)
-            </li>
+            <li>Constraints (security, redaction, audience, approval flow)</li>
           </ol>
+          <p class="muted small" style="margin-bottom: 0">
+            Tip: If you can share one example of a “good doc” from your org
+            (sanitized), I’ll match that style.
+          </p>
         </div>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
       </section>
     </main>
 
@@ -154,7 +196,8 @@
         <span class="muted small">
           <a href="portfolio.html">Portfolio</a> ·
           <a href="style-guide.html">Style guide</a> ·
-          <a href="sanitization.html">Sanitization</a>
+          <a href="sanitization.html">Sanitization</a> ·
+          <a href="family.html">Family hub</a>
         </span>
       </div>
     </footer>
