@@ -3,10 +3,23 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>Portfolio | Rutter-Reese</title>
     <meta
       name="description"
-      content="Portfolio samples organized by runbooks, SOPs, and troubleshooting. Sanitized examples that demonstrate structure and clarity."
+      content="Sanitized portfolio samples organized by runbooks, SOPs, and troubleshooting. Demonstrates structure and clarity, not operational details."
+    />
+
+    <meta property="og:title" content="Portfolio | Rutter-Reese" />
+    <meta
+      property="og:description"
+      content="Sanitized ops documentation samples: runbooks, SOPs, troubleshooting guides."
+    />
+    <meta property="og:type" content="website" />
+
+    <link
+      rel="canonical"
+      href="https://rutter-reese.com/pages/portfolio.html"
     />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
@@ -17,6 +30,7 @@
     <header class="site-header">
       <div class="container header-row">
         <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
+
         <nav class="nav" aria-label="Primary">
           <a href="portfolio.html" aria-current="page">Portfolio</a>
           <a href="resume.html">Resume</a>
@@ -30,6 +44,7 @@
     <main id="main" class="container">
       <section class="hero">
         <h1 class="section-title">Portfolio</h1>
+
         <p class="lead">
           Sanitized samples demonstrating operations documentation structure:
           runbooks, SOPs, and troubleshooting guides. These are intentionally
@@ -44,8 +59,14 @@
         </div>
 
         <p class="muted small">
-          If you want a specific format (Document360 / Confluence / Zendesk /
-          Markdown repo), say so and I’ll match it.
+          Want a specific format (Document360 / Confluence / Zendesk / Markdown
+          repo)? Say so and I’ll match it.
+        </p>
+
+        <p class="muted small">
+          All samples follow a consistent structure. See the
+          <a href="style-guide.html">Style guide</a> and
+          <a href="sanitization.html">Sanitization checklist</a>.
         </p>
       </section>
 
@@ -64,7 +85,7 @@
               actions, escalate cleanly, verify recovery.
             </p>
             <ul class="muted small">
-              <li>Clear “do first” safety checks</li>
+              <li>“Do first” safety checks</li>
               <li>Decision points + escalation package</li>
               <li>Closeout notes structure</li>
             </ul>
@@ -80,7 +101,7 @@
               Communications Outage Runbook <span class="badge">Runbook</span>
             </h3>
             <p class="muted">
-              Scope triage: single site vs widespread. Least-risk recovery
+              Scope triage (single site vs widespread). Least-risk recovery
               actions. Escalation package + verification.
             </p>
             <ul class="muted small">
@@ -98,9 +119,10 @@
           <article class="card">
             <h3>Runbook Templates <span class="badge">Template</span></h3>
             <p class="muted">
-              A standardized runbook layout for consistent triage and escalation
-              across incidents.
+              Standardized runbook layout to keep triage, escalation, and
+              verification consistent across incidents.
             </p>
+
             <details>
               <summary>What’s included</summary>
               <ul class="muted small">
@@ -110,8 +132,9 @@
                 <li>Verification + closeout</li>
               </ul>
             </details>
+
             <p class="muted small">
-              If you want, I can add a “copy/paste” blank template page next.
+              Optional next: add a “blank template” page for copy/paste.
             </p>
           </article>
         </div>
@@ -133,7 +156,7 @@
             </p>
             <ul class="muted small">
               <li>Procedure + QC criteria</li>
-              <li>Weekly log template</li>
+              <li>Recordkeeping expectations</li>
               <li>Owner + due-date follow-ups</li>
             </ul>
             <p>
@@ -146,8 +169,8 @@
           <article class="card">
             <h3>Additional SOP Slots <span class="badge">Placeholder</span></h3>
             <p class="muted">
-              When you’re ready, add 1–2 more SOPs (onboarding checklist,
-              maintenance workflow, ticket hygiene).
+              Add 1–2 more SOPs when ready (onboarding checklist, maintenance
+              workflow, ticket hygiene).
             </p>
             <details>
               <summary>Suggested next SOPs</summary>
@@ -166,7 +189,7 @@
               steps.
             </p>
             <p class="muted small">
-              Optional: add a printable checklist page for each SOP.
+              Optional: add a printable checklist page per SOP.
             </p>
           </article>
         </div>
@@ -195,7 +218,7 @@
             <ul class="muted small">
               <li>2-minute fast checks</li>
               <li>Decision tree + heuristics</li>
-              <li>Escalation package template</li>
+              <li>Escalation package structure</li>
             </ul>
             <p>
               <a
@@ -231,7 +254,7 @@
               Same troubleshooting content, rewritten as a searchable
               help-center article.
             </p>
-            <p class="muted small">Optional: we add a KB sample page next.</p>
+            <p class="muted small">Optional next: add a KB sample page.</p>
           </article>
         </div>
       </section>
@@ -240,7 +263,8 @@
         <h2>External previews (Drive / OneDrive)</h2>
         <p class="muted small">
           Add view-only links below as needed. Embedded previews can fail
-          depending on browser/security settings. Publishing is sanitized only.
+          depending on browser/security settings. Publish sanitized content
+          only.
         </p>
 
         <details>
@@ -251,15 +275,24 @@
             Replace <code>src</code> with an embed/preview URL (not a download
             link).
           </p>
+
+          <!-- Optional: add sandbox once you confirm your embed still works.
+               sandbox can reduce iframe capabilities but may break previews. -->
           <iframe
             class="embed no-ctx"
             src="about:blank"
             title="Preview placeholder"
+            loading="lazy"
           ></iframe>
+
           <p class="small muted">
             If embed fails, use a normal view link instead.
           </p>
         </details>
+
+        <p class="muted small" style="margin-top: 0.75rem">
+          <a class="link" href="#top">Back to top</a>
+        </p>
       </section>
     </main>
 
