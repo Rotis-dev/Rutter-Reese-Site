@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Runbook: Alarm Triage (Generic)</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="../../pages/portfolio.html">Portfolio</a>
+        <a href="../../pages/style-guide.html">Style Guide</a>
+        <a href="../../pages/sanitization.html">Sanitization</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Runbook — Communications Outage (Template)</h1>
+    <p class="kicker">Version: v0.1 — 2026-01-01 · Sanitized portfolio sample — not operational guidance.</p>
+
+    <div class="card">
+      <h2>Trigger</h2>
+      <ul>
+        <li>Alarm fires for a critical component (example: “Communications Loss”).</li>
+        <li>Or: multiple related alarms within 5 minutes.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Safety checks (do first)</h2>
+      <ol class="compact">
+        <li>Confirm you are working in the correct environment (site/system).</li>
+        <li>Check for any “Do Not Operate” status or active maintenance window.</li>
+        <li>If there is any safety risk, stop and escalate immediately.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Triage steps</h2>
+      <ol>
+        <li>Record timestamp + alarm text + any related alerts.</li>
+        <li>Check last known healthy status (example: last telemetry time).</li>
+        <li>Check dependencies (power, communications, upstream service).</li>
+        <li>Attempt the least-risk recovery action (example: re-poll / reset comms) if permitted.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Decision points</h2>
+      <ul>
+        <li><strong>If</strong> telemetry returns and alarm clears, go to Verification.</li>
+        <li><strong>If</strong> telemetry remains offline &gt; 10 minutes, escalate per matrix.</li>
+        <li><strong>If</strong> error indicates possible equipment damage, stop remote actions and escalate.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Escalation</h2>
+      <ul>
+        <li>Escalate to: on-call engineer / field tech / manager (based on severity).</li>
+        <li>Provide: symptom summary, steps attempted, current status, any safety concerns.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Verification</h2>
+      <ol>
+        <li>Confirm steady-state readings within expected range for 10 minutes.</li>
+        <li>Confirm alarms cleared and no new related alarms.</li>
+        <li>Update log/ticket with actions taken and outcome.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Closeout notes (recordkeeping)</h2>
+      <ul>
+        <li>What happened (1–2 sentences)</li>
+        <li>What you did (bullets)</li>
+        <li>Who you notified</li>
+        <li>What still needs follow-up</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Runbook sample</span>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

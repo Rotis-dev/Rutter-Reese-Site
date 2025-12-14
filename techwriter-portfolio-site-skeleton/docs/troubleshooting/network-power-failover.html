@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Troubleshooting: Network/Power Failover Triage (Generic)</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="../../pages/portfolio.html">Portfolio</a>
+        <a href="../../pages/style-guide.html">Style Guide</a>
+        <a href="../../pages/sanitization.html">Sanitization</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Troubleshooting — Network/Power Failover Triage (Generic Example)</h1>
+    <p class="kicker">Version: v1.0 — 2026-01-01 · Sanitized portfolio sample — not operational guidance.</p>
+
+    <div class="card">
+      <h2>Symptoms</h2>
+      <ul>
+        <li>Telemetry offline</li>
+        <li>Remote commands time out</li>
+        <li>Intermittent connection / flapping alarms</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Fast checks (2 minutes)</h2>
+      <ol class="compact">
+        <li>Confirm monitoring system is healthy (not a platform outage).</li>
+        <li>Check whether multiple sites are affected (scope).</li>
+        <li>Check last known time of good telemetry (start of incident).</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Decision tree</h2>
+      <ul>
+        <li><strong>If</strong> multiple sites are affected → treat as platform/network issue; escalate.</li>
+        <li><strong>If</strong> only one site affected → continue.</li>
+        <li><strong>If</strong> last update &lt; 5 min ago → wait 5 min and re-check (avoid thrash).</li>
+        <li><strong>If</strong> last update &gt; 10 min ago → initiate comms recovery steps (if permitted).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Recovery steps (low-risk first)</h2>
+      <ol>
+        <li>Re-poll / refresh telemetry.</li>
+        <li>Check comms device status (generic).</li>
+        <li>If allowed: restart comms service (single action) and monitor for 10 minutes.</li>
+        <li>If still offline: escalate to field tech with incident summary.</li>
+      </ol>
+    </div>
+
+    <div class="card">
+      <h2>Verification</h2>
+      <ul>
+        <li>Telemetry stable for 10 minutes.</li>
+        <li>No repeated comms alarms during verification period.</li>
+        <li>Closeout notes entered (what/when/why).</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Troubleshooting sample</span>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

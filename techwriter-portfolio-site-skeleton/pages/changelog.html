@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Changelog | MRR Docs</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="style-guide.html">Style Guide</a>
+        <a href="sanitization.html">Sanitization</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="contact.html" class="button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Changelog</h1>
+    <p class="kicker">Versioning for the portfolio itself (and you can mirror this per document).</p>
+
+    <div class="card">
+      <h2>v0.1 (Initial skeleton)</h2>
+      <ul>
+        <li>Base site structure + navigation</li>
+        <li>Portfolio categories + sample docs</li>
+        <li>Style guide + sanitization checklist</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>How to version each doc</h2>
+      <ul>
+        <li>Put a small version block at top: <code>Version: v1.0 — 2026-01-15</code></li>
+        <li>Add <code>Changes</code> section: bullet what changed and why</li>
+        <li>Commit message mirrors the change</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Changelog</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

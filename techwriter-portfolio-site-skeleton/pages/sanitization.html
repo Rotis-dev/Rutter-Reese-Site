@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sanitization Checklist | MRR Docs</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="style-guide.html">Style Guide</a>
+        <a href="sanitization.html">Sanitization</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="contact.html" class="button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Sanitization Checklist</h1>
+    <p class="kicker">Use this before publishing any work-derived sample. When in doubt, remove it.</p>
+
+    <div class="card">
+      <h2>Remove identifiers</h2>
+      <ul>
+        <li>Company/customer names, site names, asset IDs, ticket IDs</li>
+        <li>Specific vendors/integrators if it narrows identity</li>
+        <li>Screenshots of proprietary tools, dashboards, SCADA screens</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Generalize sensitive parameters</h2>
+      <ul>
+        <li>Exact setpoints, thresholds, limits, IP ranges</li>
+        <li>Security procedures, credentials, account roles, escalation contacts</li>
+        <li>Any workflow that could enable abuse</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Convert “real doc” → “portfolio doc”</h2>
+      <ul>
+        <li>Rewrite into a generic scenario that demonstrates your structure.</li>
+        <li>Keep the “thinking” (decision points, verification) without exposing systems.</li>
+        <li>Add a footer watermark: “Sanitized portfolio sample — not operational guidance.”</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Employer policy check</h2>
+      <p class="muted small">If your employer has a policy that forbids using internal documentation (even sanitized), do not publish it.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Sanitization checklist</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

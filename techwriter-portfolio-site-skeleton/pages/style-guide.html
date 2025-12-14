@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Style Guide | MRR Docs</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="style-guide.html">Style Guide</a>
+        <a href="sanitization.html">Sanitization</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="contact.html" class="button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Style Guide (Ops Docs)</h1>
+    <p class="kicker">Short rules that make docs consistent, auditable, and fast to use under pressure.</p>
+
+    <div class="card">
+      <h2>Document anatomy</h2>
+      <ul>
+        <li><strong>Purpose</strong> (one sentence)</li>
+        <li><strong>Audience</strong> (who uses this)</li>
+        <li><strong>Prerequisites</strong> (access/tools/permissions)</li>
+        <li><strong>Safety & warnings</strong> (what can go wrong)</li>
+        <li><strong>Steps</strong> (numbered, one action per step)</li>
+        <li><strong>Decision points</strong> (IF/THEN with next step references)</li>
+        <li><strong>Escalation</strong> (who/when/how)</li>
+        <li><strong>Verification</strong> (how you know it worked)</li>
+        <li><strong>Records</strong> (what to log, where)</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Language rules</h2>
+      <ul>
+        <li>Use <strong>imperative voice</strong>: “Open…”, “Verify…”, “Record…”</li>
+        <li>One step = one action. Avoid “and” in steps.</li>
+        <li>Use <strong>consistent terms</strong>. Add a glossary if needed.</li>
+        <li>Put numbers in numerals (3, 10) when they are parameters.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Warnings & callouts</h2>
+      <ul>
+        <li><strong>WARNING</strong>: Safety risk or equipment damage.</li>
+        <li><strong>CAUTION</strong>: Procedure risk (wrong command, wrong state).</li>
+        <li><strong>NOTE</strong>: Helpful context that doesn’t change the steps.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Formatting rules</h2>
+      <ul>
+        <li>Headings: H1 doc title; H2 major sections; H3 subsections.</li>
+        <li>Use tables only for quick-reference, not long explanations.</li>
+        <li>Prefer checklists for repeatable verification steps.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Style guide</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

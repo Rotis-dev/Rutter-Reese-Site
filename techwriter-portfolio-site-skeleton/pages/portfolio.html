@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio | MRR Docs</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="../index.html">MRR Docs</a>
+      <nav class="nav">
+        <a href="portfolio.html">Portfolio</a>
+        <a href="resume.html">Resume</a>
+        <a href="style-guide.html">Style Guide</a>
+        <a href="sanitization.html">Sanitization</a>
+        <a href="changelog.html">Changelog</a>
+        <a href="contact.html" class="button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="section-title">Portfolio</h1>
+    <p class="kicker">3 core categories. Each item has a short “context” + the document preview or link.</p>
+
+    <hr />
+
+    <h2 id="runbooks">Runbooks</h2>
+
+    <details open>
+      <summary>Runbook — Alarm Triage (Generic Example) <span class="badge">Runbook</span></summary>
+      <p class="small muted">
+        Audience: ROC/operator on shift. Goal: stabilize system, route escalation, verify recovery, capture closeout notes.
+        Sanitized and generic. Replace with your real-world (sanitized) version.
+      </p>
+      <p><a href="../docs/runbooks/alarm-triage-runbook.html">Open HTML version →</a></p>
+    </details>
+
+    <details>
+      <summary>Runbook — Communications Outage (Template) <span class="badge">Template</span></summary>
+      <p class="small muted">Template only. Add decision points + verification based on your environment.</p>
+      <p><a href="../docs/runbooks/comms-outage-runbook.html">Open →</a></p>
+    </details>
+
+    <hr />
+
+    <h2 id="sops">SOPs</h2>
+
+    <details open>
+      <summary>SOP — Weekly System Health Check (Generic Example) <span class="badge">SOP</span></summary>
+      <p class="small muted">
+        Purpose: consistent health checks + records. Includes prerequisites, steps, QC, and recordkeeping.
+      </p>
+      <p><a href="../docs/sops/weekly-health-check.html">Open →</a></p>
+    </details>
+
+    <hr />
+
+    <h2 id="troubleshooting">Troubleshooting</h2>
+
+    <details open>
+      <summary>Troubleshooting — Network/Power Failover Triage (Generic Example) <span class="badge">Troubleshooting</span></summary>
+      <p class="small muted">Symptom → checks → fix → verify. Written for speed under pressure.</p>
+      <p><a href="../docs/troubleshooting/network-power-failover.html">Open →</a></p>
+    </details>
+
+    <hr />
+
+    <h2 id="links">External previews (Drive/OneDrive)</h2>
+    <p class="muted small">
+      Paste your “view-only” preview links below. Embedded previews sometimes fail due to browser/security settings.
+      Do not publish proprietary/confidential information.
+    </p>
+
+    <details>
+      <summary>Sample — Embedded preview placeholder <span class="badge">Embed</span></summary>
+      <p class="small muted">Replace iframe src with your share link's embed/preview URL.</p>
+      <iframe class="embed no-ctx" src="about:blank" title="Preview placeholder"></iframe>
+      <p class="small muted">If the preview doesn’t load, provide a normal view link instead.</p>
+    </details>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Matthew Rutter-Reese</span>
+      <span class="muted">Portfolio categories: runbooks / SOPs / troubleshooting</span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
