@@ -3,101 +3,89 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
     <title>Richie | IT</title>
-    <meta
-      name="description"
-      content="Richie Rutter-Reese — IT support (remote): networking, troubleshooting, and documentation."
-    />
-
-    <meta property="og:title" content="Richie | IT" />
-    <meta
-      property="og:description"
-      content="IT support (remote): networking, troubleshooting, and documentation."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rutter-reese.com/pages/it.html" />
-
+    <meta name="description" content="Richie Rutter-Reese — IT track landing page: networking, IT support, troubleshooting, documentation." />
     <link rel="canonical" href="https://rutter-reese.com/pages/it.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
-
-  <body id="top" data-theme="it">
+  <body data-theme="it">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="it.html" aria-label="IT home">Rutter-Reese</a>
+      <div class="shell header-row">
+        <a class="brand" href="it.html" aria-label="Home">Rutter-Reese</a>
 
         <nav class="nav" aria-label="Primary">
-          <a href="it.html" aria-current="page">Home</a>
-          <a href="it-portfolio.html">Portfolio</a>
-          <a href="it-resume.html">Resume</a>
-          <a href="it-contact.html" class="button">Contact</a>
+          <a href="it.html" aria-current="page">About</a>
+          <a href="it-portfolio.html" >Portfolio</a>
+          <a href="it-resume.html" >Resume</a>
+          <a href="it-contact.html" class="button" >Contact</a>
         </nav>
       </div>
     </header>
+    <main id="main" class="shell layout">
+      <aside class="sidebar card">
+        <img class="avatar" src="../assets/img/placeholder-person.svg" alt="Richie Rutter-Reese photo" />
+        <h1>Richie Rutter-Reese</h1>
+        <p class="role">IT / Networking Support (Remote)</p>
 
-    <main id="main" class="container">
-      <section class="hero" aria-label="Richie landing">
-        <h1 class="section-title">Richie</h1>
-        <p class="lead">
-          IT support (remote): networking, troubleshooting, and documentation.
-        </p>
-
-        <div class="cta-row">
-          <a class="button" href="it-portfolio.html">View portfolio</a>
-          <a class="button secondary" href="it-contact.html">Contact</a>
+        <div class="meta" aria-label="Contact details">
+          <div>
+            <p class="label">Email</p>
+            <p class="value"><a href="mailto:it@rutter-reese.com">it@rutter-reese.com</a></p>
+          </div>
+          <div>
+            <p class="label">LinkedIn</p>
+            <p class="value"><span class="muted">LinkedIn not active</span></p>
+          </div>
         </div>
 
-        <p class="small muted" style="margin-top:.9rem;">
-          Email routing: <a class="link" href="mailto:it@rutter-reese.com">it@rutter-reese.com</a> ·
-          LinkedIn: <span class="muted">Not active</span>
+        <p class="kicker">
+          Recruiter-first site: scannable artifacts, clear scope, clean deliverables.
         </p>
-      </section>
+      </aside>
+      <section class="content card" aria-label="Richie">
+        <h2>About</h2>
+        <p class="muted">
+          IT track (remote). Networking fundamentals, end-user support, structured troubleshooting,
+          and documentation that makes repeat fixes faster. This page is a placeholder until experience and artifacts are added.
+        </p>
 
-      <section class="section" aria-label="Focus areas">
-        <h2>Focus areas</h2>
+        <div class="section split">
+          <div class="item">
+            <h4>Focus</h4>
+            <ul class="list">
+              <li>Small network troubleshooting (switch/router basics)</li>
+              <li>Remote support workflows (tickets, notes, repeat fixes)</li>
+              <li>Documentation: SOPs, checklists, and KB articles</li>
+            </ul>
+          </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Networking</h3>
-            <p class="muted">Basic switching/routing concepts and structured troubleshooting.</p>
-          </article>
-
-          <article class="card">
-            <h3>IT support</h3>
-            <p class="muted">Remote-friendly support with clean tickets and repeatable fixes.</p>
-          </article>
-
-          <article class="card">
-            <h3>Documentation</h3>
-            <p class="muted">Simple SOPs/checklists so common issues resolve faster next time.</p>
-          </article>
+          <div class="item">
+            <h4>Typical requests</h4>
+            <ul class="list">
+              <li>Connectivity issues (LAN/Wi‑Fi)</li>
+              <li>Device setup guidance</li>
+              <li>Basic security hygiene (accounts, MFA, backups)</li>
+            </ul>
+          </div>
         </div>
-      </section>
 
-      <section class="section" aria-label="How to engage">
-        <h2>How to engage</h2>
-
-        <div class="card">
-          <ul class="muted" style="margin:0;">
-            <li>Describe the issue and environment (home / small office / remote).</li>
-            <li>Share what you already tried and any error messages.</li>
-            <li>Confirm goals (restore service, improve reliability, document the fix).</li>
-          </ul>
+        <div class="section item">
+          <h4>Start here</h4>
+          <div class="actions">
+            <a class="button" href="it-portfolio.html">Portfolio</a>
+            <a class="button secondary" href="it-resume.html">Resume</a>
+            <a class="button secondary" href="it-contact.html">Contact</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-row">
+      <div class="shell footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-
-        <!-- Family hub should only appear on the 3 main branch landing pages. -->
-        <div class="footer-actions">
-          <a class="link" href="family.html">Family hub</a>
-        </div>
+        <span class="muted small">Mode:</span>
       </div>
     </footer>
 

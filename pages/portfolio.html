@@ -3,200 +3,92 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
     <title>Portfolio | Matt Rutter-Reese</title>
-    <meta
-      name="description"
-      content="Matt Rutter-Reese portfolio: links to primary artifacts plus a small set of sanitized HTML samples (runbooks, SOPs, troubleshooting)."
-    />
-
-    <meta property="og:title" content="Portfolio | Matt Rutter-Reese" />
-    <meta
-      property="og:description"
-      content="Portfolio links first, then sanitized writing samples: runbooks, SOPs, troubleshooting guides."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rutter-reese.com/pages/portfolio.html" />
-
+    <meta name="description" content="Portfolio: runbooks, SOPs, troubleshooting guides, and knowledge-base documentation samples." />
     <link rel="canonical" href="https://rutter-reese.com/pages/portfolio.html" />
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
-
-  <body id="top" data-theme="writing">
+  <body data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-row">
+      <div class="shell header-row">
         <a class="brand" href="../index.html" aria-label="Home">Rutter-Reese</a>
 
         <nav class="nav" aria-label="Primary">
+          <a href="../index.html" >About</a>
           <a href="portfolio.html" aria-current="page">Portfolio</a>
-          <a href="resume.html">Resume</a>
-          <a href="contact.html" class="button">Contact</a>
+          <a href="resume.html" >Resume</a>
+          <a href="contact.html" class="button" >Contact</a>
         </nav>
       </div>
     </header>
+    <main id="main" class="shell layout">
+      <aside class="sidebar card">
+        <img class="avatar" src="../assets/img/matt.jpg" alt="Matt Rutter-Reese photo" />
+        <h1>Matt Rutter-Reese</h1>
+        <p class="role">Ops Technical Writing (Remote)</p>
 
-    <main id="main" class="container">
-      <section class="hero" aria-label="Portfolio intro">
-        <h1 class="section-title">Portfolio</h1>
-        <p class="lead">
-          Recruiter-first: primary artifacts at the top. Sanitized HTML samples are below to show structure and decision points.
-        </p>
-
-        <div class="cta-row">
-          <a class="button" href="#primary">Open primary links</a>
-          <a class="button secondary" href="#samples">View samples</a>
+        <div class="meta" aria-label="Contact details">
+          <div>
+            <p class="label">Email</p>
+            <p class="value"><a href="mailto:writing@rutter-reese.com">writing@rutter-reese.com</a></p>
+          </div>
+          <div>
+            <p class="label">LinkedIn</p>
+            <p class="value"><a href="https://www.linkedin.com/in/rutter-reese/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rutter-reese</a></p>
+          </div>
         </div>
 
-        <p class="small muted" style="margin-top:.9rem;">
-          Note: links marked “placeholder” are temporary until final OneDrive/PDF links are added.
+        <p class="kicker">
+          Recruiter-first site: scannable artifacts, clear scope, clean deliverables.
         </p>
-      </section>
-
-      <section class="section" id="primary" aria-label="Primary portfolio links">
-        <h2>Primary links</h2>
+      </aside>
+      <section class="content card" aria-label="Portfolio">
+        <h2>Portfolio</h2>
         <p class="muted">
-          These are the “front-and-center” artifacts most reviewers expect.
+          These are sanitized, realistic samples intended to demonstrate structure and clarity.
+          No proprietary identifiers, internal screenshots, or security details.
         </p>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Portfolio PDF <span class="badge">Placeholder</span></h3>
-            <p class="muted">
-              One document a reviewer can open/download quickly.
-            </p>
-            <p>
-              <a class="button secondary" href="https://example.com/matt-portfolio.pdf" target="_blank" rel="noopener noreferrer">
-                Open PDF
-              </a>
-            </p>
-          </article>
+        <div class="section split">
+          <div class="item">
+            <h4>Primary artifacts (PDF)</h4>
+            <p class="muted small">Replace these links with your hosted PDFs (OneDrive, Drive, or in-repo).</p>
+            <ul class="list">
+              <li><a href="https://example.com/portfolio.pdf" target="_blank" rel="noopener noreferrer">Portfolio PDF (placeholder)</a></li>
+              <li><a href="https://example.com/runbooks.pdf" target="_blank" rel="noopener noreferrer">Runbook package (placeholder)</a></li>
+              <li><a href="https://example.com/sops.pdf" target="_blank" rel="noopener noreferrer">SOP package (placeholder)</a></li>
+            </ul>
+          </div>
 
-          <article class="card">
-            <h3>Runbook package PDF <span class="badge">Placeholder</span></h3>
-            <p class="muted">
-              Compact set exported to PDF (triage + outage).
-            </p>
-            <p>
-              <a class="button secondary" href="https://example.com/runbook-package.pdf" target="_blank" rel="noopener noreferrer">
-                Open PDF
-              </a>
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Case study: rewrite <span class="badge">Placeholder</span></h3>
-            <p class="muted">
-              Outcome-focused write-up (before/after) without exposing internal systems.
-            </p>
-            <p>
-              <a class="button secondary" href="https://example.com/case-study-rewrite" target="_blank" rel="noopener noreferrer">
-                Open case study
-              </a>
-            </p>
-          </article>
+          <div class="item">
+            <h4>Sanitized HTML samples</h4>
+            <p class="muted small">These live in this repo and show the “shape” of ops documentation.</p>
+            <ul class="list">
+              <li><a href="../docs/runbooks/alarm-triage-runbook.html">Alarm Triage Runbook</a></li>
+              <li><a href="../docs/runbooks/comms-outage-runbook.html">Comms Outage Runbook</a></li>
+              <li><a href="../docs/sops/weekly-health-check.html">Weekly System Health Check SOP</a></li>
+              <li><a href="../docs/troubleshooting/network-power-failover.html">Network + Power Failover Triage</a></li>
+            </ul>
+          </div>
         </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Site repository</h3>
-            <p class="muted">
-              Source for this site (helpful for reviewers who care about docs-as-code and versioning).
-            </p>
-            <p>
-              <a class="button secondary" href="https://github.com/Rotis-dev/Rutter-Reese-Site" target="_blank" rel="noopener noreferrer">
-                Open GitHub
-              </a>
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Open-source docs contribution <span class="badge">Optional</span></h3>
-            <p class="muted">
-              Add one verifiable docs PR when available.
-            </p>
-            <p>
-              <a class="button secondary" href="https://example.com/open-source-docs" target="_blank" rel="noopener noreferrer">
-                Open link
-              </a>
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>More artifacts <span class="badge">Planned</span></h3>
-            <p class="muted">
-              Add SOP package PDF, KB-style sample, and 1–2 additional SOPs.
-            </p>
-            <p class="small muted" style="margin-bottom:0;">No action needed now.</p>
-          </article>
+        <div class="section item">
+          <h4>Notes for reviewers</h4>
+          <ul class="list">
+            <li>Action-first steps, explicit decision points, and verification criteria.</li>
+            <li>Escalation packages are designed to be copy/paste.</li>
+            <li>Samples are sanitized to avoid exposing tools, identifiers, or security workflows.</li>
+          </ul>
         </div>
-      </section>
-
-      <section class="section" id="samples" aria-label="Sanitized HTML samples">
-        <h2>Sanitized HTML samples</h2>
-        <p class="muted">
-          These samples are intentionally generic and sanitized. They demonstrate structure and clarity—not operational specifics.
-        </p>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Alarm Triage Runbook</h3>
-            <p class="muted">Trigger → fast checks → actions → decisions → escalation → verification.</p>
-            <p><a class="button secondary" href="../docs/runbooks/alarm-triage-runbook.html">Open sample</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Comms Outage Runbook</h3>
-            <p class="muted">Scope isolation, comms checks, fallback actions, clean closeout.</p>
-            <p><a class="button secondary" href="../docs/runbooks/comms-outage-runbook.html">Open sample</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Weekly Health Check SOP</h3>
-            <p class="muted">Routine process with prerequisites, steps, QC checks, and records.</p>
-            <p><a class="button secondary" href="../docs/sops/weekly-health-check.html">Open sample</a></p>
-          </article>
-        </div>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Network + Power Failover Triage</h3>
-            <p class="muted">Symptoms → quick checks → decision tree → recovery → verification.</p>
-            <p><a class="button secondary" href="../docs/troubleshooting/network-power-failover.html">Open sample</a></p>
-          </article>
-
-          <article class="card">
-            <h3>KB-style sample <span class="badge">Planned</span></h3>
-            <p class="muted">
-              Rewrite one troubleshooting doc into a help-center/KB layout.
-            </p>
-            <p class="small muted" style="margin-bottom:0;">Add later.</p>
-          </article>
-
-          <article class="card">
-            <h3>Runbook template page <span class="badge">Planned</span></h3>
-            <p class="muted">
-              Copy/paste template that matches the structure used in the runbooks.
-            </p>
-            <p class="small muted" style="margin-bottom:0;">Add later.</p>
-          </article>
-        </div>
-
-        <p class="small muted" style="margin-top:1rem;">
-          <a class="link" href="#top">Back to top</a>
-        </p>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-row">
+      <div class="shell footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-
-        <!-- Family hub should only appear on the 3 main branch landing pages. -->
-        <div class="footer-actions">
-          <a class="link" href="family.html">Family hub</a>
-        </div>
+        <span class="muted small">Mode:</span>
       </div>
     </footer>
 

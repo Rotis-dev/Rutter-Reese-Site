@@ -3,123 +3,93 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
     <title>Matt Rutter-Reese | Ops Technical Writing</title>
-    <meta
-      name="description"
-      content="Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and KB-style documentation."
-    />
-
-    <meta property="og:title" content="Matt Rutter-Reese | Ops Technical Writing" />
-    <meta
-      property="og:description"
-      content="Runbooks, SOPs, troubleshooting guides, and KB-style docs—written for real operations."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://rutter-reese.com/" />
+    <meta name="description" content="Operations-focused technical writing for runbooks, SOPs, troubleshooting guides, and knowledge-base documentation." />
     <link rel="canonical" href="https://rutter-reese.com/" />
-
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
-
-  <body id="top" data-theme="writing">
+  <body data-theme="writing">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
-      <div class="container header-row">
+      <div class="shell header-row">
         <a class="brand" href="index.html" aria-label="Home">Rutter-Reese</a>
 
         <nav class="nav" aria-label="Primary">
-          <a href="pages/portfolio.html">Portfolio</a>
-          <a href="pages/resume.html">Resume</a>
-          <a href="pages/contact.html" class="button">Contact</a>
+          <a href="index.html" aria-current="page">About</a>
+          <a href="pages/portfolio.html" >Portfolio</a>
+          <a href="pages/resume.html" >Resume</a>
+          <a href="pages/contact.html" class="button" >Contact</a>
         </nav>
       </div>
     </header>
+    <main id="main" class="shell layout">
+      <aside class="sidebar card">
+        <img class="avatar" src="assets/img/matt.jpg" alt="Matt Rutter-Reese photo" />
+        <h1>Matt Rutter-Reese</h1>
+        <p class="role">Ops Technical Writing (Remote)</p>
 
-    <main id="main" class="container">
-      <section class="hero" aria-label="Intro">
-        <h1 class="section-title">Matt Rutter-Reese</h1>
-        <p class="lead">
-          Operations-focused technical writing: runbooks, SOPs, troubleshooting guides, and KB-style documentation.
-        </p>
-
-        <div class="cta-row">
-          <a class="button" href="pages/portfolio.html">Open portfolio</a>
-          <a class="button secondary" href="mailto:writing@rutter-reese.com">Email: writing@rutter-reese.com</a>
+        <div class="meta" aria-label="Contact details">
+          <div>
+            <p class="label">Email</p>
+            <p class="value"><a href="mailto:writing@rutter-reese.com">writing@rutter-reese.com</a></p>
+          </div>
+          <div>
+            <p class="label">LinkedIn</p>
+            <p class="value"><a href="https://www.linkedin.com/in/rutter-reese/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rutter-reese</a></p>
+          </div>
         </div>
 
-        <p class="small muted" style="margin-top:.9rem;">
-          Samples on this site are sanitized and intended to demonstrate structure and clarity—not disclose real operational details.
+        <p class="kicker">
+          Recruiter-first site: scannable artifacts, clear scope, clean deliverables.
         </p>
-      </section>
+      </aside>
+      <section class="content card" aria-label="About Matt">
+        <h2>About</h2>
+        <p class="muted">
+          I write operations documentation that holds up under pressure: runbooks, SOPs,
+          troubleshooting guides, and KB-style articles. Background: procedure-driven work on
+          high-consequence systems (ROC + operations).
+        </p>
 
-      <section class="section" aria-label="Start here">
-        <h2>Start here</h2>
+        <div class="split section">
+          <div class="item">
+            <h4>What I deliver</h4>
+            <ul class="list">
+              <li>Runbooks (alarm / incident response)</li>
+              <li>SOPs + checklists (routine work)</li>
+              <li>Troubleshooting guides (fast checks + decision points)</li>
+              <li>KB/help-center articles</li>
+            </ul>
+          </div>
 
-        <div class="grid-3">
-          <article class="card">
-            <h3>Portfolio <span class="badge">Primary</span></h3>
-            <p class="muted">
-              Recruiter-friendly links first, plus a few sanitized writing samples (HTML) to show structure and decision points.
-            </p>
-            <p><a class="button secondary" href="pages/portfolio.html">View portfolio</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Resume</h3>
-            <p class="muted">
-              One-page resume with a PDF link (placeholder until the final file/link is added).
-            </p>
-            <p><a class="button secondary" href="pages/resume.html">View resume</a></p>
-          </article>
-
-          <article class="card">
-            <h3>Contact</h3>
-            <p class="muted">
-              Fastest response by email. If you have a preferred format (Word / Markdown repo / Confluence / Document360), say so.
-            </p>
-            <p><a class="button secondary" href="pages/contact.html">Contact</a></p>
-          </article>
+          <div class="item">
+            <h4>How I work</h4>
+            <ul class="list">
+              <li>Action-first steps; one step = one action</li>
+              <li>Decision points written as IF/THEN</li>
+              <li>Escalation packages that copy/paste cleanly</li>
+              <li>Verification criteria (clear pass/fail)</li>
+            </ul>
+          </div>
         </div>
-      </section>
 
-      <section class="section" aria-label="What I deliver">
-        <h2>What I deliver</h2>
-
-        <div class="grid-3">
-          <article class="card">
-            <h3>Runbooks</h3>
-            <p class="muted">
-              Incident response docs: triggers, fast checks, safe actions, decision points, escalation packages, verification, closeout notes.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>SOPs + checklists</h3>
-            <p class="muted">
-              Routine processes with prerequisites, step-by-step procedure, pass/fail checks, and recordkeeping.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Troubleshooting / KB</h3>
-            <p class="muted">
-              Symptoms → quick checks → decision tree → recovery → verification. Written for searchability and reuse.
-            </p>
-          </article>
+        <div class="section item">
+          <h4>Start here</h4>
+          <p class="muted">Quick links for reviewers.</p>
+          <div class="actions">
+            <a class="button" href="pages/portfolio.html">Portfolio</a>
+            <a class="button secondary" href="pages/resume.html">Resume</a>
+            <a class="button secondary" href="pages/contact.html">Contact</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-row">
+      <div class="shell footer-row">
         <span>© <span id="year"></span> Rutter-Reese</span>
-
-        <!-- Family hub should only appear on the 3 main branch landing pages. -->
-        <div class="footer-actions">
-          <a class="link" href="pages/family.html">Family hub</a>
-        </div>
+        <span class="muted small">Mode:</span>
       </div>
     </footer>
 
